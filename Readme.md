@@ -23,6 +23,37 @@ Il simulatore implementato riproduce una versione semplificata del reale protoco
 <li><b>Swap-Out Station</b>: questa stazione serve per rilasciare la memoria adibita al processo. In questo caso però, il tempo di servizio è trascurabile. </li>
 </ul>
 
+## EVENTI DEL SIMULATORE 
+
+<ul>
+<li><b>ARRIVAL_DELAY</b>: arrivo di un processo alla Delay Station. </li>
+
+<li><b>ARRIVAL_RESERVE</b>: arrivo di un processo alla Reserve Station. </li>
+
+<li><b>ARRIVAL_SWAP_IN</b>: arrivo di un processo alla Swap-in Station. </li>
+
+<li><b>ARRIVAL_CPU</b>: arrivo di un processo alla Cpu Station. </li>
+
+<li><b>ARRIVAL_IO1</b>: arrivo di un processo alla IO1 Station. </li>
+
+<li><b>ARRIVAL_IO2</b>: arrivo di un processo alla IO2 Station. </li>
+
+<li><b>ARRIVAL_SWAP_OUT</b>: arrivo di un processo alla Swap-Out Station. </li>
+
+<li><b>DEPARTURE_DELAY</b>: partenza di un processo dalla Delay Station. </li>
+
+<li><b>DEPARTURE_RESERVE</b>: partenza di un processo dalla Reserve Station. </li>
+
+<li><b>DEPARTURE_SWAP_IN</b>: partenza di un processo dalla Swap-In Station. </li>
+
+<li><b>DEPARTURE_CPU</b>: partenza di un processo dalla Cpu Station. </li>
+
+<li><b>DEPARTURE_IO1</b>: partenza di un processo dalla IO1 Station. </li>
+
+<li><b>DEPARTURE_IO2</b>: partenza di un processo dalla IO2 Station. </li>
+
+<li><b>DEPARTURE_SWAP_OUT</b>:  partenza di un processo dalla Swap-Out Station. </li>
+</ul>
 
 Those 32 teams have been then combined, according to the contraints in 8 rounds on two halves season: `girone(a;b;c;d;e;f;g;h).` with 4 teams each.
 The final calendar follows the constraints here below:
