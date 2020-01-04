@@ -122,7 +122,7 @@ Essendo che la Cpu Station presenta una distribuzione dei tempi di servizio iper
 
 Non avendo tempi di servizio distribuiti secondo l’esponenziale negativa (unica distribuzione di probabilità continua che gode della proprietà di assenza di memoria), una possibile situazione in cui, in almeno una delle due stazioni sia presente un job in esecuzione, non sarebbe un corretto punto di rigenerazione per il sistema poiché il tempo di servizio trascorso da questo ipotetico job influenzerebbe il tempo rimanente del medesimo nel successivo ciclo di rigenerazione. Si andrebbe quindi a violare la condizione di inter-indipendenza fra due cicli di rigenerazione adiacenti.
 
-<li><b>Numero di jobs alla Swap-Out Station = CUSTOMER_IN_SWAP_OUT_FOR_REGENERATION_COND </b></li>
+<li><b>Numero di jobs alla Swap-Out Station = 0 </b></li>
 
 <li><b>Numero di jobs alla Swap-In Station = CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND </b></li>
 
@@ -130,7 +130,7 @@ Non avendo tempi di servizio distribuiti secondo l’esponenziale negativa (unic
 
 <li><b>Numero di jobs alla IO2 Station = CUSTOMER_IN_IO2_FOR_REGENERATION_COND </b></li>
 <br>
-Queste quattro ultime stazioni hanno un variabile numero di clienti che definiscono il punto di rigenerazione per incrementare la frequenza di occorrenza dell’ultimo in base al modello del sistema scelto (modello originale o modello per validazione) e al numero di terminali connessi ad esso. 
+Queste quattro ultime stazioni (tolta la Swap-Out station) presentano un numero variabile di clienti per poter incrementare la frequenza di occorrenza del punto di rigenerazione in base al modello del sistema scelto (modello originale o modello per validazione) e al numero di terminali connessi ad esso. 
 
 Nel caso in cui si abbia scelto il modello per la validazione, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA, per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca di possibili punti di rigenerazione. 
 
