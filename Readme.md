@@ -7,15 +7,23 @@ Il simulatore implementato riproduce una versione semplificata del reale protoco
 </p>
 
 
-## Data and constraint
+## STAZIONI PRESENTI NEL MODELLO
 
-The system issues a calendar to plan the uefa champions league matches for the year 2018-1029 taking into account 32 teams coming from 15 nations: Belgio, Francia, Germania, Grecia, Inghilterra, Italia, Olanda, Portogallo, Repubblica Ceca, Russia, Serbia, Spagna, Svizzera, Turchia, Ucraina.
+Delay Station (Infinite Server Station): questa stazione rappresenta appunto una stazione di ritardo per i vari jobs collegati al sistema. Possiede una distribuzione esponenziale negativa per quanto riguarda il tempo di servizio. 
 
-<p align="center">
-  <img src="https://github.com/VittorioParagallo/IALAB_2019-2020/blob/master/ASP/img/championsteamlist.png"/>
-</p>
+Reserve Station: questa stazione serve per limitare il numero di jobs “attivi simultaneamente” nel sistema (si tratta dunque di una stazione in cui tempo di servizio è distribuito secondo una distribuzione di probabilità sconosciuta). 
 
-Those specifications have been splitted in two predicates `haNazione(X, Y)` and `haCitta(X, Z).` where X is the team Y the corresponding nation and Z the corresponding town.
+Swap-In Station: una volta che il processo è ammesso nel sistema, questa stazione carica l’immagine del processo all’interno della memoria principale (il tempo di servizio è distribuito secondo la distribuzione esponenziale negativa). 
+
+CPU: stazione che rappresenta il core del sistema e che processa i vari jobs. In questo caso il tempo di servizio è distribuito secondo la distribuzione iper-esponenziale. 
+
+IO1/IO2: queste due stazioni rappresentano le stazioni di Input/Output il cui tempo di servizio è distribuito secondo la distribuzione esponenziale negativa. 
+
+Swap-Out Station: questa stazione serve per rilasciare la memoria adibita al processo. 
+
+In questo caso però, il tempo di servizio è trascurabile.
+
+
 
 Those 32 teams have been then combined, according to the contraints in 8 rounds on two halves season: `girone(a;b;c;d;e;f;g;h).` with 4 teams each.
 The final calendar follows the constraints here below:
