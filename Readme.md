@@ -1,6 +1,6 @@
 # <p align="center">Operating System Scheduling</p>
 
-Il simulatore implementato riproduce una versione semplificata del reale protocollo di scheduling utilizzato nella maggior parte dei sistemi moderni. L'algoritmo simulato è Round-Robin con un relativo quanto di tempo.
+<p align=”justify”>Il simulatore implementato riproduce una versione semplificata del reale protocollo di scheduling utilizzato nella maggior parte dei sistemi moderni. L'algoritmo simulato è Round-Robin con un relativo quanto di tempo. </p>
 
 <p align="center">
   <img src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/OSS.png"/>
@@ -9,6 +9,7 @@ Il simulatore implementato riproduce una versione semplificata del reale protoco
 
 ## STAZIONI PRESENTI NEL MODELLO
 
+<p align=”justify”>
 <ul>
 <li><b>Delay Station</b> (Infinite Server Station): questa stazione rappresenta appunto una stazione di ritardo per i vari jobs collegati al sistema. Possiede una distribuzione esponenziale negativa per quanto riguarda il tempo di servizio. </li>
 
@@ -21,7 +22,7 @@ Il simulatore implementato riproduce una versione semplificata del reale protoco
 <li><b>IO1/IO2 Stations</b>: queste due stazioni rappresentano le stazioni di Input/Output il cui tempo di servizio è distribuito secondo la distribuzione esponenziale negativa. </li>
 
 <li><b>Swap-Out Station</b>: questa stazione serve per rilasciare la memoria adibita al processo. In questo caso però, il tempo di servizio è trascurabile. </li>
-</ul>
+</ul></p>
 
 ## EVENTI DEL SIMULATORE 
 
@@ -57,11 +58,12 @@ Il simulatore implementato riproduce una versione semplificata del reale protoco
 
 ## INIZIALIZZAZIONE DEL SIMULATORE 
 
+<p align=”justify”>
 Prima di tutto vengono inizializzati tutti i vari contatori utilizzati dal simulatore. 
 
 Dopodichè, in base al parametro passato da riga di comando, viene lanciato il simulatore normale oppure una delle versioni semplificate dello stesso per scopi di validazione. 
 
-La Feature Event List (FEL) del simulatore è inizializzata inserendo i vari eventi (uno per ogni terminale connesso) di arrivo alla Delay Station (il cui il tempo di occorrenza corrisponde al tempo di Start del simulatore). 
+La Feature Event List (FEL) del simulatore è inizializzata inserendo i vari eventi (uno per ogni terminale connesso) di arrivo alla Delay Station (il cui il tempo di occorrenza corrisponde al tempo di Start del simulatore). </p>
 
 Those 32 teams have been then combined, according to the contraints in 8 rounds on two halves season: `girone(a;b;c;d;e;f;g;h).` with 4 teams each.
 The final calendar follows the constraints here below:
