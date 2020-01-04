@@ -97,8 +97,59 @@ La Feature Event List (FEL) del simulatore è inizializzata inserendo i vari eve
 
 <li><b>DepartureSwapOut</b>: gestisce la partenza dalla Swap-Out Station, inoltrando probabilisticamente il processo alla Delay Station, se desidera ulteriore tempo di computazione oppure alla Reserve Station viceversa. Se presente, viene estratto (dequeue) un processo dalla Reserve Queue. </li></ul></p>
 
+## PUNTO DI RIGENERAZIONE SCELTO
 
+<p align=”justify”>
+Data la natura della quantità da stimare (la media teorica del tempo di permanenza nel “sotto-sistema attivo” da parte di un processo), l’identificazione del punto di rigenerazione del sistema è stata effettuata mediante l'approccio del metodo del “tagged customer for passage times”. 
 
+Il punto di rigenerazione da me scelto coincide quindi col verificarsi del seguente evento: 
+<ul>
+<li><b>Arrivo del “tagged” job (n.0) job alla Cpu Station. </p></li>
+
+Punto di entrata del sotto-sistema. 
+
+<li><b>Il “tagged customer”DEVE aver già attraversato il sotto-sistema. </p></li>
+
+Questo per evitare di aggregare inutili regeneration points (nel caso in cui il “tagged customer” non abbia attraversato almeno una volta il sotto-sistema, esso non accumulerebbe nessun valore). 
+
+<li><b>Numero di jobs alla Reserve Station = 0. </p></li>
+
+Questa scelta è motivata dal fatto che la distribuzione dei tempi di servizio è sconosciuta, fortemente influenzata dal grado di multiprogrammazione scelto e in parte anche dai	 tempi di attesa in ciascuna stazione dei terminali connessi al sistema. Quindi in generale essa non gode della proprietà di assenza di memoria.  
+
+<li><b>Numero di jobs alla Cpu Station = 0. </p></li>
+
+Essendo che la Cpu Station presenta una distribuzione dei tempi di servizio iper-esponenziale, essa non gode della proprietà di assenza di memoria. 
+
+Non avendo tempi di servizio distribuiti secondo l’esponenziale negativa (unica distribuzione di probabilità continua che gode della proprietà di assenza di memoria), una possibile situazione in cui, in almeno una delle due stazioni sia presente un job in esecuzione, non sarebbe un corretto punto di rigenerazione per il sistema poiché il tempo di servizio trascorso da questo ipotetico job influenzerebbe il tempo rimanente del medesimo nel successivo ciclo di rigenerazione. Si andrebbe quindi a violare la condizione di inter-indipendenza fra due cicli di rigenerazione adiacenti. 
+
+<li><b>Numero di jobs alla Swap-Out Station = 0 </p></li>
+
+<li><b>Numero di jobs alla Swap-In Station = CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND </p></li>
+
+<li><b>Numero di jobs alla IO1 Station = CUSTOMER_IN_IO1_FOR_REGENERATION_COND </p></li>
+
+<li><b>Numero di jobs alla IO2 Station = CUSTOMER_IN_IO2_FOR_REGENERATION_COND </p></li>
+
+Queste tre ultime stazioni hanno un variabile numero di clienti che definiscono il punto di rigenerazione per incrementare la frequenza di occorrenza dell’ultimo in base al modello del sistema scelto (modello originale o modello per validazione) e al numero di terminali connessi ad esso. 
+
+Nel caso in cui si abbia scelto il modello per la validazione, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA, per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca di possibili punti di rigenerazione. 
+
+Viceversa nel caso in cui si abbia scelto il modello originale, si utilizza lo stesso approccio di assegnazione di valori alle variabili del caso precedente solo qualora il grado di multiprogrammazione sia maggiore o uguale al numero di terminali connessi al sistema (questo perché il modello sarebbe rilassato dal vincolo introdotto dalla Reserve Station proprio come nel caso precedente). 
+
+Nel caso invece si lanci il simulatore scegliendo il modello originale (in cui il grado di multiprogrammazione è in generale minore del numero di terminali connessi al sistema), il valore assegnato alle variabili sopracitate diventa: 
+
+<ul>
+<li>CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND = 1 </li>
+
+<li>CUSTOMER_IN_IO1_FOR_REGENERATION_COND = 1 </li>
+
+<li>CUSTOMER_IN_IO2_FOR_REGENERATION_COND = 6 </li>
+</ul>
+
+Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell’assegnazione di valori che massimizza la probabilità di occorrere in una condizione di rigenerazione per abbattere quindi i tempi dovuti all’attesa dell’evento (sempre in accordo con le proprietà che ogni punto di rigenerazione deve possedere per essere considerato tale). 
+
+Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) quasi-normale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
+</ul></p>
 
 
 
