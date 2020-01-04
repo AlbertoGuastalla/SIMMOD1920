@@ -1,4 +1,4 @@
-# Performance Evaluation: Simulation and Modelling PROJECT
+# Operating System Scheduling
 
 Il simulatore implementato riproduce una versione semplificata del reale protocollo di scheduling utilizzato nella maggior parte dei sistemi moderni. L'algoritmo simulato è Round-Robin con un relativo quanto di tempo.
 
