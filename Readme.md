@@ -3,7 +3,7 @@
 Il simulatore implementato riproduce una versione semplificata del reale protocollo di scheduling utilizzato nella maggior parte dei sistemi moderni. L'algoritmo simulato è Round-Robin con un relativo quanto di tempo.
 
 <p align="center">
-  <img src="https://github.com/VittorioParagallo/IALAB_2019-2020/blob/master/ASP/img/kisspng-201617-uefa-champions-league-premier-league-201-5b08f06ae70224.2252970515273124909462.jpg"/>
+  <img src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/OSS.png"/>
 </p>
 
 
