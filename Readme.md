@@ -69,7 +69,7 @@ La Feature Event List (FEL) del simulatore è inizializzata inserendo i vari eve
 
 <p align=”justify”>
 <ul>
-<li><b>ArrivalDelay: gestisce semplicemente l’arrivo di un processo alla Delay Station, ritardando l’uscita dall’ultima del tempo di servizio attribuitogli. </li>
+<li><b>ArrivalDelay</b>: gestisce semplicemente l’arrivo di un processo alla Delay Station, ritardando l’uscita dall’ultima del tempo di servizio attribuitogli. </li>
 
 <li><b>DepartureDelay</b>: effettua l’inoltro del processo alla Reserve Station. </li>
 
