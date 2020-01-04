@@ -1,7 +1,6 @@
-# CLINGO PROJECT
+# Performance Evaluation: Simulation and Modelling PROJECT
 
-This project implements the ASP project champions 2018-2019 as specified for the Laboratory of Artificial Intelligence at the University of Turin (Italy) during accademic year 2019-2020.
-A calendar is required to plan the UEFA champions league, so through CLINGO the needed answer set is computed according to severeal constraints.
+Il simulatore implementato riproduce una versione semplificata del reale protocollo di scheduling utilizzato nella maggior parte dei sistemi moderni. L'algoritmo simulato è Round-Robin con un relativo quanto di tempo.
 
 <p align="center">
   <img src="https://github.com/VittorioParagallo/IALAB_2019-2020/blob/master/ASP/img/kisspng-201617-uefa-champions-league-premier-league-201-5b08f06ae70224.2252970515273124909462.jpg"/>
