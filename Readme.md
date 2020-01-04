@@ -55,6 +55,14 @@ Il simulatore implementato riproduce una versione semplificata del reale protoco
 <li><b>DEPARTURE_SWAP_OUT</b>:  partenza di un processo dalla Swap-Out Station. </li>
 </ul>
 
+## INIZIALIZZAZIONE DEL SIMULATORE 
+
+Prima di tutto vengono inizializzati tutti i vari contatori utilizzati dal simulatore. 
+
+Dopodichè, in base al parametro passato da riga di comando, viene lanciato il simulatore normale oppure una delle versioni semplificate dello stesso per scopi di validazione. 
+
+La Feature Event List (FEL) del simulatore è inizializzata inserendo i vari eventi (uno per ogni terminale connesso) di arrivo alla Delay Station (il cui il tempo di occorrenza corrisponde al tempo di Start del simulatore). 
+
 Those 32 teams have been then combined, according to the contraints in 8 rounds on two halves season: `girone(a;b;c;d;e;f;g;h).` with 4 teams each.
 The final calendar follows the constraints here below:
 - max 1 team per nation in the same round;
