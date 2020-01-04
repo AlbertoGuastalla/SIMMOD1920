@@ -9,20 +9,19 @@ Il simulatore implementato riproduce una versione semplificata del reale protoco
 
 ## STAZIONI PRESENTI NEL MODELLO
 
-Delay Station (Infinite Server Station): questa stazione rappresenta appunto una stazione di ritardo per i vari jobs collegati al sistema. Possiede una distribuzione esponenziale negativa per quanto riguarda il tempo di servizio. 
+<ul>
+<li>Delay Station (Infinite Server Station): questa stazione rappresenta appunto una stazione di ritardo per i vari jobs collegati al sistema. Possiede una distribuzione esponenziale negativa per quanto riguarda il tempo di servizio. </li>
 
-Reserve Station: questa stazione serve per limitare il numero di jobs “attivi simultaneamente” nel sistema (si tratta dunque di una stazione in cui tempo di servizio è distribuito secondo una distribuzione di probabilità sconosciuta). 
+<li>Reserve Station: questa stazione serve per limitare il numero di jobs “attivi simultaneamente” nel sistema (si tratta dunque di una stazione in cui tempo di servizio è distribuito secondo una distribuzione di probabilità sconosciuta). </li>
 
-Swap-In Station: una volta che il processo è ammesso nel sistema, questa stazione carica l’immagine del processo all’interno della memoria principale (il tempo di servizio è distribuito secondo la distribuzione esponenziale negativa). 
+<li>Swap-In Station: una volta che il processo è ammesso nel sistema, questa stazione carica l’immagine del processo all’interno della memoria principale (il tempo di servizio è distribuito secondo la distribuzione esponenziale negativa). </li>
 
-CPU: stazione che rappresenta il core del sistema e che processa i vari jobs. In questo caso il tempo di servizio è distribuito secondo la distribuzione iper-esponenziale. 
+<li>CPU: stazione che rappresenta il core del sistema e che processa i vari jobs. In questo caso il tempo di servizio è distribuito secondo la distribuzione iper-esponenziale. </li>
 
-IO1/IO2: queste due stazioni rappresentano le stazioni di Input/Output il cui tempo di servizio è distribuito secondo la distribuzione esponenziale negativa. 
+<li>IO1/IO2: queste due stazioni rappresentano le stazioni di Input/Output il cui tempo di servizio è distribuito secondo la distribuzione esponenziale negativa. </li>
 
-Swap-Out Station: questa stazione serve per rilasciare la memoria adibita al processo. 
-
-In questo caso però, il tempo di servizio è trascurabile.
-
+<li>Swap-Out Station: questa stazione serve per rilasciare la memoria adibita al processo. In questo caso però, il tempo di servizio è trascurabile. </li>
+</ul>
 
 
 Those 32 teams have been then combined, according to the contraints in 8 rounds on two halves season: `girone(a;b;c;d;e;f;g;h).` with 4 teams each.
