@@ -403,7 +403,7 @@ Una prima e approssimativa analisi delle strozzature si può facilmente vedere l
 Con un’analisi più accurata invece si possono osservare i seguenti valori: 
 
 <ul>
-<li><b>Stazione bottleneck</b>: Vb * Sb = max_i {Vi * Si} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). </li>
+<li><b>Stazione bottleneck</b>: V<SUB>b</SUB> * S<SUB>b</SUB> = MAX {V<SUB>i</SUB> * S<SUB>i</SUB>} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). </li>
 
 <li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R0(1) = D = ∑ViSi = VswapIN * SswapIN + Vcpu * Scpu + VIO1 * SIO1 + VIO2 * SIO2 = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li>
 </ul>
