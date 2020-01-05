@@ -419,25 +419,23 @@ La Reserve e la Swap-Out Station sono state omesse poichè irrilevanti nel calco
 
 ### ANALISI BOTTLENECK PER IL THROUGHPUT   
 
-Tempo medio di ciclo del sistema con 1 cliente = Y0(1) = R0(1) + Z = 2975 + 5000 = 7975 msec 
+<ul>
+<li><b>Tempo medio di ciclo del sistema con 1 cliente </b> = Y0(1) = R0(1) + Z = 2975 + 5000 = 7975 msec </li>
+<li><b>Throughput del sistema con 1 cliente: </b> 1 / Y0(1) = 1 / 7975 = 0.00012539 jobs / msec </li>
+</ul>
 
-Throughput del sistema con 1 cliente: 1 / Y0(1) = 1 / 7975 = 0.00012539 jobs / msec 
-
-Da questo, l'asintoto obliquo per il throughput risulta essere: 
-
-NX0(1) = N * 0.00012539 
+Da questo, l'asintoto obliquo per il throughput risulta essere: NX0(1) = N * 0.00012539 
 
 Infine per quanto riguarda l’analisi bottleneck riguardante il throughput si possono ottenere facilmente gli asintoti orizzontali: 
 
-1 / Vb * Sb = 1 / 1125 = 0.00088888888 (IO2) 
+<ul>
+<li>1 / Vb * Sb = 1 / 1125 = 0.00088888888 (IO2) </li>
+<li>1 / Vcpu * Scpu = 1 / 675 = 0.00148148148 (CPU) </li>
+<li>1 / VIO1 * SIO1 = 1 / 650 = 0.00153846153 (IO1) </li>
+<li>1 / VswapIN * SswapIN = 1 / 525 = 0.0019047619 (Swap-In) </li>
+</ul>
 
-1 / Vcpu * Scpu = 1 / 675 = 0.00148148148 (CPU) 
-
-1 / VIO1 * SIO1 = 1 / 650 = 0.00153846153 (IO1) 
-
-1 / VswapIN * SswapIN = 1 / 525 = 0.0019047619 (Swap-In) 
-
- 
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/THROUGHPUT.png"/> 
 
  
 
