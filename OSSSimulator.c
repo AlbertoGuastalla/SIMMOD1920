@@ -99,7 +99,7 @@ unsigned int *passageDelayTimes;					/* Number of times that a job pass through 
 
 double leftExtreme;							/* Left Extreme for confidence interval */
 double rightExtreme;							/* Right Extreme for confidence interval */
-double delta;								/* Half part of interval */
+double delta;								/* Value for computing the confidence interval */
 unsigned int numberOfObservationInCurrentCycle;				/* Number of observations in a regeneration cycle */
 unsigned int WORKSTATIONS;						/* Number of terminals connected to the system */ 
 
