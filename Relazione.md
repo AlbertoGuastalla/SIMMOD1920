@@ -166,13 +166,13 @@ Il primo modello di validazione semplifica il modello originale modificando:
 
 <ul>
 <li>La distribuzione di tempi di servizio della CPU: Esponenziale negativa di media λ = 2.7 msec. </li>
-<li>CPU completion choice: q3,3 = 0.9, q3,4 = 0.065, q3,5 = 0.025, q3,6 = 0.01. </li>
+<li>CPU completion choice: q33 = 0.9, q34 = 0.065, q35 = 0.025, q36 = 0.01. </li>
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/fsv.png"/>
 <li>MPD = INT_MAX (massimo intero con segno in complemento a 2 rappresentabile in 32 bit). </li>
 <li>CPU_QUANTUM = DBL_MAX (massimo extended floating-point number con segno rappresentabile in 64 bit). </li>
 </ul>
 
-Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le varie medie teoriche dei tempi di risposta del sistema e dei tempi di permanenza nel sotto-sistema “attivo” per ogni carico del sistema (da 1 a 30 jobs). Utilizzando la classica formula di Little in questa forma: R = N / X0(N) - Z (X0(N) letto direttamente dall’output di MVA per ogni livello di carico) è possibile ottenere i vari tempi medi di risposta del sistema: 
+Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le varie medie teoriche dei tempi di risposta del sistema e dei tempi di permanenza nel sotto-sistema “attivo” per ogni carico del sistema (da 1 a 30 jobs). Utilizzando la classica formula di Little in questa forma: R = N / $$ X_0 $$(N) - Z ($$ X_0 $$(N) letto direttamente dall’output di MVA per ogni livello di carico) è possibile ottenere i vari tempi medi di risposta del sistema: 
 </p>
 
 <table style="width:100%">
