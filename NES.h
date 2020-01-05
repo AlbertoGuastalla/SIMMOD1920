@@ -69,9 +69,10 @@ struct node{
 	nodePtr right;  // Pointer to the next node in the doubly linked list
 };
 
+/* check if a string encodes an integer */
 boolean isNumber(const char* s) 
 { 
-	int i;
+    int i;
     for (i = 0; i < strlen(s); i++) 
         if (isdigit(s[i]) == false) 
             return false; 
