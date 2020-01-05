@@ -134,6 +134,10 @@ Queste tre ultime stazioni (tolta la Swap-Out station) presentano un numero vari
 
 Nel caso in cui si abbia scelto il modello per la validazione, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA, per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca del punto rigenerazione scelto. 
 
+Questa operazione è stata effettuata lanciando MVA su un processo figlio (mttendo quindi in attesa il simulatore per il tempo necessario affinchè quest'ultimo termini), il quale andrà a scriveere su file i vari valori medi per ciascuna stazione; dopodichè il padre riprendendo l'esecuzione, leggerà tali valori utilizzandoli come sopracitato.
+
+Bisogna però tener presente che, questo approccio non degrada le prestazioni del simulatore poichè il tutto avviene nella fase di inizializzazione del medesimo.
+
 Viceversa nel caso in cui si abbia scelto il modello originale, si utilizza lo stesso approccio di assegnazione di valori alle variabili del caso precedente solo qualora il grado di multiprogrammazione sia maggiore o uguale al numero di terminali connessi al sistema (questo perché il modello sarebbe rilassato dal vincolo introdotto dalla Reserve Station proprio come nel caso precedente). 
 
 Nel caso invece si lanci il simulatore scegliendo il modello originale (in cui il grado di multiprogrammazione è in generale minore del numero di terminali connessi al sistema), il valore assegnato alle variabili sopracitate diventa: 
