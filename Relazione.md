@@ -483,16 +483,6 @@ Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888
 Questi risultati sono stati ottenuti considerando un numero p di cicli di rigenerazione maggiore di 25 (condizione necessaria e sufficiente per poter approssimare la distribuzione t di student con (p − 1) gradi di libertà alla normale con identica media e varianza). <br>
 Non si è potuto evidenziare una sostanziale differenza fra i vari risultati ottenuti dal simulatore variando il time-slice (quanto di tempo) e/o la distribuzione dei tempi di servizio della CPU. 
 
-## PARAMETRI OPZIONALI DA RIGA DI COMANDO 
-
-Lanciare OSSSimulator N –fsv –verbosity 
-
-<ul>
-<li>N: numero di terminali connessi al sistema. </li>
-<li>-fsv: first step validation flag </li>
-<li>-verbosity: verbosity flag </li>
-</ul>
-
 ## Author
 
 * **Alberto Guastalla** - [AlbertoGuastalla](https://github.com/AlbertoGuastalla)
