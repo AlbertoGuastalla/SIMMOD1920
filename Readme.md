@@ -173,6 +173,8 @@ Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le vari
   <tr>
     <th>LIVELLO DI CARICO DEL SISTEMA</th>
     <th>RESPONSE TIME MEDIO</th>
+    <th>LIVELLO DI CARICO DEL SISTEMA</th>
+    <th>RESPONSE TIME MEDIO</th>
   </tr>
   <tr>
     <td>1</td>
