@@ -404,7 +404,7 @@ Con un’analisi più accurata invece si possono osservare i seguenti valori:
 
 Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite V = VQ (poiché, essendo la Delay Station la stazione di riferimento, V0 risulta essere per definizione uguale ad 1). 
 
-Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss e l'unica soluzionerisulta quindi essere: V0 = 1, V1 = 2.5, V2 = 250, V3 = 16.25, V4 = 6.25, dove i vari indici indicano: 
+Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss e l'unica soluzionerisulta quindi essere: <b>V0 = 1, V1 = 2.5, V2 = 250, V3 = 16.25, V4 = 6.25</b>, dove i vari indici indicano: 
 <ul>
   <li>0: Delay Station</li>
   <li>1: Swap-In Station</li>
