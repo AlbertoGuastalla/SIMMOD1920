@@ -150,7 +150,7 @@ Nel caso invece si lanci il simulatore scegliendo il modello originale (in cui i
 <br>
 Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell’assegnazione di valori che massimizza la probabilità di occorrere in una condizione di rigenerazione per abbattere quindi i tempi dovuti all’attesa dell’evento (sempre in accordo con le proprietà che ogni punto di rigenerazione deve possedere per essere considerato tale). 
 
-Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) quasi-normale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
+Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale com dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
 
 # FIRST STEP VALIDATION
@@ -480,6 +480,7 @@ Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888
   Larghezza dell’intervallo: 95.346401 </li>
 </ol>
 
+Questi risultati sono stati ottenuti considerando un numero p di cicli di rigenerazione maggiore di 25 (condizione necessaria e sufficiente per poter approssimare la distribuzione t di student con (p − 1) gradi di libertà alla normale con identica media e varianza).
 Non si è potuto evidenziare una sostanziale differenza fra i vari risultati ottenuti dal simulatore variando il time-slice (quanto di tempo) e/o la distribuzione dei tempi di servizio della CPU. 
 
 ## PARAMETRI OPZIONALI DA RIGA DI COMANDO 
