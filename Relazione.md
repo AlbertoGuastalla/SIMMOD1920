@@ -136,7 +136,7 @@ Nel caso in cui si abbia scelto il modello per la validazione, l’assegnazione 
 
 Questa operazione è stata effettuata lanciando MVA su un processo figlio (mttendo quindi in attesa il simulatore per il tempo necessario affinchè quest'ultimo termini), il quale andrà a scriveere su file i vari valori medi per ciascuna stazione; dopodichè il padre riprendendo l'esecuzione, leggerà tali valori utilizzandoli come sopracitato.
 
-Bisogna però tener presente che, questo approccio non degrada le prestazioni del simulatore poichè il tutto avviene nella fase di inizializzazione del medesimo.
+Bisogna però tener presente che, questo approccio non interrompe, ne tantomeno degrada le prestazioni del simulatore poichè il tutto avviene nella fase di inizializzazione del medesimo.
 
 Viceversa nel caso in cui si abbia scelto il modello originale, si utilizza lo stesso approccio di assegnazione di valori alle variabili del caso precedente solo qualora il grado di multiprogrammazione sia maggiore o uguale al numero di terminali connessi al sistema (questo perché il modello sarebbe rilassato dal vincolo introdotto dalla Reserve Station proprio come nel caso precedente). 
 
