@@ -177,6 +177,8 @@ Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le vari
   <tr>
     <td>1</td>
     <td>2975.000000 </td>
+    <td>16</td>
+    <td>13233.567629 </td>
   </tr>
   <tr>
     <td>2</td>
@@ -234,10 +236,7 @@ Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le vari
     <td>15</td>
     <td>12200.782963 </td>
   </tr>
-  <tr>
-    <td>16</td>
-    <td>13233.567629 </td>
-  </tr>
+
   <tr>
     <td>17</td>
     <td>14290.239909 </td>
