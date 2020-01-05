@@ -61,7 +61,7 @@
 <p align=”justify”>
 Prima di tutto vengono inizializzati tutti i vari contatori utilizzati dal simulatore. 
   
-Vengono inizializzazati i valori delle variabili con le quali poi si definirà il punto di rigenerazione del sistema (Vedi PUNTO DI RIGENERAZIONE SCELTO).
+Vengono inizializzazati i valori delle variabili con le quali poi si definirà il punto di rigenerazione del sistema (vedi la sezione: PUNTO DI RIGENERAZIONE SCELTO).
 
 Dopodichè, in base al parametro passato da riga di comando, viene lanciato il simulatore normale oppure una delle versioni semplificate dello stesso per scopi di validazione. 
 
@@ -132,11 +132,11 @@ Non avendo tempi di servizio distribuiti secondo l’esponenziale negativa (unic
 
 <li><b>Numero di jobs alla IO2 Station = CUSTOMER_IN_IO2_FOR_REGENERATION_COND </b></li>
 <br>
-Queste tre ultime stazioni (tolta la Swap-Out station) presentano un numero variabile di clienti per poter incrementare la frequenza di occorrenza del punto di rigenerazione in base al modello del sistema scelto (modello originale o modello per validazione) e al numero di terminali connessi ad esso. 
+Queste tre ultime stazioni (tolta la Swap-Out station) presentano un numero variabile di clienti per poter incrementare la frequenza di occorrenza del punto di rigenerazione in base al modello del sistema scelto (modello originale o modello per validazione) e al numero di terminali connessi ad esso. <br>
 
 Nel caso in cui si abbia scelto il modello per la validazione, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA, per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca del punto rigenerazione scelto. 
 
-Questa operazione è stata effettuata lanciando MVA su un processo figlio (mttendo quindi in attesa il simulatore per il tempo necessario affinchè quest'ultimo termini), il quale andrà a scriveere su file i vari valori medi per ciascuna stazione; dopodichè il padre riprendendo l'esecuzione, leggerà tali valori utilizzandoli come sopracitato.
+Questa operazione è stata effettuata lanciando MVA su un processo figlio (mettendo quindi in attesa il simulatore per il tempo necessario affinchè quest'ultimo termini), il quale andrà a scrivere su file i vari valori medi per ciascuna stazione; dopodichè il padre riprendendo l'esecuzione, leggerà tali valori utilizzandoli come sopracitato.
 
 Bisogna però tener presente che, questo approccio non interrompe, ne tantomeno degrada le prestazioni del simulatore poichè il tutto avviene nella fase di inizializzazione del medesimo.
 
@@ -154,9 +154,9 @@ Nel caso invece si lanci il simulatore scegliendo il modello originale (in cui i
 <li>CUSTOMER_IN_IO2_FOR_REGENERATION_COND = 6 </li>
 </ul>
 <br>
-Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell’assegnazione di valori che massimizza la probabilità di occorrere in una condizione di rigenerazione per abbattere quindi i tempi dovuti all’attesa dell’evento (sempre in accordo con le proprietà che ogni punto di rigenerazione deve possedere per essere considerato tale). 
+Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell’assegnazione di valori che massimizza la probabilità di occorrere in una condizione di rigenerazione per abbattere quindi i tempi dovuti all’attesa dell’evento (sempre in accordo con le proprietà che ogni punto di rigenerazione deve possedere per essere considerato tale). <br>
 
-Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale com dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
+Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale come dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
 
 # FIRST STEP VALIDATION
