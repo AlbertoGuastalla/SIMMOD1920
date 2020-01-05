@@ -377,6 +377,7 @@ Qui sotto i vari tempi medi di permanenza nel sotto-sistema per ogni livello di 
 
 <p align=”justify”>
 Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. 
+Semi utilizzati: 100000000 ÷ 100000099.
 Numero di terminali connessi al sistema: 20. 
 Modello utilizzato: primo modello di validazione. 
 Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 6630.261907 <br>
