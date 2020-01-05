@@ -274,6 +274,105 @@ Mentre per quanto riguarda il tempo medio di permanenza nel sotto-sistema, esso 
 In formule: <b>AverageActiveTime = E[Ncpu + NIO1 + NIO2] / XswapIN</b> (ancora una volta la formula di Little). 
 Qui sotto i vari tempi medi di permanenza nel sotto-sistema per ogni livello di carico: </p>
 
+<table style="width:100%">
+  <tr>
+    <th>LIVELLO DI CARICO DEL SISTEMA</th>
+    <th>TEMPO MEDIO DI PERMANENZA</th>
+    <th>LIVELLO DI CARICO DEL SISTEMA</th>
+    <th>TEMPO MEDIO DI PERMANENZA</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>980.000000 </td>
+    <td>16</td>
+    <td>4909.305363 </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1087.523511 </td>
+    <td>17</td>
+    <td>5329.135412 </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>1211.474174 </td>
+    <td>18</td>
+    <td>5757.153767 </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>1354.081999 </td>
+    <td>19</td>
+    <td>6191.394795 </td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>1517.575700 </td>
+    <td>20</td>
+    <td>6630.261907 </td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>1704.040924 </td>
+    <td>21</td>
+    <td>7072.500922 </td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>1915.249343 </td>
+    <td>22</td>
+    <td>7517.154779 </td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>2152.477838 </td>
+    <td>23</td>
+    <td>7963.511253 </td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>2416.346303 </td>
+    <td>24</td>
+    <td>8411.051703 </td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>2706.706390 </td>
+    <td>25</td>
+    <td>8859.405489 </td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>3022.608435 </td>
+    <td>26</td>
+    <td>9308.312014 </td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>3362.359476 </td>
+    <td>27</td>
+    <td>9757.590621 </td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>3723.665580 </td>
+    <td>28</td>
+    <td>10207.117598 </td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>4103.833047 </td>
+    <td>29</td>
+    <td>10656.809130 </td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>4499.991995 </td>
+    <td>30</td>
+    <td>11106.608965 </td>
+  </tr>
+</table>
+
 ## Author
 
 * **Alberto Guastalla** - [AlbertoGuastalla](https://github.com/AlbertoGuastalla)
