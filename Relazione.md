@@ -408,16 +408,9 @@ Con un’analisi più accurata invece si possono osservare i seguenti valori:
 <li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R<SUB>0</SUB>(1) = D = ∑V<SUB>i</SUB> * S<SUB>i</SUB> = V<SUB>SI</SUB> * S<SUB>SI</SUB> + V<SUB>CPU</SUB> * S<SUB>CPU</SUB> + V<SUB>IO1</SUB> * S<SUB>IO1</SUB> + V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li>
 </ul>
 
-Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite V = VQ (poiché, essendo la Delay Station la stazione di riferimento, V0 risulta essere per definizione uguale ad 1). 
+Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite V = VQ (poiché, essendo la Delay Station la stazione di riferimento, V<SUB>DS</SUB> risulta essere per definizione uguale ad 1). 
 
-Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss e l'unica soluzionerisulta quindi essere: <b>V0 = 1, V1 = 2.5, V2 = 250, V3 = 16.25, V4 = 6.25</b>, dove i vari indici indicano: 
-<ul>
-  <li>0: Delay Station</li>
-  <li>1: Swap-In Station</li>
-  <li>2: CPU Station</li>
-  <li>3: IO1 Station</li>
-  <li>4: IO2 Station</li>
-</ul>
+Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss e l'unica soluzionerisulta quindi essere: <b>V<SUB>DS</SUB> = 1, V<SUB>SI</SUB> = 2.5, V<SUB>CPU</SUB> = 250, V<SUB>IO1</SUB> = 16.25, V<SUB>IO2</SUB> = 6.25</b>.
 
 La Reserve e la Swap-Out Station sono state omesse poichè irrilevanti nel calcolo degli indici di prestazione medi.
 </p>
