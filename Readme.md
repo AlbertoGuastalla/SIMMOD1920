@@ -435,7 +435,7 @@ Infine per quanto riguarda l’analisi bottleneck riguardante il throughput si p
 <li>1 / VswapIN * SswapIN = 1 / 525 = 0.0019047619 (Swap-In) </li>
 </ul>
 
-<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/THROUGHPUT.png"/> 
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/throughput.png"/> 
 
 ### ANALISI BOTTLENECK PER IL RESPONSE TIME 
 
@@ -450,12 +450,12 @@ Infine per quanto riguarda l’analisi bottleneck riguardante il response time s
 <li>N * VswapIN * SswapIN – Z = 525 * N – 5000 (Swap-In) </li>
 </ul>
 
+<img width="700" height="500" src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/responsetime.png"/> 
+
 Il valore di N* (il livello di carico superato il quale si `e certi che si formino code all’interno del sistema) è determinato dall’intersezione dell’asintoto orizzontale (R0(1)) con l’asintoto obliquo (throughput del sistema qualora il numero di terminali tendesse ad infinito). 
 
 Quindi:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
-Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888 
-
-<img width="700" height="500" src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/RESPONSE%20TIME.png"/>  
+Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888  
 
 ## Author
 
