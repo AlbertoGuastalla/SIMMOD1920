@@ -405,7 +405,7 @@ Con un’analisi più accurata invece si possono osservare i seguenti valori:
 <ul>
 <li><b>Stazione bottleneck</b>: V<SUB>b</SUB> * S<SUB>b</SUB> = MAX {V<SUB>i</SUB> * S<SUB>i</SUB>} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). </li>
 
-<li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R0(1) = D = ∑ViSi = VswapIN * SswapIN + Vcpu * Scpu + VIO1 * SIO1 + VIO2 * SIO2 = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li>
+<li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R<SUB>0</SUB>(1) = D = ∑V<SUB>i</SUB> * S<SUB>i</SUB> = V<SUB>SI</SUB> * S<SUB>SI</SUB> + V<SUB>CPU</SUB> * S<SUB>CPU</SUB> + V<SUB>IO1</SUB> * S<SUB>IO1</SUB> + V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li>
 </ul>
 
 Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite V = VQ (poiché, essendo la Delay Station la stazione di riferimento, V0 risulta essere per definizione uguale ad 1). 
