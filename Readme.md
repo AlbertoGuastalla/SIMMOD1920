@@ -457,6 +457,50 @@ Il valore di N* (il livello di carico superato il quale si `e certi che si formi
 Quindi:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888  
 
+## QUATTRO CASI DI TEST 
+<ol type="1">
+  <li><b>δ = 3; CPU ~ Hyper-Exp (α = 0.8, β = 0.2, µ1 = 15, µ2 = 75) </b> <br>
+  Sample Average Active Time = 4182.501631 (point-estimate) <br>
+  Left Extreme = 4130.824114 <br>
+  Right Extreme = 4234.179149 <br>
+  Larghezza dell’intervallo: 103.355035 </li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+ 
+
+δ = 3; CPU ~ Exp (1/27) 
+
+Sample Average Active Time = 4236.382488 (point-estimate) 
+
+Left Extreme = 4199.293873 
+
+Right Extreme = 4273.471103 
+
+Larghezza dell’intervallo: 74.17723 
+
+δ = 3000; CPU ~ Hyper-Exp (α = 0.8, β = 0.2, µ1 = 15, µ2 = 75) 
+
+Sample Average Active Time = 4285.827819 (point-estimate) 
+
+Left Extreme = 4253.164602 
+
+Right Extreme = 4318.491035 
+
+Larghezza dell’intervallo: 65.326433 
+
+δ = 3000; CPU ~ Exp (1/27) 
+
+Sample Average Active Time = 4222.013121 (point-estimate) 
+
+Left Extreme = 4174.339921 
+
+Right Extreme = 4269.686322 
+
+Larghezza dell’intervallo: 95.346401 
+
+Non si è potuto evidenziare una sostanziale differenza fra i vari risultati ottenuti dal simulatore variando il time-slice (quanto di tempo) e/o la distribuzione dei tempi di servizio della CPU. 
+
 ## Author
 
 * **Alberto Guastalla** - [AlbertoGuastalla](https://github.com/AlbertoGuastalla)
