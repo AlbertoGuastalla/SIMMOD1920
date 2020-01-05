@@ -391,7 +391,7 @@ Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona appro
 
 Una prima e approssimativa analisi delle strozzature si può facilmente vedere lanciando MVA e osservando che l’utilizzazione della IO2 Station arriva quasi ad essere 100% con un numero di terminali connessi al sistema pari a 20. 
 
- 
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/confidence.png"/>
 
 Con un’analisi più accurata invece si possono osservare i seguenti valori: 
 
