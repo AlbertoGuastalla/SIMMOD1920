@@ -1,4 +1,4 @@
-## DEESCRIZIONE DEI SORGENTI
+## DESCRIZIONE DEI SORGENTI
 
 <ul>
   <li><b>OSSSimulator.c</b>: sorgente relativo al simulatore.</li>
