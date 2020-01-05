@@ -13,7 +13,7 @@
 <ul>
 <li><b>Delay Station</b> (Infinite Server Station): questa stazione rappresenta appunto una stazione di ritardo per i vari jobs collegati al sistema. Possiede una distribuzione esponenziale negativa per quanto riguarda il tempo di servizio. </li>
 
-<li><b>Reserve Station</b>: questa stazione serve per limitare il numero di jobs “attivi simultaneamente” nel sistema (si tratta dunque di una stazione in cui tempo di servizio è distribuito secondo una distribuzione di probabilità sconosciuta). </li>
+<li><b>Reserve Station</b>: questa stazione serve per limitare il numero di jobs “attivi simultaneamente” nel sistema (si tratta dunque di una stazione il cui tempo di servizio è distribuito secondo una distribuzione di probabilità sconosciuta). </li>
 
 <li><b>Swap-In Station</b>: una volta che il processo è ammesso nel sistema, questa stazione carica l’immagine del processo all’interno della memoria principale (il tempo di servizio è distribuito secondo la distribuzione esponenziale negativa). </li>
 
@@ -60,6 +60,8 @@
 
 <p align=”justify”>
 Prima di tutto vengono inizializzati tutti i vari contatori utilizzati dal simulatore. 
+  
+Vengono inizializzazati i valori delle variabili con le quali poi si definirà il punto di rigenerazione del sistema (Vedi PUNTO DI RIGENERAZIONE SCELTO).
 
 Dopodichè, in base al parametro passato da riga di comando, viene lanciato il simulatore normale oppure una delle versioni semplificate dello stesso per scopi di validazione. 
 
@@ -95,7 +97,7 @@ La Feature Event List (FEL) del simulatore è inizializzata inserendo i vari eve
 
 <li><b>ArrivalSwapOut</b>: gestisce l’arrivo di un processo alla Swap-Out Station. </li>
 
-<li><b>DepartureSwapOut</b>: gestisce la partenza dalla Swap-Out Station, inoltrando probabilisticamente il processo alla Delay Station, se desidera ulteriore tempo di computazione oppure alla Reserve Station viceversa. Se presente, viene estratto (dequeue) un processo dalla Reserve Queue. </li></ul></p>
+<li><b>DepartureSwapOut</b>: gestisce la partenza dalla Swap-Out Station, inoltrando probabilisticamente il processo alla Reserve Station, se desidera ulteriore tempo di computazione oppure alla Delay Station viceversa. Se presente, viene estratto (dequeue) un processo dalla Reserve Queue. </li></ul></p>
 
 ## PUNTO DI RIGENERAZIONE SCELTO
 
