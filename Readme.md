@@ -387,6 +387,76 @@ Teoricamente, con un livello di fiducia al 10%, ci si aspetterebbe che il 90% de
 Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande. 
 </p>
 
+## BOTTLENECK ANALYSIS 
+
+Una prima e approssimativa analisi delle strozzature si può facilmente vedere lanciando MVA e osservando che l’utilizzazione della IO2 Station arriva quasi ad essere 100% con un numero di terminali connessi al sistema pari a 20. 
+
+ 
+
+Con un’analisi più accurata invece si possono osservare i seguenti valori: 
+
+Stazione bottleneck: Vb * Sb = max_i {Vi * Si} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). 
+
+Tempo medio di risposta del sistema con 1 cliente = R0(1) = D = ∑ViSi = VswapIN * SswapIN + Vcpu * Scpu + VIO1 * SIO1 + VIO2 * SIO2 = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec 
+
+Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite (poiché, essendo la Delay Station la stazione di riferimento, V0 risulta essere per definizione uguale ad 1). 
+
+Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss. 
+
+ 
+
+Quindi V0 = 1, V1 = 2.5, V2 = 250, V3 = 16.25, V4 = 6.25 
+
+ 
+
+### ANALISI BOTTLENECK PER IL THROUGHPUT   
+
+Tempo medio di ciclo del sistema con 1 cliente = Y0(1) = R0(1) + Z = 2975 + 5000 = 7975 msec 
+
+Throughput del sistema con 1 cliente: 1 / Y0(1) = 1 / 7975 = 0.00012539 jobs / msec 
+
+Da questo, l'asintoto obliquo per il throughput risulta essere: 
+
+NX0(1) = N * 0.00012539 
+
+Infine per quanto riguarda l’analisi bottleneck riguardante il throughput si possono ottenere facilmente gli asintoti orizzontali: 
+
+1 / Vb * Sb = 1 / 1125 = 0.00088888888 (IO2) 
+
+1 / Vcpu * Scpu = 1 / 675 = 0.00148148148 (CPU) 
+
+1 / VIO1 * SIO1 = 1 / 650 = 0.00153846153 (IO1) 
+
+1 / VswapIN * SswapIN = 1 / 525 = 0.0019047619 (Swap-In) 
+
+ 
+
+ 
+
+### ANALISI BOTTLENECK PER IL RESPONSE TIME 
+
+L'asintoto orizzontale per il response time risulta essere: 
+
+R0(1) = 2975 
+
+Infine per quanto riguarda l’analisi bottleneck riguardante il response time si possono ottenere facilmente gli asintoti obliqui: 
+
+N * Vb * Sb – Z = 1125 * N – 5000 (IO2) 
+
+N * Vcpu * Scpu – Z = 675 * N – 5000 (CPU) 
+
+N * VIO1 * SIO1 – Z = 650 * N – 5000 (IO1) 
+
+N * VswapIN * SswapIN – Z = 525 * N – 5000 (Swap-In) 
+
+ 
+
+Il valore di N* (il livello di carico superato il quale si `e certi che si formino code all’interno del sistema) è determinato dall’intersezione dell’asintoto orizzontale (R0(1)) con l’asintoto obliquo (throughput del sistema qualora il numero di terminali tendesse ad infinito). 
+
+Quindi:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 
+
+Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888 
+
 ## Author
 
 * **Alberto Guastalla** - [AlbertoGuastalla](https://github.com/AlbertoGuastalla)
