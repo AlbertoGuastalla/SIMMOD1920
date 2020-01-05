@@ -410,7 +410,7 @@ Con un’analisi più accurata invece si possono osservare i seguenti valori:
 
 Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite V = VQ (poiché, essendo la Delay Station la stazione di riferimento, V<SUB>DS</SUB> risulta essere per definizione uguale ad 1). 
 
-Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss e l'unica soluzionerisulta quindi essere: <b>V<SUB>DS</SUB> = 1, V<SUB>SI</SUB> = 2.5, V<SUB>CPU</SUB> = 250, V<SUB>IO1</SUB> = 16.25, V<SUB>IO2</SUB> = 6.25</b>.
+Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss e l'unica soluzione risulta quindi essere: <b>V<SUB>DS</SUB> = 1, V<SUB>SI</SUB> = 2.5, V<SUB>CPU</SUB> = 250, V<SUB>IO1</SUB> = 16.25, V<SUB>IO2</SUB> = 6.25</b>.
 
 La Reserve e la Swap-Out Station sono state omesse poichè irrilevanti nel calcolo degli indici di prestazione medi.
 </p>
@@ -418,39 +418,39 @@ La Reserve e la Swap-Out Station sono state omesse poichè irrilevanti nel calco
 ### ANALISI BOTTLENECK PER IL THROUGHPUT   
 
 <ul>
-<li><b>Tempo medio di ciclo del sistema con 1 cliente </b> = Y0(1) = R0(1) + Z = 2975 + 5000 = 7975 msec </li>
-<li><b>Throughput del sistema con 1 cliente: </b> 1 / Y0(1) = 1 / 7975 = 0.00012539 jobs / msec </li>
+<li><b>Tempo medio di ciclo del sistema con 1 cliente </b> = Y<SUB>0</SUB>(1) = R<SUB>0</SUB>(1) + Z = 2975 + 5000 = 7975 msec </li>
+<li><b>Throughput del sistema con 1 cliente: </b> 1 / Y<SUB>0</SUB>(1) = 1 / 7975 = 0.00012539 jobs / msec </li>
 </ul>
 
-Da questo, l'asintoto obliquo per il throughput risulta essere: NX0(1) = N * 0.00012539 
+Da questo, l'asintoto obliquo per il throughput risulta essere: NX<SUB>0</SUB>(1) = N * 0.00012539 
 
 Infine per quanto riguarda l’analisi bottleneck riguardante il throughput si possono ottenere facilmente gli asintoti orizzontali: 
 
 <ul>
-<li>1 / Vb * Sb = 1 / 1125 = 0.00088888888 (IO2) </li>
-<li>1 / Vcpu * Scpu = 1 / 675 = 0.00148148148 (CPU) </li>
-<li>1 / VIO1 * SIO1 = 1 / 650 = 0.00153846153 (IO1) </li>
-<li>1 / VswapIN * SswapIN = 1 / 525 = 0.0019047619 (Swap-In) </li>
+<li>1 / V<SUB>b</SUB> * S<SUB>b</SUB> = 1 / 1125 = 0.00088888888 (IO2) </li>
+<li>1 / V<SUB>CPU</SUB> * S<SUB>CPU</SUB> = 1 / 675 = 0.00148148148 (CPU) </li>
+<li>1 / V<SUB>IO1</SUB> * S<SUB>IO1</SUB> = 1 / 650 = 0.00153846153 (IO1) </li>
+<li>1 / V<SUB>SI</SUB> * S<SUB>SI</SUB> = 1 / 525 = 0.0019047619 (Swap-In) </li>
 </ul>
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/throughput.png"/> 
 
 ### ANALISI BOTTLENECK PER IL RESPONSE TIME 
 
-L'asintoto orizzontale per il response time risulta essere: R0(1) = 2975 
+L'asintoto orizzontale per il response time risulta essere: R<SUB>0</SUB>(1) = 2975 
 
 Infine per quanto riguarda l’analisi bottleneck riguardante il response time si possono ottenere facilmente gli asintoti obliqui: 
 
 <ul>
-<li>N * Vb * Sb – Z = 1125 * N – 5000 (IO2) </li>
-<li>N * Vcpu * Scpu – Z = 675 * N – 5000 (CPU) </li>
-<li>N * VIO1 * SIO1 – Z = 650 * N – 5000 (IO1) </li>
-<li>N * VswapIN * SswapIN – Z = 525 * N – 5000 (Swap-In) </li>
+<li>N * V<SUB>b</SUB> * S<SUB>b</SUB> – Z = 1125 * N – 5000 (IO2) </li>
+<li>N * V<SUB>CPU</SUB> * S<SUB>CPU</SUB> – Z = 675 * N – 5000 (CPU) </li>
+<li>N * V<SUB>IO1</SUB> * S<SUB>IO1</SUB> – Z = 650 * N – 5000 (IO1) </li>
+<li>N * V<SUB>SI</SUB> * S<SUB>SI</SUB> – Z = 525 * N – 5000 (Swap-In) </li>
 </ul>
 
 <img width="700" height="500" src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/responsetime.png"/> 
 
-Il valore di N* (il livello di carico superato il quale si `e certi che si formino code all’interno del sistema) è determinato dall’intersezione dell’asintoto orizzontale (R0(1)) con l’asintoto obliquo (throughput del sistema qualora il numero di terminali tendesse ad infinito). 
+Il valore di N* (il livello di carico superato il quale si `e certi che si formino code all’interno del sistema) è determinato dall’intersezione dell’asintoto orizzontale (R<SUB>0</SUB>(1)) con l’asintoto obliquo (throughput del sistema qualora il numero di terminali tendesse ad infinito). 
 
 Quindi:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888  
