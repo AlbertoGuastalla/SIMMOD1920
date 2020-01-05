@@ -156,4 +156,4 @@ Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numer
 
 ## Author
 
-* **Alberto Guastalla** - [AlebertoGuastalla](https://github.com/AlebertoGuastalla)
+* **Alberto Guastalla** - [AlbertoGuastalla](https://github.com/AlbertoGuastalla)
