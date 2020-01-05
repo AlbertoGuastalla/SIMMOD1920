@@ -153,6 +153,20 @@ Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell�
 Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) quasi-normale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
 
+# FIRST STEP VALIDATION
+
+<p align=”justify”>
+Il primo modello di validazione semplifica il modello originale modificando: 
+
+<ul>
+<li>La distribuzione di tempi di servizio della CPU: Esponenziale negativa di media λ = 2.7 msec. </li>
+<li>CPU completion choice: q3,3 = 0.9, q3,4 = 0.065, q3,5 = 0.025, q3,6 = 0.01. </li>
+<li>MPD = INT_MAX (massimo intero con segno in complemento a 2 rappresentabile in 32 bit). </li>
+<li>CPU_QUANTUM = DBL_MAX (massimo extended floating-point number con segno rappresentabile in 64 bit). </li>
+</ul>
+
+Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le varie medie teoriche dei tempi di risposta del sistema e dei tempi di permanenza nel sotto-sistema “attivo” per ogni carico del sistema (da 1 a 30 jobs). Utilizzando la classica formula di Little in questa forma: R = N / X0(N) - Z (X0(N) letto direttamente dall’output di MVA per ogni livello di carico) è possibile ottenere i vari tempi medi di risposta del sistema: 
+</p>
 
 ## Author
 
