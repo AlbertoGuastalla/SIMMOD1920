@@ -455,7 +455,7 @@ Il valore di N* (il livello di carico superato il quale si `e certi che si formi
 Quindi:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 
 Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888 
 
-<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/RESPONSE%20TIME.png"/> 
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/RESPONSE%20TIME.png"/>  
 
 ## Author
 
