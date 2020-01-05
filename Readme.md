@@ -402,10 +402,18 @@ Con un’analisi più accurata invece si possono osservare i seguenti valori:
 <li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R0(1) = D = ∑ViSi = VswapIN * SswapIN + Vcpu * Scpu + VIO1 * SIO1 + VIO2 * SIO2 = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li>
 </ul>
 
-Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite (poiché, essendo la Delay Station la stazione di riferimento, V0 risulta essere per definizione uguale ad 1). 
+Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite V = VQ (poiché, essendo la Delay Station la stazione di riferimento, V0 risulta essere per definizione uguale ad 1). 
 
-Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss. 
-Quindi V0 = 1, V1 = 2.5, V2 = 250, V3 = 16.25, V4 = 6.25 
+Il sistema di equazioni lineare è stato risolto attraverso il metodo di eliminazione di Gauss e l'unica soluzionerisulta quindi essere: V0 = 1, V1 = 2.5, V2 = 250, V3 = 16.25, V4 = 6.25, dove i vari indici indicano: 
+<ul>
+  <li>0: Delay Station</li>
+  <li>1: Swap-In Station</li>
+  <li>2: CPU Station</li>
+  <li>3: IO1 Station</li>
+  <li>4: IO2 Station</li>
+</ul>
+
+La Reserve e la Swap-Out Station sono state omesse poichè irrilevanti nel calcolo degli indici di prestazione medi.
 </p>
  
 
