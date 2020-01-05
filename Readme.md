@@ -373,6 +373,19 @@ Qui sotto i vari tempi medi di permanenza nel sotto-sistema per ogni livello di 
   </tr>
 </table>
 
+## EXTENSIVE VALIDATION 
+
+<p align=”justify”>
+Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. 
+Numero di terminali connessi al sistema: 20. 
+Modello utilizzato: primo modello di validazione. 
+Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 6630.261907 
+
+Teoricamente, con un livello di fiducia al 10%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (di cui, il 5% è shiftato verso il basso e l'altro 5% è shiftato verso l’alto). Nell’esempio riportato, si notano come 88 intervalli contengano il valore teorico e 12 viceversa (8 sono shiftati vero il basso e i rimanenti 4 vero l'’alto); 45 intervalli sono centrati in una stima che sta sopra la media teorica mentre 55 viceversa. 
+
+Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande. 
+</p>
+
 ## Author
 
 * **Alberto Guastalla** - [AlbertoGuastalla](https://github.com/AlbertoGuastalla)
