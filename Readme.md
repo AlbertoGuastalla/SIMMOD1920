@@ -416,7 +416,6 @@ Il sistema di equazioni lineare è stato risolto attraverso il metodo di elimina
 La Reserve e la Swap-Out Station sono state omesse poichè irrilevanti nel calcolo degli indici di prestazione medi.
 </p>
  
-
 ### ANALISI BOTTLENECK PER IL THROUGHPUT   
 
 <ul>
@@ -482,6 +481,16 @@ Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888
 </ol>
 
 Non si è potuto evidenziare una sostanziale differenza fra i vari risultati ottenuti dal simulatore variando il time-slice (quanto di tempo) e/o la distribuzione dei tempi di servizio della CPU. 
+
+## PARAMETRI DA RIGA DI COMANDO 
+
+Lanciare OSSSimulator N –fsv –verbosity 
+
+<ul>
+<li>N: numero di terminali connessi al sistema. </li>
+<li>-fsv: first step validation flag </li>
+<li>-verbosity: verbosity flag </li>
+</ul>
 
 ## Author
 
