@@ -482,7 +482,7 @@ Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888
 
 Non si è potuto evidenziare una sostanziale differenza fra i vari risultati ottenuti dal simulatore variando il time-slice (quanto di tempo) e/o la distribuzione dei tempi di servizio della CPU. 
 
-## PARAMETRI DA RIGA DI COMANDO 
+## PARAMETRI OPZIONALI DA RIGA DI COMANDO 
 
 Lanciare OSSSimulator N –fsv –verbosity 
 
