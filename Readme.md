@@ -437,31 +437,25 @@ Infine per quanto riguarda l’analisi bottleneck riguardante il throughput si p
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/THROUGHPUT.png"/> 
 
- 
-
 ### ANALISI BOTTLENECK PER IL RESPONSE TIME 
 
-L'asintoto orizzontale per il response time risulta essere: 
-
-R0(1) = 2975 
+L'asintoto orizzontale per il response time risulta essere: R0(1) = 2975 
 
 Infine per quanto riguarda l’analisi bottleneck riguardante il response time si possono ottenere facilmente gli asintoti obliqui: 
 
-N * Vb * Sb – Z = 1125 * N – 5000 (IO2) 
-
-N * Vcpu * Scpu – Z = 675 * N – 5000 (CPU) 
-
-N * VIO1 * SIO1 – Z = 650 * N – 5000 (IO1) 
-
-N * VswapIN * SswapIN – Z = 525 * N – 5000 (Swap-In) 
-
- 
+<ul>
+<li>N * Vb * Sb – Z = 1125 * N – 5000 (IO2) </li>
+<li>N * Vcpu * Scpu – Z = 675 * N – 5000 (CPU) </li>
+<li>N * VIO1 * SIO1 – Z = 650 * N – 5000 (IO1) </li>
+<li>N * VswapIN * SswapIN – Z = 525 * N – 5000 (Swap-In) </li>
+</ul>
 
 Il valore di N* (il livello di carico superato il quale si `e certi che si formino code all’interno del sistema) è determinato dall’intersezione dell’asintoto orizzontale (R0(1)) con l’asintoto obliquo (throughput del sistema qualora il numero di terminali tendesse ad infinito). 
 
 Quindi:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 
-
 Equivalentemente: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888 
+
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/RESPONSE%20TIME.png"/> 
 
 ## Author
 
