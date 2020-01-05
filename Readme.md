@@ -171,21 +171,130 @@ Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le vari
 Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le varie medie teoriche dei tempi di risposta del sistema e dei tempi di permanenza nel sotto-sistema “attivo” per ogni carico del sistema (da 1 a 30 jobs). Utilizzando la classica formula di Little in questa forma: R = N / X0(N) - Z (X0(N) letto direttamente dall’output di MVA per ogni livello di carico) è possibile ottenere i vari tempi medi di risposta del sistema: 
 </p>
 
-<table style="width:500%">
+<table style="width:100%">
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
+    <th>LIVELLO DI CARICO DEL SISTEMA</th>
+    <th>RESPONSE TIME MEDIO</th>
   </tr>
   <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
+    <td>1</td>
+    <td>2975.000000 </td>
   </tr>
   <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
+    <td>2</td>
+    <td>3278.369906 </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>3624.658248 </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>4019.039128 </td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>4466.521677 </td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>4971.604695 </td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>5537.884825 </td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>6167.667693 </td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>6861.647033 </td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>7618.718170 </td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>8435.974603 </td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>9308.902088 </td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>10231.743119 </td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>11197.969502 </td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>12200.782963 </td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>13233.567629 </td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>14290.239909 </td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>15365.471246 </td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>16454.787398 </td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>17554.567286 </td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>18661.972927 </td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>19774.841442 </td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>20891.564085 </td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>22010.969291 </td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>23132.219380 </td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>24254.724870 </td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td>25378.076649 </td>
+  </tr>
+  <tr>
+    <td>28</td>
+    <td>26501.994194 </td>
+  </tr>
+  <tr>
+    <td>29</td>
+    <td>27626.287177 </td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>28750.827655 </td>
   </tr>
 </table>
 
