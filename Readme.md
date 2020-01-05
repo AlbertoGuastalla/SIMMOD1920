@@ -171,7 +171,7 @@ Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le vari
 Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le varie medie teoriche dei tempi di risposta del sistema e dei tempi di permanenza nel sotto-sistema “attivo” per ogni carico del sistema (da 1 a 30 jobs). Utilizzando la classica formula di Little in questa forma: R = N / X0(N) - Z (X0(N) letto direttamente dall’output di MVA per ogni livello di carico) è possibile ottenere i vari tempi medi di risposta del sistema: 
 </p>
 
-<table style="width:100%">
+<table style="width:500%">
   <tr>
     <th>Firstname</th>
     <th>Lastname</th>
