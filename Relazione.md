@@ -388,7 +388,7 @@ Numero di terminali connessi al sistema: 20. <br>
 Modello utilizzato: primo modello di validazione. <br> 
 Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 6630.261907 <br>
 <img align=”center” src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/intervals.png"/> <br>
-Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (il 50% dgli intervalli sia shiftato verso l'alto e l'altro 50% verso il basso). Nell’esempio riportato, si può notare come 89 intervalli contengano il valore teorico e 11 viceversa; 48 intervalli sono "sbilancianti" verso l'alto, mentre i rimanenti 52 verso il basso.
+Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (il 50% dgli intervalli sia centrato su una stima più grande del valore teorico e l'altro 50% viceversa). Nell’esempio riportato, si può notare come 89 intervalli contengano il valore teorico e 11 viceversa; 48 intervalli sono "sbilancianti" verso l'alto, mentre i rimanenti 52 verso il basso.
 
 Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande. 
 </p>
