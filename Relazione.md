@@ -435,6 +435,10 @@ Infine per quanto riguarda l’analisi bottleneck riguardante il throughput si p
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/throughput.png"/> 
 
+Il valore di N* è determinato dall'intersezione dell’asintoto orizzontale (1 / V<SUB>b</SUB> * S<SUB>b</SUB>) con l'asintoto obliquo (throughput del sistema qualora il tempo di ciclo rimanesse identico a quello in cui vi è un solo cliente nel sistema).
+
+In formule: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888
+
 ### ANALISI BOTTLENECK PER IL RESPONSE TIME 
 
 L'asintoto orizzontale per il response time risulta essere: R<SUB>0</SUB>(1) = 2975 
@@ -453,8 +457,6 @@ Infine per quanto riguarda l’analisi bottleneck riguardante il response time s
 Il valore di N* (il livello di carico superato il quale si `e certi che si formino code all’interno del sistema) è determinato dall’intersezione dell’asintoto orizzontale (R<SUB>0</SUB>(1)) con l’asintoto obliquo (response time del sistema qualora il numero di terminali tendesse ad infinito). 
 
 In formule:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
-Utilizzando invece l'analisi fatta per il throughput il valore di N* è determinato dall'intersezione dell’asintoto orizzontale (1 / V<SUB>b</SUB> * S<SUB>b</SUB>) con l'asintoto obliquo (throughput del sistema qualora il tempo di ciclo rimanesse identico a quello in cui vi è un solo cliente nel sistema).
-In formule: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888
 
 ## QUATTRO CASI DI TEST 
 <ol type="1">
