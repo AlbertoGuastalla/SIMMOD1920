@@ -418,8 +418,8 @@ La Reserve e la Swap-Out Station sono state omesse poichè irrilevanti nel calco
 ### ANALISI BOTTLENECK PER IL THROUGHPUT   
 
 <ul>
-<li><b>Tempo medio di ciclo del sistema con 1 cliente </b> = Y<SUB>0</SUB>(1) = R<SUB>0</SUB>(1) + Z = 2975 + 5000 = 7975 msec </li>
-<li><b>Throughput del sistema con 1 cliente: </b> 1 / Y<SUB>0</SUB>(1) = 1 / 7975 = 0.00012539 jobs / msec </li>
+<li><b>Tempo medio di ciclo del sistema con 1 cliente: </b> Y<SUB>0</SUB>(1) = R<SUB>0</SUB>(1) + Z = 2975 + 5000 = 7975 msec </li>
+<li><b>Throughput del sistema con 1 cliente: </b> X<SUB>0</SUB>(1) = 1 / Y<SUB>0</SUB>(1) = 1 / 7975 = 0.00012539 jobs / msec </li>
 </ul>
 
 Da questo, l'asintoto obliquo per il throughput risulta essere: NX<SUB>0</SUB>(1) = N * 0.00012539 
