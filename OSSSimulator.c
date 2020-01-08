@@ -859,17 +859,17 @@ boolean DecideToStop () {
 }
 
 void print_results(){
-	/*
-	int i;
-	
-	for (i = 0; i < WORKSTATIONS; ++i) {
-		printf("averageActiveTime of process %i: %f\n", i, totalActiveTimes[i] / passageSubSystemTimes[i]);
+	if (detailedPrint) {
+		int i;
+
+		for (i = 0; i < WORKSTATIONS; ++i) {
+			printf("averageActiveTime of process %i: %f\n", i, totalActiveTimes[i] / passageSubSystemTimes[i]);
+		}
+
+		for (i = 0; i < WORKSTATIONS; ++i) {
+			printf("averageResponseTime of process %i: %f\n", i, totalResponseTimes[i] / passageDelayTimes[i]);
+		}
 	}
-	
-	for (i = 0; i < WORKSTATIONS; ++i) {
-		printf("averageResponseTime of process %i: %f\n", i, totalResponseTimes[i] / passageDelayTimes[i]);
-	}
-	*/
 	
 	if (!detailedPrint) {
 		printf("\nSample Average Active Time                        = %f", sampleAverageActiveTime);
