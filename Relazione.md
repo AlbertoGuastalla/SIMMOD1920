@@ -398,10 +398,8 @@ Semi utilizzati: 100000000 ÷ 100000999. <br>
 Numero di terminali connessi al sistema: 20. <br>
 Modello utilizzato: primo modello di validazione. <br> 
 
-Intervalli centrati su una stima più grande o uguale del valore teorico: 501
-
-Intervalli centrati su una stima più piccola del valore teorico: 499
-
+Intervalli centrati su una stima più grande o uguale del valore teorico: 501 <br>
+Intervalli centrati su una stima più piccola del valore teorico: 499 <br>
 Intervalli che non coprono il valore teorico: 109
 </p>
 
