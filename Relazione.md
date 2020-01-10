@@ -394,13 +394,13 @@ Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona appro
 
 Infatti con 1000 simulazioni differenti, si è potuto verificare che i risultati ottenuti tendono al risultato teorico (10% degli intervalli non copre la media teorica).
 
-Semi utilizzati: 100000000 ÷ 100000999. <br>
+Semi utilizzati: 112345 ÷ 113344. <br>
 Numero di terminali connessi al sistema: 20. <br>
 Modello utilizzato: primo modello di validazione. <br> 
 
-Intervalli centrati su una stima più grande o uguale del valore teorico: 501 <br>
-Intervalli centrati su una stima più piccola del valore teorico: 499 <br>
-Intervalli che non coprono il valore teorico: 109
+Intervalli centrati su una stima più grande o uguale del valore teorico: 483 <br>
+Intervalli centrati su una stima più piccola del valore teorico: 517 <br>
+Intervalli che non coprono il valore teorico: 104
 </p>
 
 ## BOTTLENECK ANALYSIS 
