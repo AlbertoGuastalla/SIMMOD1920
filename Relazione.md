@@ -392,7 +392,7 @@ Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% de
 
 Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande. 
 
-Infatti con 1000 simulazioni differenti, si è potuto verificare che i risultati ottenuti tendono al risultato teorico (10% degli intervalli non copre la media teorica).
+Infatti con 1000 simulazioni differenti, si è potuto verificare che i risultati ottenuti tendono al risultato teorico.
 
 Semi utilizzati: 112345 ÷ 113344. <br>
 Numero di terminali connessi al sistema: 20. <br>
