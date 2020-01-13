@@ -398,9 +398,9 @@ Semi utilizzati: 112345 ÷ 113344. <br>
 Numero di terminali connessi al sistema: 20. <br>
 Modello utilizzato: primo modello di validazione. <br> 
 
-Intervalli centrati su una stima più grande o uguale del valore teorico: 483 <br>
-Intervalli centrati su una stima più piccola del valore teorico: 517 <br>
-Intervalli che non coprono il valore teorico: 104
+Intervalli centrati su una stima più grande o uguale del valore teorico: 489 <br>
+Intervalli centrati su una stima più piccola del valore teorico: 511 <br>
+Intervalli che non coprono il valore teorico: 108
 </p>
 
 ## BOTTLENECK ANALYSIS 
