@@ -386,7 +386,7 @@ Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. <br>
 Semi utilizzati: 100000000 ÷ 100000099. <br>
 Numero di terminali connessi al sistema: 20. <br>
 Modello utilizzato: primo modello di validazione. <br> 
-Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 6630.261907 <br>
+Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 6630.261907 <br> <br> 
 <img align=”center” src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/intervals.png"/> <br>
 Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (il 50% degli intervalli sia centrato su una stima più grande o uguale del valore teorico e l'altro 50% viceversa). Nell’esempio riportato, si può notare come 88 intervalli contengano il valore teorico e 12 viceversa; 50 intervalli sono "sbilancianti" verso l'alto, mentre i rimanenti 50 verso il basso.
 
