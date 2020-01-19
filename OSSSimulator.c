@@ -927,4 +927,5 @@ void printMeasures() {
 	printf("\nSample Average Active Time                        = %f", sampleAverageActiveTime);
 	printf("\nLeft Extreme                                      = %f", leftExtreme);
 	printf("\nRigth Extreme                                     = %f", rightExtreme); 
+	printf("\n");
 }
