@@ -460,25 +460,25 @@ In formule:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 ## QUATTRO CASI DI TEST 
 <ol type="1">
   <li><b>δ = 3; CPU ~ Hyper-Exp (α = 0.8, β = 0.2, µ1 = 15, µ2 = 75) </b> <br>
-  Sample Average Active Time = 4182.501631 (point-estimate) <br>
-  Left Extreme = 4130.824114 <br>
-  Right Extreme = 4234.179149 <br>
-  Larghezza dell’intervallo: 103.355035 </li>
+  Sample Average Active Time = 4193.819712 (point-estimate) <br>
+  Left Extreme = 4177.677693 <br>
+  Right Extreme = 4209.961731 <br>
+  Larghezza dell’intervallo: 32.284038 </li>
   <li><b>δ = 3; CPU ~ Exp (1/27) </b> <br>
-  Sample Average Active Time = 4236.382488 (point-estimate) <br>
-  Left Extreme = 4199.293873 <br>
-  Right Extreme = 4273.471103 <br>
-  Larghezza dell’intervallo: 74.17723 </li>
+  Sample Average Active Time = 4198.465349 (point-estimate) <br>
+  Left Extreme = 4182.213559 <br>
+  Right Extreme = 4214.717138 <br>
+  Larghezza dell’intervallo: 32.503579 </li>
   <li><b>δ = 3000; CPU ~ Hyper-Exp (α = 0.8, β = 0.2, µ1 = 15, µ2 = 75) </b> <br>
-  Sample Average Active Time = 4285.827819 (point-estimate) <br>
-  Left Extreme = 4253.164602 <br>
-  Right Extreme = 4318.491035 <br>
-  Larghezza dell’intervallo: 65.326433 </li>
+  Sample Average Active Time = 4245.031203 (point-estimate) <br>
+  Left Extreme = 4233.128181 <br>
+  Right Extreme = 4256.934225 <br>
+  Larghezza dell’intervallo: 23.806044 </li>
   <li><b>δ = 3000; CPU ~ Exp (1/27)  </b> <br>
-  Sample Average Active Time = 4222.013121 (point-estimate) <br>
-  Left Extreme = 4174.339921 <br>
-  Right Extreme = 4269.686322 <br>
-  Larghezza dell’intervallo: 95.346401 </li>
+  Sample Average Active Time = 4201.508537 (point-estimate) <br>
+  Left Extreme = 4187.308633 <br>
+  Right Extreme = 4215.708442 <br>
+  Larghezza dell’intervallo: 28.399809 </li>
 </ol>
 
 Questi risultati sono stati ottenuti considerando un numero p di cicli di rigenerazione maggiore di 25 (condizione necessaria e sufficiente per poter approssimare la distribuzione t di student con (p − 1) gradi di libertà alla normale con identica media e varianza). <br>
