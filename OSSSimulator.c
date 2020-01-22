@@ -21,8 +21,8 @@
 #include <process.h>				
 
 #define SEED 918273645
-#define MIN_NUM_CYCLES 25										/* for approximate t-student with normal density function */
-#define MIN_NUMBER_OBSERVATIONS 30								/* for central limit theorem (quasi-normality of the sum) */
+#define MIN_NUM_CYCLES 25					/* for approximate t-student with normal density function */
+#define MIN_NUMBER_OBSERVATIONS 30				/* for central limit theorem (quasi-normality of the sum) */
 
 #define SERVICE_DELAY_STREAM 0
 #define SERVICE_SWAP_IN_STREAM 1
