@@ -386,7 +386,7 @@ Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. <br>
 Semi utilizzati: 100000000 ÷ 100000099. <br>
 Numero di terminali connessi al sistema: 20. <br>
 Modello utilizzato: primo modello di validazione. <br> 
-Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 6630.261907 <br> <br> 
+Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 6630.261907 <br>
 <img align=”center” src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/intervals.png"/> <br>
 Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (il 50% degli intervalli sia centrato su una stima più grande o uguale del valore teorico e l'altro 50% viceversa). Nell’esempio riportato, 91 intervalli contengono il valore teorico e 9 viceversa; 48 intervalli sono "sbilancianti" verso l'alto, mentre i rimanenti 52 verso il basso.
 
@@ -482,7 +482,7 @@ In formule:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 </ol>
 
 Questi risultati sono stati ottenuti considerando un numero p di cicli di rigenerazione maggiore di 25 (condizione necessaria e sufficiente per poter approssimare la distribuzione t di student con (p − 1) gradi di libertà alla normale con identica media e varianza). <br>
-Non si è potuto evidenziare una sostanziale differenza fra i vari risultati ottenuti dal simulatore variando il time-slice (quanto di tempo) e/o la distribuzione dei tempi di servizio della CPU. 
+Ciò che si può osservare è che la dimensione dell'intervallo nel caso in cui il quanto di tempo sia uguale 3000 msec risulta essere leggermente più piccola rispetto a quella in cui lo stesso vale 3 msec (indipendentemente dalla scelta della distribuzione dei tempi di servizio della CPU).
 
 ## Author
 
