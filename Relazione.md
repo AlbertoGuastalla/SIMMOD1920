@@ -106,13 +106,9 @@ Data la natura della quantità da stimare (la media teorica del tempo di permane
 
 Il punto di rigenerazione da me scelto coincide quindi col verificarsi del seguente evento: 
 <ul>
-<li><b>Arrivo del “tagged” job (n.0) job alla Cpu Station. </b></li>
+<li><b>Partenza del “tagged” job (n.0) dalla Swap-In station. </b></li>
 
 Punto di entrata del sotto-sistema. 
-
-<li><b>Il “tagged customer”DEVE aver già attraversato il sotto-sistema. </b></li>
-
-Questo per evitare di aggregare inutili regeneration points (nel caso in cui il “tagged customer” non abbia attraversato almeno una volta il sotto-sistema, esso non accumulerebbe nessun valore). 
 
 <li><b>Numero di jobs alla Reserve Station = 0. </b></li>
 
@@ -134,11 +130,15 @@ Non avendo tempi di servizio distribuiti secondo l’esponenziale negativa (unic
 <br>
 Queste tre ultime stazioni (tolta la Swap-Out station) presentano un numero variabile di clienti per poter incrementare la frequenza di occorrenza del punto di rigenerazione in base al modello del sistema scelto (modello originale o modello per validazione) e al numero di terminali connessi ad esso. <br>
 
+### PUNTO DI RIGENERAZIONE (FIRST VALIDATION)
+
+
+
 Nel caso in cui si abbia scelto il modello per la validazione, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA, per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca del punto rigenerazione scelto. 
 
 Questa operazione è stata effettuata lanciando MVA su un processo figlio (mettendo quindi in attesa il simulatore per il tempo necessario affinchè quest'ultimo termini), il quale andrà a scrivere su file i vari valori medi per ciascuna stazione; dopodichè il padre riprendendo l'esecuzione, leggerà tali valori utilizzandoli come sopracitato.
 
-Bisogna però tener presente che, questo approccio non interrompe, ne tantomeno degrada le prestazioni del simulatore poichè il tutto avviene nella fase di inizializzazione del medesimo.
+Bisogna però tener presente che, questo approccio non interrompe, ne tantomeno invalida le prestazioni del simulatore poichè il tutto avviene nella fase di inizializzazione del medesimo.
 
 Viceversa nel caso in cui si abbia scelto il modello originale, si utilizza lo stesso approccio di assegnazione di valori alle variabili del caso precedente solo qualora il grado di multiprogrammazione sia maggiore o uguale al numero di terminali connessi al sistema (questo perché il modello sarebbe rilassato dal vincolo introdotto dalla Reserve Station proprio come nel caso precedente). 
 
@@ -159,7 +159,7 @@ Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell�
 Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale come dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
 
-# FIRST STEP VALIDATION
+# FIRST VALIDATION STEP
 
 <p align=”justify”>
 Il primo modello di validazione semplifica il modello originale modificando: 
