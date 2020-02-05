@@ -130,19 +130,15 @@ Non avendo tempi di servizio distribuiti secondo l’esponenziale negativa (unic
 <br>
 Queste tre ultime stazioni (tolta la Swap-Out station) presentano un numero variabile di clienti per poter incrementare la frequenza di occorrenza del punto di rigenerazione in base al modello del sistema scelto (modello originale o modello per validazione) e al numero di terminali connessi ad esso. <br>
 
-### PUNTO DI RIGENERAZIONE (FIRST VALIDATION)
+### PUNTO DI RIGENERAZIONE (ORIGINAL MODEL)
 
-
-
-Nel caso in cui si abbia scelto il modello per la validazione, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA, per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca del punto rigenerazione scelto. 
+Nel caso in cui si abbia scelto il modello originale, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA, per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca del punto rigenerazione scelto. 
 
 Questa operazione è stata effettuata lanciando MVA su un processo figlio (mettendo quindi in attesa il simulatore per il tempo necessario affinchè quest'ultimo termini), il quale andrà a scrivere su file i vari valori medi per ciascuna stazione; dopodichè il padre riprendendo l'esecuzione, leggerà tali valori utilizzandoli come sopracitato.
 
 Bisogna però tener presente che, questo approccio non interrompe, ne tantomeno invalida le prestazioni del simulatore poichè il tutto avviene nella fase di inizializzazione del medesimo.
 
-Viceversa nel caso in cui si abbia scelto il modello originale, si utilizza lo stesso approccio di assegnazione di valori alle variabili del caso precedente solo qualora il grado di multiprogrammazione sia maggiore o uguale al numero di terminali connessi al sistema (questo perché il modello sarebbe rilassato dal vincolo introdotto dalla Reserve Station proprio come nel caso precedente). 
-
-Nel caso invece si lanci il simulatore scegliendo il modello originale (in cui il grado di multiprogrammazione è in generale minore del numero di terminali connessi al sistema), il valore assegnato alle variabili sopracitate diventa: 
+Si utilizza questo approccio solo qualora il grado di multiprogrammazione sia maggiore o uguale al numero di terminali connessi al sistema (questo perché il modello sarebbe rilassato dal vincolo introdotto dalla Reserve Station), altrimenti, il valore assegnato alle variabili sopracitate diventa: 
 
 <ul>
 <li>CUSTOMER_IN_SWAP_OUT_FOR_REGENERATION_COND = 0 </li>  
@@ -155,6 +151,13 @@ Nel caso invece si lanci il simulatore scegliendo il modello originale (in cui i
 </ul>
 <br>
 Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell’assegnazione di valori che massimizza la probabilità di occorrere in una condizione di rigenerazione per abbattere quindi i tempi dovuti all’attesa dell’evento (sempre in accordo con le proprietà che ogni punto di rigenerazione deve possedere per essere considerato tale). <br>
+
+### PUNTO DI RIGENERAZIONE (FIRST VALIDATION MODEL)
+Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è guidata unicamente dai valori in output d MVA.
+
+
+### PUNTO DI RIGENERAZIONE (SECOND VALIDATION MODEL)
+Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è la medesima del primo modello di validazione.
 
 Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale come dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
