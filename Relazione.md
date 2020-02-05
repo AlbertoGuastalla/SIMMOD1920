@@ -153,7 +153,7 @@ Si utilizza questo approccio solo qualora il grado di multiprogrammazione sia ma
 Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell’assegnazione di valori che massimizza la probabilità di occorrere in una condizione di rigenerazione per abbattere quindi i tempi dovuti all’attesa dell’evento (sempre in accordo con le proprietà che ogni punto di rigenerazione deve possedere per essere considerato tale). <br>
 
 ### PUNTO DI RIGENERAZIONE (FIRST VALIDATION MODEL)
-Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è guidata unicamente dai valori in output d MVA.
+Nel caso in cui si abbia invece scelto il primo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è guidata unicamente dai valori in output d MVA.
 
 
 ### PUNTO DI RIGENERAZIONE (SECOND VALIDATION MODEL)
@@ -162,7 +162,11 @@ Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'asse
 Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale come dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
 
-# FIRST VALIDATION STEP
+#VALIDATION MODELS
+
+<img src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/validation.png"/>
+
+## FIRST VALIDATION STEP
 
 <p align=”justify”>
 Il primo modello di validazione semplifica il modello originale modificando: 
