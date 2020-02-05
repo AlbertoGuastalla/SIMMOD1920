@@ -388,11 +388,13 @@ Qui sotto i vari tempi medi di permanenza nel sotto-sistema per ogni livello di 
   </tr>
 </table>
 
-Lanciando il simulatore con il parametro "-verbosity" specificato, è possibile visualizzare su riga di comando, il valore simulato del tempo di risposta e del tempo di permanenza nel sotto-sistema per ciascun cliente.
-Entrambi calcolati come una differenza del tipo:
+Lanciando il simulatore con il parametro "-verbosity" specificato, è possibile visualizzare su riga di comando, il valore simulato del tempo medio di risposta e del tempo medio di permanenza nel sotto-sistema per ciascun cliente.
+Si sono quindi dapprima calcolate le somme di entrambi i tempi:
 
 - Tempo di risposta: Departure_Swap_Out_Time - Departure_Delay_Time.
 - Tempo di permanenza: Arrival_Swap_Out_Time - Departure_Swap_In_Time.
+
+Infine si sono calcolate le due medie, dividendo entrambe le sommme rispettivamente per il numero di passaggi alla delay station e per il numero di passaggi al sotto-sistema.
 
 ## EXTENSIVE VALIDATION 
 
