@@ -284,7 +284,7 @@ Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le vari
 </table>
 
 <p align=”justify”>
-Mentre per quanto riguarda il tempo medio di permanenza nel sotto-sistema, esso è stato calcolato ricavando dapprima il numero medio di clienti nel sotto-sistema. Quest’ultimo, a sua volta, è stato ottenuto sommando il numero medio di clienti appartenenti a ciascuna stazione del sotto-sistema (poiché il valore atteso gode della proprietà di linearità i.e. E[n<SUB>CPU</SUB>] + E[n<SUB>IO1</SUB>] + E[n<SUB>IO2</SUB>] = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>]) e dividendolo per il flusso entrante in esso (throughput della stazione Swap-In). 
+Mentre per quanto riguarda il tempo medio di permanenza nel sotto-sistema, esso è stato calcolato ricavando dapprima il throughput della stazione Swap-In e il numero medio di clienti nel sotto-sistema direttamente leggendo l'output prodotto da MVA. Dopodichè si sono sommati gli ultimi relativi a ciascuna stazione del sotto-sistema (poiché il valore atteso gode della proprietà di linearità i.e. E[n<SUB>CPU</SUB>] + E[n<SUB>IO1</SUB>] + E[n<SUB>IO2</SUB>] = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>]) e dividendolo per il flusso entrante in esso (throughput della stazione Swap-In). 
 
 In formule: <b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / X<SUB>SI</SUB></b> (ancora una volta la formula di Little). 
 Qui sotto i vari tempi medi di permanenza nel sotto-sistema per ogni livello di carico: </p>
