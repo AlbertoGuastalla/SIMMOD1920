@@ -162,7 +162,7 @@ Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'asse
 Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale come dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
 
-# VALIDATION MODELS
+## VALIDATION MODELS
 
 <p align="center">
   <img width="1000" height="400" src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/validation.png"/>
