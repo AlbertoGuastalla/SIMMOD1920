@@ -394,7 +394,7 @@ Si sono quindi dapprima calcolate le somme di entrambi i tempi:
 - Tempo di risposta: Departure_Swap_Out_Time - Departure_Delay_Time.
 - Tempo di permanenza: Arrival_Swap_Out_Time - Departure_Swap_In_Time.
 
-Infine si sono calcolate le due medie, dividendo entrambe le sommme rispettivamente per il numero di passaggi alla delay station e per il numero di passaggi al sotto-sistema.
+Infine si sono calcolate le due medie, dividendo rispettivamente entrambe le somme per il numero di passaggi alla delay station e per il numero di passaggi al sotto-sistema.
 
 ## EXTENSIVE VALIDATION 
 
