@@ -512,7 +512,7 @@ di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 #### CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
 
 Per poter valutare il modello semplificato si è dovuto risolvere (trovare la distribuzione a regime) la catena di Markov a tempo continuo che descrive l'evoluzione dl sistema.
-Dopo aver compilato la matrice Q che rappresenta il generatore infinitesimale della catena (link), si è quindi risolto il seguente sistema di equazioni lineare (attraverso un solver apposito):
+Dopo aver compilato la matrice Q che rappresenta il generatore infinitesimale della catena (https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/Markov%20Chain.xlsx), si è quindi risolto il seguente sistema di equazioni lineare (attraverso un solver apposito):
 - <b>πQ</b> = <b>0</b>
 
 trovando la seguente distribuzione limite (<b>π</b>):
@@ -647,7 +647,7 @@ VALORI MEDI PRODOTTI DALLA CATENA DI MARKOV:
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2856433626
 - Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]>: 0.5579334187
 
-VALORI MEDI PRODOTTI DA MVA:
+VALORI MEDI PRODOTTI DA MVA: <br>
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
