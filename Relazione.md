@@ -164,11 +164,11 @@ Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numer
 
 ## VALIDATION MODELS
 
-### FIRST VALIDATION STEP
-
 <p align="center">
   <img width="1000" height="400" src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/validation.png"/>
 </p>
+
+### FIRST VALIDATION STEP
 
 <p align=”justify”>
 Il primo modello di validazione semplifica il modello originale modificando: 
