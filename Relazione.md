@@ -634,7 +634,7 @@ Dato che essendo il sistema in equilibrio operazionale, dnotando il flusso in en
 Ma dato che, λ = X<SUB>DS</SUB> + q61 * μ = μ, allora μ = X<SUB>DS</SUB> / 0.4 = 0.0009609916513.
 
 Sempre considerando il fatto che l'operatore valore atteso gode della proprietà di linearità, il tempo medio di permanenza del sotto-sistema attivo è quindi:
-<b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b>
+<b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1121,775299.
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
 <ol type="1">
