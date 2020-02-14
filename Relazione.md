@@ -127,7 +127,7 @@ Punto di entrata del sotto-sistema.
 
 <li><b>Numero di jobs alla Reserve Station = 0. </b></li>
 
-Questa scelta è motivata dal fatto che la distribuzione dei tempi di servizio è sconosciuta, fortemente influenzata dal grado di multiprogrammazione scelto e in parte anche dai	 tempi di attesa in ciascuna stazione dei terminali connessi al sistema. Quindi in generale essa non gode della proprietà di assenza di memoria.  
+Questa scelta è motivata dal fatto che la distribuzione dei tempi di servizio è sconosciuta, fortemente influenzata dal grado di multiprogrammazione scelto e in parte anche dai tempi di attesa in ciascuna stazione dei terminali connessi al sistema. Quindi in generale essa non gode della proprietà di assenza di memoria.  
 
 <li><b>Numero di jobs alla Cpu Station = 0. </b></li>
 
@@ -603,6 +603,7 @@ trovando la seguente distribuzione limite (<b>π</b>):
 #### CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
 
 ##### NUMERO MEDIO DI JOBS
+
 - Numero medio di jobs in Delay station E[n<SUB>DS</SUB>]: 1.921983303
 - Numero medio di jobs in CPU station E[n<SUB>CPU</SUB>]: 0.1984139534
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2971184709
@@ -634,9 +635,23 @@ Dato che essendo il sistema in equilibrio operazionale, dnotando il flusso in en
 Ma dato che, λ = X<SUB>DS</SUB> + q61 * μ = μ, allora μ = X<SUB>DS</SUB> / 0.4 = 0.0009609916513.
 
 Sempre considerando il fatto che l'operatore valore atteso gode della proprietà di linearità, il tempo medio di permanenza del sotto-sistema attivo è quindi:
-<b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1121,775299.
+<b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1121.775299.
+
+##### CONFRONTO CON MVA
+
+Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper-esponenziale si riduce ad una singola esponenziale negativa di media η = 27 msec rendendo cosi identiche l'analisi effettuata con la catena di Markov da quella effttuata con MVA durante la prima validazione (con l'unica differenza che il tempo medio di servizio della Swap-In è 0.0).
+
+VALORI MEDI PRODOTTI DALLA CATENA DI MARKOV:
+- Numero medio di jobs in Delay station E[n<SUB>DS</SUB>]: 1.857884605
+- Numero medio di jobs in CPU station E[n<SUB>CPU</SUB>]: 0.2985386137
+- Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2856433626
+- Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]>: 0.5579334187
+
+VALORI MEDI PRODOTTI DA MVA:
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
+
 <ol type="1">
   <li><b>δ = 3; CPU ~ Hyper-Exp (α = 0.8, β = 0.2, µ1 = 15, µ2 = 75) </b> <br>
   Sample Average Active Time = 4193.819712 (point-estimate) <br>
