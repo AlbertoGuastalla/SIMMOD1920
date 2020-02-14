@@ -185,7 +185,7 @@ Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numer
 
 ### FIRST VALIDATION STEP
 
-## DETTAGLI DEL MODELLO
+#### DETTAGLI DEL MODELLO
 
 - Tempo medio di ritardo Z = 5000 msec
 - Tempo medio di servizio della stazione swap-in S1 = 210 msec
@@ -198,9 +198,6 @@ Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numer
 - Multi-Programming Degree MPD = INT_MAX (massimo intero con segno in complemento a 2 rappresentabile in 32 bit)
 
 Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa.
-
-<p align=”justify”>
-<img " src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/fsv.png"/>
 
 Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le varie medie teoriche dei tempi di risposta del sistema e dei tempi di permanenza nel sotto-sistema “attivo” per ogni carico del sistema (da 1 a 30 jobs). Utilizzando la classica formula di Little in questa forma: R = N / X<SUB>0</SUB>(N) - Z (X<SUB>0</SUB>(N) letto direttamente dall’output di MVA per ogni livello di carico) è possibile ottenere i vari tempi medi di risposta del sistema: 
 </p>
@@ -417,7 +414,7 @@ Si sono quindi dapprima calcolate le somme di entrambi i tempi:
 
 Infine si sono calcolate le due medie, dividendo rispettivamente entrambe le somme per il numero di passaggi alla delay station e per il numero di passaggi al sotto-sistema.
 
-## EXTENSIVE VALIDATION 
+#### EXTENSIVE VALIDATION 
 
 <p align=”justify”>
 Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. <br>
