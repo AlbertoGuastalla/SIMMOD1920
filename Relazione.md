@@ -8,20 +8,19 @@
 
 ## DETTAGLI DEL MODELLO
 
-- Average work-station think time Z = 5000 msec,
-- Average swap-in time S1 = 210 msec,
-- Average CPU time S2 = 27 msec
-- Length of the time slice (CPU quantum) δ = 3 msec
-- Average I/O1 time s4 = 40 msec
-- Average I/O2 time s5 = 180 msec
+- Tempo medio di ritardo Z = 5000 msec
+- Tempo medio di servizio della stazione swap-in S1 = 210 msec
+- Tempo medio di servizio della stazione CPU S2 = 27 msec
+- Lunghezza del time slice (quanto della CPU) δ = 3 msec
+- Tempo medio di servizio della stazione I/O1 S4 = 40 msec
+- Tempo medio di servizio della stazione I/O2 S5 = 180 msec
 - CPU completion choice q3,4 = 0.65, q3,5 = 0.25, q3,6 = 0.1
 - Swap-out choice q6,0 = 0.4, q6,1 = 0.6.
 - Multi-Programming Degree MP D = 10
-All the stations are characterized by negative exponential distributions, but the CPU in which
-the time slice is deterministic (constant) and the total length of the CPU burst has a two stage
-hyper-exponential distribution
-fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2)
-with parameters α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
+
+Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa a meno della CPU, la quale presenta un quanto di tempo costante e una distribuzione dei tempi di servizio iper-esponenziale a due stadi:
+- fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2)
+di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
 ## STAZIONI PRESENTI NEL MODELLO
 
