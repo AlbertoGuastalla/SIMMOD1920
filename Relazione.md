@@ -427,24 +427,6 @@ Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% de
 
 Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande.
 
-### SECOND VALIDATION STEP
-
-## DETTAGLI DEL MODELLO
-
-- Tempo medio di ritardo Z = 5000 msec
-- Tempo medio di servizio della stazione swap-in S1 = 210 msec
-- Tempo medio di servizio della stazione CPU S2 = 27 msec
-- Lunghezza del time slice (quanto della CPU) δ = 3 msec
-- Tempo medio di servizio della stazione I/O1 S4 = 40 msec
-- Tempo medio di servizio della stazione I/O2 S5 = 180 msec
-- CPU completion choice q3,4 = 0.65, q3,5 = 0.25, q3,6 = 0.1
-- Swap-out choice q6,0 = 0.4, q6,1 = 0.6.
-- Multi-Programming Degree MPD = 10
-
-Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa a meno della CPU, la quale presenta un quanto di tempo costante e una distribuzione dei tempi di servizio iper-esponenziale a due stadi:
-- fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
-di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
-
 ## BOTTLENECK ANALYSIS 
 
 Una prima e approssimativa analisi delle strozzature si può facilmente vedere lanciando MVA e osservando che l’utilizzazione della IO2 Station arriva quasi ad essere 100% con un numero di terminali connessi al sistema pari a 20. 
@@ -510,7 +492,25 @@ Il valore di N*, anche questa volta, è determinato dall’intersezione dell’a
 
 In formule:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 
-## QUATTRO CASI DI TEST 
+### SECOND VALIDATION STEP
+
+#### DETTAGLI DEL MODELLO
+
+- Tempo medio di ritardo Z = 5000 msec
+- Tempo medio di servizio della stazione swap-in S1 = 0.0 msec
+- Tempo medio di servizio della stazione CPU S2 = 27 msec
+- Lunghezza media del time slice (quanto della CPU) δ = 3 msec
+- Tempo medio di servizio della stazione I/O1 S4 = 40 msec
+- Tempo medio di servizio della stazione I/O2 S5 = 180 msec
+- CPU completion choice q3,4 = 0.65, q3,5 = 0.25, q3,6 = 0.1
+- Swap-out choice q6,0 = 0.4, q6,1 = 0.6.
+- Multi-Programming Degree MPD = INT_MAX (massimo intero con segno in complemento a 2 rappresentabile in 32 bit)
+
+Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa a meno della CPU, la quale presenta un quanto di tempo costante e una distribuzione dei tempi di servizio iper-esponenziale a due stadi:
+- fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
+di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
+
+## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
 <ol type="1">
   <li><b>δ = 3; CPU ~ Hyper-Exp (α = 0.8, β = 0.2, µ1 = 15, µ2 = 75) </b> <br>
   Sample Average Active Time = 4193.819712 (point-estimate) <br>
