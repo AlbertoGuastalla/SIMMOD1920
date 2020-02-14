@@ -6,6 +6,22 @@
   <img src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/OSS.png"/>
 </p>
 
+## DETTAGLI DEL MODELLO
+
+- Average work-station think time Z = 5000 msec,
+- Average swap-in time S1 = 210 msec,
+- Average CPU time S2 = 27 msec
+- Length of the time slice (CPU quantum) δ = 3 msec
+- Average I/O1 time s4 = 40 msec
+- Average I/O2 time s5 = 180 msec
+- CPU completion choice q3,4 = 0.65, q3,5 = 0.25, q3,6 = 0.1
+- Swap-out choice q6,0 = 0.4, q6,1 = 0.6.
+- Multi-Programming Degree MP D = 10
+All the stations are characterized by negative exponential distributions, but the CPU in which
+the time slice is deterministic (constant) and the total length of the CPU burst has a two stage
+hyper-exponential distribution
+fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2)
+with parameters α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
 ## STAZIONI PRESENTI NEL MODELLO
 
