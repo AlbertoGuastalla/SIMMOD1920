@@ -512,1030 +512,1034 @@ di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
 #### GENERATORE INFINITESIMALE
 
+!!Error parsing row 0. Wrong number of columns.!!
+!!Error parsing row 1. Wrong number of columns.!!
+!!Error parsing row 2. Wrong number of columns.!!
+!!Error parsing row 3. Wrong number of columns.!!
+!!Error parsing row 4. Wrong number of columns.!!
+!!Error parsing row 5. Wrong number of columns.!!
+!!Error parsing row 6. Wrong number of columns.!!
+!!Error parsing row 7. Wrong number of columns.!!
+!!Error parsing row 8. Wrong number of columns.!!
+!!Error parsing row 9. Wrong number of columns.!!
+!!Error parsing row 10. Wrong number of columns.!!
+!!Error parsing row 11. Wrong number of columns.!!
+!!Error parsing row 12. Wrong number of columns.!!
+!!Error parsing row 13. Wrong number of columns.!!
+!!Error parsing row 14. Wrong number of columns.!!
+!!Error parsing row 15. Wrong number of columns.!!
+!!Error parsing row 16. Wrong number of columns.!!
+!!Error parsing row 17. Wrong number of columns.!!
+!!Error parsing row 18. Wrong number of columns.!!
+!!Error parsing row 19. Wrong number of columns.!!
+!!Error parsing row 20. Wrong number of columns.!!
+!!Error parsing row 21. Wrong number of columns.!!
+!!Error parsing row 22. Wrong number of columns.!!
+!!Error parsing row 23. Wrong number of columns.!!
+!!Error parsing row 24. Wrong number of columns.!!
+!!Error parsing row 25. Wrong number of columns.!!
+!!Error parsing row 26. Wrong number of columns.!!
+!!Error parsing row 27. Wrong number of columns.!!
+!!Error parsing row 28. Wrong number of columns.!!
+!!Error parsing row 29. Wrong number of columns.!!
+
 <table>
-   <tr>
-      <td></td>
-      <td>(3,0,0,0)</td>
-      <td>(0,(3,A),0,0)</td>
-      <td>(0,(3,B),0,0)</td>
-      <td>(0,0,3,0)</td>
-      <td>(0,0,0,3)</td>
-      <td>(2,(1,A),0,0)</td>
-      <td>(2,(1,B),0,0)</td>
-      <td>(2,0,1,0)</td>
-      <td>(2,0,0,1)</td>
-      <td>(1,(2,A),0,0)</td>
-      <td>(1,(2,B),0,0)</td>
-      <td>(1,0,2,0)</td>
-      <td>(1,0,0,2)</td>
-      <td>(0,(1,A),2,0)</td>
-      <td>(0,(1,B),2,0)</td>
-      <td>(0,(1,A),0,2)</td>
-      <td>(0,(1,B),0,2)</td>
-      <td>(0,0,1,2)</td>
-      <td>(0,0,2,1)</td>
-      <td>(0,(2,A),1,0)</td>
-      <td>(0,(2,B),1,0)</td>
-      <td>(0,(2,A),0,1)</td>
-      <td>(0,(2,B),0,1)</td>
-      <td>(0,(1,A),1,1)</td>
-      <td>(0,(1,B),1,1)</td>
-      <td>(1,0,1,1)</td>
-      <td>(1,(1,A),0,1)</td>
-      <td>(1,(1,B),0,1)</td>
-      <td>(1,(1,A),1,0)</td>
-      <td>(1,(1,B),1,0)</td>
-   </tr>
-   <tr>
-      <td>(3,0,0,0)</td>
-      <td>-3 * λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>3 * λ1 * α</td>
-      <td>3 * λ1 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(3,A),0,0)</td>
-      <td>0</td>
-      <td>-(μA + μq) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q36 * q60 * α</td>
-      <td>μA * q36 * q60 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q34 * α</td>
-      <td>μA * q34 * β</td>
-      <td>μA * q35 * α</td>
-      <td>μA * q35 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(3,B),0,0)</td>
-      <td>0</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq) + (μq + μB * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q36 * q60 * α</td>
-      <td>μB * q36 * q60 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q34 * α</td>
-      <td>μB * q34 * β</td>
-      <td>μB * q35 * α</td>
-      <td>μB * q35 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,0,3,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-λ3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ3 * α</td>
-      <td>λ3 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,0,0,3)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-λ4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ4 * α</td>
-      <td>λ4 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(2,(1,A),0,0)</td>
-      <td>μA * q36 * q60</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(μA + μq + 2 * λ1) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>μA * q34</td>
-      <td>μA * q35</td>
-      <td>2 * λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(2,(1,B),0,0)</td>
-      <td>μB * q36 * q60</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + 2 * λ1) + (μq + μB * q36 * q61) * β</td>
-      <td>μB * q34</td>
-      <td>μB * q35</td>
-      <td>0</td>
-      <td>2 * λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(2,0,1,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ3 * α</td>
-      <td>λ3 * β</td>
-      <td>-(2 * λ1 + λ3)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>2 * λ1 * α</td>
-      <td>2 * λ1 * β</td>
-   </tr>
-   <tr>
-      <td>(2,0,0,1)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ4 * α</td>
-      <td>λ4 * β</td>
-      <td>0</td>
-      <td>-(2 * λ1 + λ4)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>2 * λ1 * α</td>
-      <td>2 * λ1 * β</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(1,(2,A),0,0)</td>
-      <td>0</td>
-      <td>λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q36 * q60 * α</td>
-      <td>μA * q36 * q60 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(μA + μq + λ1) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q35 * α</td>
-      <td>μA * q35 * β</td>
-      <td>μA * q34 * α</td>
-      <td>μA * q34 * β</td>
-   </tr>
-   <tr>
-      <td>(1,(2,B),0,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q36 * q60 * α</td>
-      <td>μB * q36 * q60 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + λ1) + (μq + μB * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q35 * α</td>
-      <td>μB * q35 * β</td>
-      <td>μB * q34 * α</td>
-      <td>μB * q34 * β</td>
-   </tr>
-   <tr>
-      <td>(1,0,2,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(λ1 + λ3)</td>
-      <td>0</td>
-      <td>λ1 * α</td>
-      <td>λ1 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ3 * α</td>
-      <td>λ3 * β</td>
-   </tr>
-   <tr>
-      <td>(1,0,0,2)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(λ1 + λ4)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ1 * α</td>
-      <td>λ1 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ4 * α</td>
-      <td>λ4 * β</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(1,A),2,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q34</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q36 * q60</td>
-      <td>0</td>
-      <td>-(μA + μq + λ3) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q35</td>
-      <td>λ3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(1,B),2,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q34</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q36 * q60</td>
-      <td>0</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + λ3) + (μq + μB * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q35</td>
-      <td>0</td>
-      <td>λ3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(1,A),0,2)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q36 * q60</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(μA + μq + λ4) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>μA * q34</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(1,B),0,2)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q36 * q60</td>
-      <td>0</td>
-      <td>0</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + λ4) + (μq + μB * q36 * q61) * β</td>
-      <td>μB * q34</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,0,1,2)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ3 * α</td>
-      <td>λ3 * β</td>
-      <td>-(λ4 + λ3)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ4 * α</td>
-      <td>λ4 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,0,2,1)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ4 * α</td>
-      <td>λ4 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(λ4 + λ3)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ3 * α</td>
-      <td>λ3 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(2,A),1,0)</td>
-      <td>0</td>
-      <td>λ3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q34 * α</td>
-      <td>μA * q34 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(μA + μq + λ3) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q35 * α</td>
-      <td>μA * q35 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q36 * q60 * α</td>
-      <td>μA * q36 * q60 * β</td>
-   </tr>
-   <tr>
-      <td>(0,(2,B),1,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ3</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q34 * α</td>
-      <td>μB * q34 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + λ3) + (μq + μB * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q35 * α</td>
-      <td>μB * q35 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q36 * q60 * α</td>
-      <td>μB * q36 * q60 * β</td>
-   </tr>
-   <tr>
-      <td>(0,(2,A),0,1)</td>
-      <td>0</td>
-      <td>λ4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q35 * α</td>
-      <td>μA * q35 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(μA + μq + λ4) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>μA * q34 * α</td>
-      <td>μA * q34 * β</td>
-      <td>0</td>
-      <td>μA * q36 * q60 * α</td>
-      <td>μA * q36 * q60 * β</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(2,B),0,1)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q35 * α</td>
-      <td>μB * q35 * β</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + λ4) + (μq + μB * q36 * q61) * β</td>
-      <td>μB * q34 * α</td>
-      <td>μB * q34 * β</td>
-      <td>0</td>
-      <td>μB * q36 * q60 * α</td>
-      <td>μB * q36 * q60 * β</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(1,A),1,1)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q35</td>
-      <td>μA * q34</td>
-      <td>λ4</td>
-      <td>0</td>
-      <td>λ3</td>
-      <td>0</td>
-      <td>-(μA + μq + λ3+ λ4) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>μA * q36 * q60</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(0,(1,B),1,1)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q35</td>
-      <td>μB * q34</td>
-      <td>0</td>
-      <td>λ4</td>
-      <td>0</td>
-      <td>λ3</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + λ3+ λ4) + (μq + μB * q36 * q61) * β</td>
-      <td>μB * q36 * q60</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(1,0,1,1)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ1 * α</td>
-      <td>λ1 * β</td>
-      <td>-(λ1 + λ3 + λ4)</td>
-      <td>λ3 * α</td>
-      <td>λ3 * β</td>
-      <td>λ4 * α</td>
-      <td>λ4 * β</td>
-   </tr>
-   <tr>
-      <td>(1,(1,A),0,1)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q36 * q60</td>
-      <td>λ4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q34</td>
-      <td>-(μA + μq + λ1+ λ4) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(1,(1,B),0,1)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q36 * q60</td>
-      <td>0</td>
-      <td>λ4</td>
-      <td>0</td>
-      <td>μB * q35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q34</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + λ1+ λ4) + (μq + μB * q36 * q61) * β</td>
-      <td>0</td>
-      <td>0</td>
-   </tr>
-   <tr>
-      <td>(1,(1,A),1,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q36 * q60</td>
-      <td>0</td>
-      <td>λ3</td>
-      <td>0</td>
-      <td>μA * q34</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μA * q35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>-(μA + μq + λ1+ λ3) + (μq + μA * q36 * q61) * α</td>
-      <td>(μq + μA * q36 * q61) * β</td>
-   </tr>
-   <tr>
-      <td>(1,(1,B),1,0)</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q36 * q60</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ3</td>
-      <td>μB * q34</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>λ1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>μB * q35</td>
-      <td>0</td>
-      <td>0</td>
-      <td>(μq + μB * q36 * q61) * α</td>
-      <td>-(μB + μq + λ1+ λ3) + (μq + μB * q36 * q61) * β</td>
-   </tr>
+  <thead>
+    <tr>
+      <th class="(3,0,0,0)-cell">(3,0,0,0)</th>
+      <th class="(0,(3,A),0,0)-cell">(0,(3,A),0,0)</th>
+      <th class="(0,(3,B),0,0)-cell">(0,(3,B),0,0)</th>
+      <th class="(0,0,3,0)-cell">(0,0,3,0)</th>
+      <th class="(0,0,0,3)-cell">(0,0,0,3)</th>
+      <th class="(2,(1,A),0,0)-cell">(2,(1,A),0,0)</th>
+      <th class="(2,(1,B),0,0)-cell">(2,(1,B),0,0)</th>
+      <th class="(2,0,1,0)-cell">(2,0,1,0)</th>
+      <th class="(2,0,0,1)-cell">(2,0,0,1)</th>
+      <th class="(1,(2,A),0,0)-cell">(1,(2,A),0,0)</th>
+      <th class="(1,(2,B),0,0)-cell">(1,(2,B),0,0)</th>
+      <th class="(1,0,2,0)-cell">(1,0,2,0)</th>
+      <th class="(1,0,0,2)-cell">(1,0,0,2)</th>
+      <th class="(0,(1,A),2,0)-cell">(0,(1,A),2,0)</th>
+      <th class="(0,(1,B),2,0)-cell">(0,(1,B),2,0)</th>
+      <th class="(0,(1,A),0,2)-cell">(0,(1,A),0,2)</th>
+      <th class="(0,(1,B),0,2)-cell">(0,(1,B),0,2)</th>
+      <th class="(0,0,1,2)-cell">(0,0,1,2)</th>
+      <th class="(0,0,2,1)-cell">(0,0,2,1)</th>
+      <th class="(0,(2,A),1,0)-cell">(0,(2,A),1,0)</th>
+      <th class="(0,(2,B),1,0)-cell">(0,(2,B),1,0)</th>
+      <th class="(0,(2,A),0,1)-cell">(0,(2,A),0,1)</th>
+      <th class="(0,(2,B),0,1)-cell">(0,(2,B),0,1)</th>
+      <th class="(0,(1,A),1,1)-cell">(0,(1,A),1,1)</th>
+      <th class="(0,(1,B),1,1)-cell">(0,(1,B),1,1)</th>
+      <th class="(1,0,1,1)-cell">(1,0,1,1)</th>
+      <th class="(1,(1,A),0,1)-cell">(1,(1,A),0,1)</th>
+      <th class="(1,(1,B),0,1)-cell">(1,(1,B),0,1)</th>
+      <th class="(1,(1,A),1,0)-cell">(1,(1,A),1,0)</th>
+      <th class="(1,(1,B),1,0)-cell">(1,(1,B),1,0)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="firstRow">
+      <td class="(3,0,0,0)-cell">(3,0,0,0)</td>
+      <td class="(0,(3,A),0,0)-cell">-3 * λ1</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">3 * λ1 * α</td>
+      <td class="(2,0,1,0)-cell">3 * λ1 * β</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(3,A),0,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">-(μA + μq) + (μq + μA * q36 * q61) * α</td>
+      <td class="(0,0,3,0)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">μA * q36 * q60 * α</td>
+      <td class="(1,0,2,0)-cell">μA * q36 * q60 * β</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">μA * q34 * α</td>
+      <td class="(0,(2,A),0,1)-cell">μA * q34 * β</td>
+      <td class="(0,(2,B),0,1)-cell">μA * q35 * α</td>
+      <td class="(0,(1,A),1,1)-cell">μA * q35 * β</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(3,B),0,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(0,0,3,0)-cell">-(μB + μq) + (μq + μB * q36 * q61) * β</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">μB * q36 * q60 * α</td>
+      <td class="(1,0,2,0)-cell">μB * q36 * q60 * β</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">μB * q34 * α</td>
+      <td class="(0,(2,A),0,1)-cell">μB * q34 * β</td>
+      <td class="(0,(2,B),0,1)-cell">μB * q35 * α</td>
+      <td class="(0,(1,A),1,1)-cell">μB * q35 * β</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,0,3,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">-λ3</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">λ3 * α</td>
+      <td class="(0,(1,A),0,2)-cell">λ3 * β</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,0,0,3)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">-λ4</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">λ4 * α</td>
+      <td class="(0,0,1,2)-cell">λ4 * β</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(2,(1,A),0,0)</td>
+      <td class="(0,(3,A),0,0)-cell">μA * q36 * q60</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">-(μA + μq + 2 * λ1) + (μq + μA * q36 * q61) * α</td>
+      <td class="(2,0,1,0)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(2,0,0,1)-cell">μA * q34</td>
+      <td class="(1,(2,A),0,0)-cell">μA * q35</td>
+      <td class="(1,(2,B),0,0)-cell">2 * λ1</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(2,(1,B),0,0)</td>
+      <td class="(0,(3,A),0,0)-cell">μB * q36 * q60</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(2,0,1,0)-cell">-(μB + μq + 2 * λ1) + (μq + μB * q36 * q61) * β</td>
+      <td class="(2,0,0,1)-cell">μB * q34</td>
+      <td class="(1,(2,A),0,0)-cell">μB * q35</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">2 * λ1</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(2,0,1,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">λ3 * α</td>
+      <td class="(2,0,1,0)-cell">λ3 * β</td>
+      <td class="(2,0,0,1)-cell">-(2 * λ1 + λ3)</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">2 * λ1 * α</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(2,0,0,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">λ4 * α</td>
+      <td class="(2,0,1,0)-cell">λ4 * β</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">-(2 * λ1 + λ4)</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">2 * λ1 * α</td>
+      <td class="(1,(1,A),1,0)-cell">2 * λ1 * β</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(1,(2,A),0,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">λ1</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">μA * q36 * q60 * α</td>
+      <td class="(2,0,1,0)-cell">μA * q36 * q60 * β</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">-(μA + μq + λ1) + (μq + μA * q36 * q61) * α</td>
+      <td class="(1,0,2,0)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">μA * q35 * α</td>
+      <td class="(1,(1,A),1,0)-cell">μA * q35 * β</td>
+      <td class="(1,(1,B),1,0)-cell">μA * q34 * α</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(1,(2,B),0,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">λ1</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">μB * q36 * q60 * α</td>
+      <td class="(2,0,1,0)-cell">μB * q36 * q60 * β</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(1,0,2,0)-cell">-(μB + μq + λ1) + (μq + μB * q36 * q61) * β</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">μB * q35 * α</td>
+      <td class="(1,(1,A),1,0)-cell">μB * q35 * β</td>
+      <td class="(1,(1,B),1,0)-cell">μB * q34 * α</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(1,0,2,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">-(λ1 + λ3)</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">λ1 * α</td>
+      <td class="(0,(1,A),0,2)-cell">λ1 * β</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">λ3 * α</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(1,0,0,2)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">-(λ1 + λ4)</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">λ1 * α</td>
+      <td class="(0,0,1,2)-cell">λ1 * β</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">λ4 * α</td>
+      <td class="(1,(1,A),1,0)-cell">λ4 * β</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(1,A),2,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">μA * q34</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">μA * q36 * q60</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">-(μA + μq + λ3) + (μq + μA * q36 * q61) * α</td>
+      <td class="(0,(1,A),0,2)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">μA * q35</td>
+      <td class="(0,(2,B),1,0)-cell">λ3</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(1,B),2,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">μB * q34</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">μB * q36 * q60</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(0,(1,A),0,2)-cell">-(μB + μq + λ3) + (μq + μB * q36 * q61) * β</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">μB * q35</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">λ3</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(1,A),0,2)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">μA * q35</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">μA * q36 * q60</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">-(μA + μq + λ4) + (μq + μA * q36 * q61) * α</td>
+      <td class="(0,0,1,2)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(0,0,2,1)-cell">μA * q34</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">λ4</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(1,B),0,2)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">μB * q35</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">μB * q36 * q60</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(0,0,1,2)-cell">-(μB + μq + λ4) + (μq + μB * q36 * q61) * β</td>
+      <td class="(0,0,2,1)-cell">μB * q34</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">λ4</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,0,1,2)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">λ3 * α</td>
+      <td class="(0,0,1,2)-cell">λ3 * β</td>
+      <td class="(0,0,2,1)-cell">-(λ4 + λ3)</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">λ4 * α</td>
+      <td class="(1,0,1,1)-cell">λ4 * β</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,0,2,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">λ4 * α</td>
+      <td class="(0,(1,A),0,2)-cell">λ4 * β</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">-(λ4 + λ3)</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">λ3 * α</td>
+      <td class="(1,0,1,1)-cell">λ3 * β</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(2,A),1,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">λ3</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">μA * q34 * α</td>
+      <td class="(0,(1,A),0,2)-cell">μA * q34 * β</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">-(μA + μq + λ3) + (μq + μA * q36 * q61) * α</td>
+      <td class="(0,(2,A),0,1)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">μA * q35 * α</td>
+      <td class="(1,0,1,1)-cell">μA * q35 * β</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">μA * q36 * q60 * α</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(2,B),1,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">λ3</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">μB * q34 * α</td>
+      <td class="(0,(1,A),0,2)-cell">μB * q34 * β</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(0,(2,A),0,1)-cell">-(μB + μq + λ3) + (μq + μB * q36 * q61) * β</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">μB * q35 * α</td>
+      <td class="(1,0,1,1)-cell">μB * q35 * β</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">μB * q36 * q60 * α</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(2,A),0,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">λ4</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">μA * q35 * α</td>
+      <td class="(0,0,1,2)-cell">μA * q35 * β</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">-(μA + μq + λ4) + (μq + μA * q36 * q61) * α</td>
+      <td class="(0,(1,A),1,1)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(0,(1,B),1,1)-cell">μA * q34 * α</td>
+      <td class="(1,0,1,1)-cell">μA * q34 * β</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">μA * q36 * q60 * α</td>
+      <td class="(1,(1,A),1,0)-cell">μA * q36 * q60 * β</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(2,B),0,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">λ4</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">μB * q35 * α</td>
+      <td class="(0,0,1,2)-cell">μB * q35 * β</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(0,(1,A),1,1)-cell">-(μB + μq + λ4) + (μq + μB * q36 * q61) * β</td>
+      <td class="(0,(1,B),1,1)-cell">μB * q34 * α</td>
+      <td class="(1,0,1,1)-cell">μB * q34 * β</td>
+      <td class="(1,(1,A),0,1)-cell">0</td>
+      <td class="(1,(1,B),0,1)-cell">μB * q36 * q60 * α</td>
+      <td class="(1,(1,A),1,0)-cell">μB * q36 * q60 * β</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(1,A),1,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">μA * q35</td>
+      <td class="(0,(2,A),1,0)-cell">μA * q34</td>
+      <td class="(0,(2,B),1,0)-cell">λ4</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">λ3</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">-(μA + μq + λ3+ λ4) + (μq + μA * q36 * q61) * α</td>
+      <td class="(1,0,1,1)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(1,(1,A),0,1)-cell">μA * q36 * q60</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(0,(1,B),1,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">μB * q35</td>
+      <td class="(0,(2,A),1,0)-cell">μB * q34</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">λ4</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">λ3</td>
+      <td class="(0,(1,B),1,1)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(1,0,1,1)-cell">-(μB + μq + λ3+ λ4) + (μq + μB * q36 * q61) * β</td>
+      <td class="(1,(1,A),0,1)-cell">μB * q36 * q60</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(1,0,1,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">λ1 * α</td>
+      <td class="(1,0,1,1)-cell">λ1 * β</td>
+      <td class="(1,(1,A),0,1)-cell">-(λ1 + λ3 + λ4)</td>
+      <td class="(1,(1,B),0,1)-cell">λ3 * α</td>
+      <td class="(1,(1,A),1,0)-cell">λ3 * β</td>
+      <td class="(1,(1,B),1,0)-cell">λ4 * α</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(1,(1,A),0,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">μA * q36 * q60</td>
+      <td class="(1,(2,B),0,0)-cell">λ4</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">μA * q35</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">λ1</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">μA * q34</td>
+      <td class="(1,(1,B),0,1)-cell">-(μA + μq + λ1+ λ4) + (μq + μA * q36 * q61) * α</td>
+      <td class="(1,(1,A),1,0)-cell">(μq + μA * q36 * q61) * β</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(1,(1,B),0,1)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">0</td>
+      <td class="(1,(2,A),0,0)-cell">μB * q36 * q60</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">λ4</td>
+      <td class="(1,0,0,2)-cell">0</td>
+      <td class="(0,(1,A),2,0)-cell">μB * q35</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">λ1</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">μB * q34</td>
+      <td class="(1,(1,B),0,1)-cell">(μq + μB * q36 * q61) * α</td>
+      <td class="(1,(1,A),1,0)-cell">-(μB + μq + λ1+ λ4) + (μq + μB * q36 * q61) * β</td>
+      <td class="(1,(1,B),1,0)-cell">0</td>
+    </tr>
+    <tr>
+      <td class="(3,0,0,0)-cell">(1,(1,A),1,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">μA * q36 * q60</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">λ3</td>
+      <td class="(1,0,2,0)-cell">0</td>
+      <td class="(1,0,0,2)-cell">μA * q34</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">λ1</td>
+      <td class="(0,(2,A),0,1)-cell">0</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">μA * q35</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">-(μA + μq + λ1+ λ3) + (μq + μA * q36 * q61) * α</td>
+    </tr>
+    <tr class="lastRow">
+      <td class="(3,0,0,0)-cell">(1,(1,B),1,0)</td>
+      <td class="(0,(3,A),0,0)-cell">0</td>
+      <td class="(0,(3,B),0,0)-cell">0</td>
+      <td class="(0,0,3,0)-cell">0</td>
+      <td class="(0,0,0,3)-cell">0</td>
+      <td class="(2,(1,A),0,0)-cell">0</td>
+      <td class="(2,(1,B),0,0)-cell">0</td>
+      <td class="(2,0,1,0)-cell">0</td>
+      <td class="(2,0,0,1)-cell">μB * q36 * q60</td>
+      <td class="(1,(2,A),0,0)-cell">0</td>
+      <td class="(1,(2,B),0,0)-cell">0</td>
+      <td class="(1,0,2,0)-cell">λ3</td>
+      <td class="(1,0,0,2)-cell">μB * q34</td>
+      <td class="(0,(1,A),2,0)-cell">0</td>
+      <td class="(0,(1,B),2,0)-cell">0</td>
+      <td class="(0,(1,A),0,2)-cell">0</td>
+      <td class="(0,(1,B),0,2)-cell">0</td>
+      <td class="(0,0,1,2)-cell">0</td>
+      <td class="(0,0,2,1)-cell">0</td>
+      <td class="(0,(2,A),1,0)-cell">0</td>
+      <td class="(0,(2,B),1,0)-cell">0</td>
+      <td class="(0,(2,A),0,1)-cell">λ1</td>
+      <td class="(0,(2,B),0,1)-cell">0</td>
+      <td class="(0,(1,A),1,1)-cell">0</td>
+      <td class="(0,(1,B),1,1)-cell">0</td>
+      <td class="(1,0,1,1)-cell">0</td>
+      <td class="(1,(1,A),0,1)-cell">μB * q35</td>
+      <td class="(1,(1,B),0,1)-cell">0</td>
+      <td class="(1,(1,A),1,0)-cell">0</td>
+      <td class="(1,(1,B),1,0)-cell">(μq + μB * q36 * q61) * α</td>
+    </tr>
+  </tbody>
 </table>
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
