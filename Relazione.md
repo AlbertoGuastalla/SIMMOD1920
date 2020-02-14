@@ -19,7 +19,7 @@
 - Multi-Programming Degree MPD = 10
 
 Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa a meno della CPU, la quale presenta un quanto di tempo costante e una distribuzione dei tempi di servizio iper-esponenziale a due stadi:
-- fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
+- &#402;X(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
 di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
 ## STAZIONI PRESENTI NEL MODELLO
@@ -506,7 +506,7 @@ In formule:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 - Multi-Programming Degree MPD = INT_MAX (massimo intero con segno in complemento a 2 rappresentabile in 32 bit)
 
 Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa a meno della CPU, la quale presenta un quanto di tempo costante e una distribuzione dei tempi di servizio iper-esponenziale a due stadi:
-- fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
+- &#402;X(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
 di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
 #### CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
@@ -600,6 +600,14 @@ trovando la seguente distribuzione limite (<b>π</b>):
    </tr>
 </table>
 
+#### CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
+
+- Numero medio di jobs in Delay station: 1,921983303
+- Numero medio di jobs in CPU station:	0,1984139534
+- Numero medio di jobs in IO1 station:	0,2971184709
+- Numero medio di jobs in IO2 station:	0,5824842722
+
+Calcolati attaverso: &#8721; k * π
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
 <ol type="1">
