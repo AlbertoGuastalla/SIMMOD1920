@@ -19,7 +19,7 @@
 - Multi-Programming Degree MPD = 10
 
 Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa a meno della CPU, la quale presenta un quanto di tempo costante e una distribuzione dei tempi di servizio iper-esponenziale a due stadi:
-- fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
+- f:\mathbb{R}\to\mathbb{R} = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
 di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
 ## STAZIONI PRESENTI NEL MODELLO
