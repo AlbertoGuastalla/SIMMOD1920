@@ -600,6 +600,8 @@ trovando la seguente distribuzione limite (<b>π</b>):
    </tr>
 </table>
 
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/distribution.png"/>
+
 #### CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
 
 ##### NUMERO MEDIO DI JOBS
