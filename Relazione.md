@@ -185,16 +185,22 @@ Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numer
 
 ### FIRST VALIDATION STEP
 
-<p align=”justify”>
-Il primo modello di validazione semplifica il modello originale modificando: 
+## DETTAGLI DEL MODELLO
 
-<ul>
-<li>La distribuzione di tempi di servizio della CPU: Esponenziale negativa di media η = 2.7 msec. </li>
-<li>CPU completion choice: q33 = 0.9, q34 = 0.065, q35 = 0.025, q36 = 0.01. </li>
+- Tempo medio di ritardo Z = 5000 msec
+- Tempo medio di servizio della stazione swap-in S1 = 210 msec
+- Tempo medio di servizio della stazione CPU S2 = 2.7 msec
+- Lunghezza del time slice (quanto della CPU) δ = DBL_MAX (massimo extended floating-point number con segno rappresentabile in 64 bit)
+- Tempo medio di servizio della stazione I/O1 S4 = 40 msec
+- Tempo medio di servizio della stazione I/O2 S5 = 180 msec
+- CPU completion choice q33 = 0.9, q34 = 0.065, q35 = 0.025, q36 = 0.01
+- Swap-out choice q6,0 = 0.4, q6,1 = 0.6.
+- Multi-Programming Degree MPD = INT_MAX (massimo intero con segno in complemento a 2 rappresentabile in 32 bit)
+
+Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa.
+
+<p align=”justify”>
 <img " src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/fsv.png"/>
-<li>MPD = INT_MAX (massimo intero con segno in complemento a 2 rappresentabile in 32 bit). </li>
-<li>CPU_QUANTUM = DBL_MAX (massimo extended floating-point number con segno rappresentabile in 64 bit). </li>
-</ul>
 
 Utilizzando l’algoritmo Mean Value Analysis (MVA) si possono osservare le varie medie teoriche dei tempi di risposta del sistema e dei tempi di permanenza nel sotto-sistema “attivo” per ogni carico del sistema (da 1 a 30 jobs). Utilizzando la classica formula di Little in questa forma: R = N / X<SUB>0</SUB>(N) - Z (X<SUB>0</SUB>(N) letto direttamente dall’output di MVA per ogni livello di carico) è possibile ottenere i vari tempi medi di risposta del sistema: 
 </p>
@@ -423,6 +429,24 @@ Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato li
 Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (il 50% degli intervalli sia centrato su una stima più grande o uguale del valore teorico e l'altro 50% viceversa). Nell’esempio riportato, 91 intervalli contengono il valore teorico e 9 viceversa; 48 intervalli sono "sbilancianti" verso l'alto, mentre i rimanenti 52 verso il basso.
 
 Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande.
+
+### SECOND VALIDATION STEP
+
+## DETTAGLI DEL MODELLO
+
+- Tempo medio di ritardo Z = 5000 msec
+- Tempo medio di servizio della stazione swap-in S1 = 210 msec
+- Tempo medio di servizio della stazione CPU S2 = 27 msec
+- Lunghezza del time slice (quanto della CPU) δ = 3 msec
+- Tempo medio di servizio della stazione I/O1 S4 = 40 msec
+- Tempo medio di servizio della stazione I/O2 S5 = 180 msec
+- CPU completion choice q3,4 = 0.65, q3,5 = 0.25, q3,6 = 0.1
+- Swap-out choice q6,0 = 0.4, q6,1 = 0.6.
+- Multi-Programming Degree MPD = 10
+
+Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenziale negativa a meno della CPU, la quale presenta un quanto di tempo costante e una distribuzione dei tempi di servizio iper-esponenziale a due stadi:
+- fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
+di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
 ## BOTTLENECK ANALYSIS 
 
