@@ -607,7 +607,7 @@ trovando la seguente distribuzione limite (<b>π</b>):
 - Numero medio di jobs in IO1 station:	0,2971184709
 - Numero medio di jobs in IO2 station:	0,5824842722
 
-Calcolati attaverso: &#8721; k * π
+Calcolati attaverso: &#8721; k * π<SUB>i</SUB>
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
 <ol type="1">
