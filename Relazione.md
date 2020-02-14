@@ -512,1071 +512,1030 @@ di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
 #### GENERATORE INFINITESIMALE
 
-<style>
-table { width: 775px; background-color: #FFFFFF; color: #000000; }
-th, td { width: 25px; }
-</style>
-<table border="0" cellspacing="0" cellpadding="0">
-<thead>
-<tr>
-<th>Titolo 1</th>
-<th>Titolo 2</th>
-<th>Titolo 3</th>
-<th>Titolo 4</th>
-<th>Titolo 5</th>
-<th>Titolo 6</th>
-<th>Titolo 7</th>
-<th>Titolo 8</th>
-<th>Titolo 9</th>
-<th>Titolo 10</th>
-<th>Titolo 11</th>
-<th>Titolo 12</th>
-<th>Titolo 13</th>
-<th>Titolo 14</th>
-<th>Titolo 15</th>
-<th>Titolo 16</th>
-<th>Titolo 17</th>
-<th>Titolo 18</th>
-<th>Titolo 19</th>
-<th>Titolo 20</th>
-<th>Titolo 21</th>
-<th>Titolo 22</th>
-<th>Titolo 23</th>
-<th>Titolo 24</th>
-<th>Titolo 25</th>
-<th>Titolo 26</th>
-<th>Titolo 27</th>
-<th>Titolo 28</th>
-<th>Titolo 29</th>
-<th>Titolo 30</th>
-<th>Titolo 31</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-<tr>
-<td>Valore1</td>
-<td>Valore2</td>
-<td>Valore3</td>
-<td>Valore4</td>
-<td>Valore5</td>
-<td>Valore6</td>
-<td>Valore7</td>
-<td>Valore8</td>
-<td>Valore9</td>
-<td>Valore10</td>
-<td>Valore11</td>
-<td>Valore12</td>
-<td>Valore13</td>
-<td>Valore14</td>
-<td>Valore15</td>
-<td>Valore16</td>
-<td>Valore17</td>
-<td>Valore18</td>
-<td>Valore19</td>
-<td>Valore20</td>
-<td>Valore21</td>
-<td>Valore22</td>
-<td>Valore23</td>
-<td>Valore24</td>
-<td>Valore25</td>
-<td>Valore26</td>
-<td>Valore27</td>
-<td>Valore28</td>
-<td>Valore29</td>
-<td>Valore30</td>
-<td>Valore31</td>
-</tr>
-</tbody>
+<table>
+   <tr>
+      <td></td>
+      <td>(3,0,0,0)</td>
+      <td>(0,(3,A),0,0)</td>
+      <td>(0,(3,B),0,0)</td>
+      <td>(0,0,3,0)</td>
+      <td>(0,0,0,3)</td>
+      <td>(2,(1,A),0,0)</td>
+      <td>(2,(1,B),0,0)</td>
+      <td>(2,0,1,0)</td>
+      <td>(2,0,0,1)</td>
+      <td>(1,(2,A),0,0)</td>
+      <td>(1,(2,B),0,0)</td>
+      <td>(1,0,2,0)</td>
+      <td>(1,0,0,2)</td>
+      <td>(0,(1,A),2,0)</td>
+      <td>(0,(1,B),2,0)</td>
+      <td>(0,(1,A),0,2)</td>
+      <td>(0,(1,B),0,2)</td>
+      <td>(0,0,1,2)</td>
+      <td>(0,0,2,1)</td>
+      <td>(0,(2,A),1,0)</td>
+      <td>(0,(2,B),1,0)</td>
+      <td>(0,(2,A),0,1)</td>
+      <td>(0,(2,B),0,1)</td>
+      <td>(0,(1,A),1,1)</td>
+      <td>(0,(1,B),1,1)</td>
+      <td>(1,0,1,1)</td>
+      <td>(1,(1,A),0,1)</td>
+      <td>(1,(1,B),0,1)</td>
+      <td>(1,(1,A),1,0)</td>
+      <td>(1,(1,B),1,0)</td>
+   </tr>
+   <tr>
+      <td>(3,0,0,0)</td>
+      <td>-3 * λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3 * λ1 * α</td>
+      <td>3 * λ1 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(3,A),0,0)</td>
+      <td>0</td>
+      <td>-(μA + μq) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q36 * q60 * α</td>
+      <td>μA * q36 * q60 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q34 * α</td>
+      <td>μA * q34 * β</td>
+      <td>μA * q35 * α</td>
+      <td>μA * q35 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(3,B),0,0)</td>
+      <td>0</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq) + (μq + μB * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q36 * q60 * α</td>
+      <td>μB * q36 * q60 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q34 * α</td>
+      <td>μB * q34 * β</td>
+      <td>μB * q35 * α</td>
+      <td>μB * q35 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,0,3,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-λ3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ3 * α</td>
+      <td>λ3 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,0,0,3)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-λ4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ4 * α</td>
+      <td>λ4 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(2,(1,A),0,0)</td>
+      <td>μA * q36 * q60</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(μA + μq + 2 * λ1) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>μA * q34</td>
+      <td>μA * q35</td>
+      <td>2 * λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(2,(1,B),0,0)</td>
+      <td>μB * q36 * q60</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + 2 * λ1) + (μq + μB * q36 * q61) * β</td>
+      <td>μB * q34</td>
+      <td>μB * q35</td>
+      <td>0</td>
+      <td>2 * λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(2,0,1,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ3 * α</td>
+      <td>λ3 * β</td>
+      <td>-(2 * λ1 + λ3)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2 * λ1 * α</td>
+      <td>2 * λ1 * β</td>
+   </tr>
+   <tr>
+      <td>(2,0,0,1)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ4 * α</td>
+      <td>λ4 * β</td>
+      <td>0</td>
+      <td>-(2 * λ1 + λ4)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2 * λ1 * α</td>
+      <td>2 * λ1 * β</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(1,(2,A),0,0)</td>
+      <td>0</td>
+      <td>λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q36 * q60 * α</td>
+      <td>μA * q36 * q60 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(μA + μq + λ1) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q35 * α</td>
+      <td>μA * q35 * β</td>
+      <td>μA * q34 * α</td>
+      <td>μA * q34 * β</td>
+   </tr>
+   <tr>
+      <td>(1,(2,B),0,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q36 * q60 * α</td>
+      <td>μB * q36 * q60 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + λ1) + (μq + μB * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q35 * α</td>
+      <td>μB * q35 * β</td>
+      <td>μB * q34 * α</td>
+      <td>μB * q34 * β</td>
+   </tr>
+   <tr>
+      <td>(1,0,2,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(λ1 + λ3)</td>
+      <td>0</td>
+      <td>λ1 * α</td>
+      <td>λ1 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ3 * α</td>
+      <td>λ3 * β</td>
+   </tr>
+   <tr>
+      <td>(1,0,0,2)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(λ1 + λ4)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ1 * α</td>
+      <td>λ1 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ4 * α</td>
+      <td>λ4 * β</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(1,A),2,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q34</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q36 * q60</td>
+      <td>0</td>
+      <td>-(μA + μq + λ3) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q35</td>
+      <td>λ3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(1,B),2,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q34</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q36 * q60</td>
+      <td>0</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + λ3) + (μq + μB * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q35</td>
+      <td>0</td>
+      <td>λ3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(1,A),0,2)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q35</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q36 * q60</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(μA + μq + λ4) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>μA * q34</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(1,B),0,2)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q35</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q36 * q60</td>
+      <td>0</td>
+      <td>0</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + λ4) + (μq + μB * q36 * q61) * β</td>
+      <td>μB * q34</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,0,1,2)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ3 * α</td>
+      <td>λ3 * β</td>
+      <td>-(λ4 + λ3)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ4 * α</td>
+      <td>λ4 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,0,2,1)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ4 * α</td>
+      <td>λ4 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(λ4 + λ3)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ3 * α</td>
+      <td>λ3 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(2,A),1,0)</td>
+      <td>0</td>
+      <td>λ3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q34 * α</td>
+      <td>μA * q34 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(μA + μq + λ3) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q35 * α</td>
+      <td>μA * q35 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q36 * q60 * α</td>
+      <td>μA * q36 * q60 * β</td>
+   </tr>
+   <tr>
+      <td>(0,(2,B),1,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q34 * α</td>
+      <td>μB * q34 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + λ3) + (μq + μB * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q35 * α</td>
+      <td>μB * q35 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q36 * q60 * α</td>
+      <td>μB * q36 * q60 * β</td>
+   </tr>
+   <tr>
+      <td>(0,(2,A),0,1)</td>
+      <td>0</td>
+      <td>λ4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q35 * α</td>
+      <td>μA * q35 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(μA + μq + λ4) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>μA * q34 * α</td>
+      <td>μA * q34 * β</td>
+      <td>0</td>
+      <td>μA * q36 * q60 * α</td>
+      <td>μA * q36 * q60 * β</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(2,B),0,1)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q35 * α</td>
+      <td>μB * q35 * β</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + λ4) + (μq + μB * q36 * q61) * β</td>
+      <td>μB * q34 * α</td>
+      <td>μB * q34 * β</td>
+      <td>0</td>
+      <td>μB * q36 * q60 * α</td>
+      <td>μB * q36 * q60 * β</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(1,A),1,1)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q35</td>
+      <td>μA * q34</td>
+      <td>λ4</td>
+      <td>0</td>
+      <td>λ3</td>
+      <td>0</td>
+      <td>-(μA + μq + λ3+ λ4) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>μA * q36 * q60</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(0,(1,B),1,1)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q35</td>
+      <td>μB * q34</td>
+      <td>0</td>
+      <td>λ4</td>
+      <td>0</td>
+      <td>λ3</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + λ3+ λ4) + (μq + μB * q36 * q61) * β</td>
+      <td>μB * q36 * q60</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(1,0,1,1)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ1 * α</td>
+      <td>λ1 * β</td>
+      <td>-(λ1 + λ3 + λ4)</td>
+      <td>λ3 * α</td>
+      <td>λ3 * β</td>
+      <td>λ4 * α</td>
+      <td>λ4 * β</td>
+   </tr>
+   <tr>
+      <td>(1,(1,A),0,1)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q36 * q60</td>
+      <td>λ4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q35</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q34</td>
+      <td>-(μA + μq + λ1+ λ4) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(1,(1,B),0,1)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q36 * q60</td>
+      <td>0</td>
+      <td>λ4</td>
+      <td>0</td>
+      <td>μB * q35</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q34</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + λ1+ λ4) + (μq + μB * q36 * q61) * β</td>
+      <td>0</td>
+      <td>0</td>
+   </tr>
+   <tr>
+      <td>(1,(1,A),1,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q36 * q60</td>
+      <td>0</td>
+      <td>λ3</td>
+      <td>0</td>
+      <td>μA * q34</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μA * q35</td>
+      <td>0</td>
+      <td>0</td>
+      <td>-(μA + μq + λ1+ λ3) + (μq + μA * q36 * q61) * α</td>
+      <td>(μq + μA * q36 * q61) * β</td>
+   </tr>
+   <tr>
+      <td>(1,(1,B),1,0)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q36 * q60</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ3</td>
+      <td>μB * q34</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>λ1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>μB * q35</td>
+      <td>0</td>
+      <td>0</td>
+      <td>(μq + μB * q36 * q61) * α</td>
+      <td>-(μB + μq + λ1+ λ3) + (μq + μB * q36 * q61) * β</td>
+   </tr>
 </table>
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
