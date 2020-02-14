@@ -438,7 +438,7 @@ Con un’analisi più accurata invece si possono osservare i seguenti valori:
 <ul>
 <li><b>Stazione bottleneck</b>: V<SUB>b</SUB> * S<SUB>b</SUB> = MAX {V<SUB>i</SUB> * S<SUB>i</SUB>} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). </li>
 
-<li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R<SUB>0</SUB>(1) = D = ∑V<SUB>i</SUB> * S<SUB>i</SUB> = V<SUB>SI</SUB> * S<SUB>SI</SUB> + V<SUB>CPU</SUB> * S<SUB>CPU</SUB> + V<SUB>IO1</SUB> * S<SUB>IO1</SUB> + V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li>
+<li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R<SUB>0</SUB>(1) = D = ∑V<SUB>i</SUB> * S<SUB>i</SUB> = V<SUB>SI</SUB> * S<SUB>SI</SUB> + V<SUB>CPU</SUB> * S<SUB>CPU</SUB> + V<SUB>IO1</SUB> * S<SUB>IO1</SUB> + V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li> 
 </ul>
 
 Dove le varie visite alle stazioni sono state calcolate risolvendo il sistema lineare di 5 equazioni a 4 incognite V = VQ (poiché, essendo la Delay Station la stazione di riferimento, V<SUB>DS</SUB> risulta essere per definizione uguale ad 1). 
@@ -602,12 +602,39 @@ trovando la seguente distribuzione limite (<b>π</b>):
 
 #### CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
 
-- Numero medio di jobs in Delay station: 1,921983303
-- Numero medio di jobs in CPU station:	0,1984139534
-- Numero medio di jobs in IO1 station:	0,2971184709
-- Numero medio di jobs in IO2 station:	0,5824842722
+##### NUMERO MEDIO DI JOBS
+- Numero medio di jobs in Delay station E[n<SUB>DS</SUB>]: 1.921983303
+- Numero medio di jobs in CPU station E[n<SUB>CPU</SUB>]: 0.1984139534
+- Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2971184709
+- Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]>: 0.5824842722
 
-Calcolati attaverso: &#8721; k * π<SUB>i</SUB>
+Calcolati attaverso: &#8721; k * π<SUB>i</SUB> con k > 0, i = 1,...,30
+
+##### UTILIZZAZIONI
+
+- Utilizzazione della CPU station U<SUB>CPUS</SUB>: 0.1755993833
+- Utilizzazione della IO1 station U<SUB>IO1</SUB>: 0.2498578293
+- Utilizzazione della IO2 station U<SUB>IO2</SUB>: 0.4324462431
+
+Calcolate attaverso: &#8721; π<SUB>i</SUB> con k > 0, i = 1,...,30
+
+##### THROUGHPUTS
+
+- Throughput della Delay station X<SUB>DS</SUB>: 0.0003843966605
+- Throughput della CPU station X<SUB>CPU</SUB>: 0.0065036808633
+- Throughput della IO1 station X<SUB>IO1</SUB>: 0.006246445733
+- Throughput della IO2 station X<SUB>IO2</SUB>: 0.002402479128
+
+Calcolati attaverso: X = U / S
+
+##### AVERAGE ACTIVE TIME
+
+Dato che essendo il sistema in equilibrio operazionale, dnotando il flusso in entrata al sotto-sistema con λ e quello in uscita con μ, deve per forza valere che λ = μ.
+
+Ma dato che, λ = X<SUB>DS</SUB> + q61 * μ = μ, allora μ = X<SUB>DS</SUB> / 0.4 = 0.0009609916513.
+
+Sempre considerando il fatto che l'operatore valore atteso gode della proprietà di linearità, il tempo medio di permanenza del sotto-sistema attivo è quindi:
+<b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b>
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
 <ol type="1">
