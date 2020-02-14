@@ -512,90 +512,90 @@ di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 #### CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
 
 Per poter valutare il modello semplificato si è dovuto risolvere (trovare la distribuzione a regime) la catena di Markov a tempo continuo che descrive l'evoluzione dl sistema.
-Dopo aver compilato la matrice Q che rappresenta il generatore infinitesimale della catena (link), si è quindi risolto il seguente sistema di equazioni lineare:
+Dopo aver compilato la matrice Q che rappresenta il generatore infinitesimale della catena (link), si è quindi risolto il seguente sistema di equazioni lineare (attraverso un solver apposito):
 - <b>πQ</b> = <b>0</b>
 
-trovando la seguente distribuzione limite:
+trovando la seguente distribuzione limite (<b>π</b>):
 
 <table>
    <tr>
-      <td>(3,0,0,0)</td>
+      <td>π1 (3,0,0,0)</td>
       <td>0.2955257595</td>
-      <td>(0,(3,A),0,0)</td>
+      <td>π2 (0,(3,A),0,0)</td>
       <td>0.0010493937</td>
-      <td>(0,(3,B),0,0)</td>
+      <td>π3 (0,(3,B),0,0)</td>
       <td>0.0003091759</td>
    </tr>
    <tr>
-      <td>(0,0,3,0)</td>
+      <td>π4 (0,0,3,0)</td>
       <td>0.0038985165</td>
-      <td>(0,0,0,3)</td>
+      <td>π5 (0,0,0,3)</td>
       <td>0.0201986299</td>
-      <td>(2,(1,A),0,0)</td>
+      <td>π6 (2,(1,A),0,0)</td>
       <td>0.0628669158</td>
    </tr>
    <tr>
-      <td>(2,(1,B),0,0)</td>
+      <td>π7 (2,(1,B),0,0)</td>
       <td>0.0181319005</td>
-      <td>(2,0,1,0)</td>
+      <td>π8 (2,0,1,0)</td>
       <td>0.115255928</td>
-      <td>(2,0,0,1)</td>
+      <td>π9 (2,0,0,1)</td>
       <td>0.19948052</td>
    </tr>
    <tr>
-      <td>(1,(2,A),0,0)</td>
+      <td>π10 (1,(2,A),0,0)</td>
       <td>0.0114663278</td>
-      <td>(1,(2,B),0,0)</td>
+      <td>π11 (1,(2,B),0,0)</td>
       <td>0.0033695517</td>
-      <td>(1,0,2,0)</td>
+      <td>π12 (1,0,2,0)</td>
       <td>0.029980932</td>
    </tr>
    <tr>
-      <td>(1,0,0,2)</td>
+      <td>π13 (1,0,0,2)</td>
       <td>0.0897702381</td>
-      <td>(0,(1,A),2,0)</td>
+      <td>π14 (0,(1,A),2,0)</td>
       <td>0.0021275043</td>
-      <td>(0,(1,B),2,0)</td>
+      <td>π15 (0,(1,B),2,0)</td>
       <td>0.0006081991</td>
    </tr>
    <tr>
-      <td>(0,(1,A),0,2)</td>
+      <td>π16 (0,(1,A),0,2)</td>
       <td>0.0063663591</td>
-      <td>(0,(1,B),0,2)</td>
+      <td>π17 (0,(1,B),0,2)</td>
       <td>0.0018325876</td>
-      <td>(0,0,1,2)</td>
+      <td>π18 (0,0,1,2)</td>
       <td>0.0116715845</td>
    </tr>
    <tr>
-      <td>(0,0,2,1)</td>
+      <td>π19 (0,0,2,1)</td>
       <td>0.0067469732</td>
-      <td>(0,(2,A),1,0)</td>
+      <td>π20 (0,(2,A),1,0)</td>
       <td>0.0014916223</td>
-      <td>(0,(2,B),1,0)</td>
+      <td>π21 (0,(2,B),1,0)</td>
       <td>0.0004338117</td>
    </tr>
    <tr>
-      <td>(0,(2,A),0,1)</td>
+      <td>π22 (0,(2,A),0,1)</td>
       <td>0.0025798483</td>
-      <td>(0,(2,B),0,1)</td>
+      <td>π23 (0,(2,B),0,1)</td>
       <td>0.0007562691</td>
-      <td>(0,(1,A),1,1)</td>
+      <td>π24 (0,(1,A),1,1)</td>
       <td>0.0036822808</td>
    </tr>
    <tr>
-      <td>(0,(1,B),1,1)</td>
+      <td>π25 (0,(1,B),1,1)</td>
       <td>0.0010507244</td>
-      <td>(1,0,1,1)</td>
+      <td>π26 (1,0,1,1)</td>
       <td>0.0518715347</td>
-      <td>(1,(1,A),0,1)</td>
+      <td>π27 (1,(1,A),0,1)</td>
       <td>0.0282945707</td>
    </tr>
    <tr>
-      <td>(1,(1,B),0,1)</td>
+      <td>π28 (1,(1,B),0,1)</td>
       <td>0.0081441227</td>
-      <td>(1,(1,A),1,0)</td>
+      <td>π29 (1,(1,A),1,0)</td>
       <td>0.0163612658</td>
-      <td>(1,(1,B),1,0)</td>
+      <td>π30 (1,(1,B),1,0)</td>
       <td>0.004676952</td>
    </tr>
 </table>
