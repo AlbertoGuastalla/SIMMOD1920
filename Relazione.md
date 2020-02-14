@@ -170,7 +170,6 @@ Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell�
 ### PUNTO DI RIGENERAZIONE (FIRST VALIDATION MODEL)
 Nel caso in cui si abbia invece scelto il primo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è guidata unicamente dai valori in output d MVA.
 
-
 ### PUNTO DI RIGENERAZIONE (SECOND VALIDATION MODEL)
 Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è la medesima del primo modello di validazione.
 
@@ -510,58 +509,137 @@ Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenzial
 - fX(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
 di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
-#### GENERATORE INFINITESIMALE
+#### CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
 
-<style type="text/css">
-	table.tableizer-table {
-		font-size: 12px;
-		border: 1px solid #CCC; 
-		font-family: Arial, Helvetica, sans-serif;
-	} 
-	.tableizer-table td {
-		padding: 4px;
-		margin: 3px;
-		border: 1px solid #CCC;
-	}
-	.tableizer-table th {
-		background-color: #104E8B; 
-		color: #FFF;
-		font-weight: bold;
-	}
-</style>
-<table class="tableizer-table">
-<thead><tr class="tableizer-firstrow"><th></th><th>(3,0,0,0)</th><th>(0,(3,A),0,0)</th><th>(0,(3,B),0,0)</th><th>(0,0,3,0)</th><th>(0,0,0,3)</th><th>(2,(1,A),0,0)</th><th>(2,(1,B),0,0)</th><th>(2,0,1,0)</th><th>(2,0,0,1)</th><th>(1,(2,A),0,0)</th><th>(1,(2,B),0,0)</th><th>(1,0,2,0)</th><th>(1,0,0,2)</th><th>(0,(1,A),2,0)</th><th>(0,(1,B),2,0)</th><th>(0,(1,A),0,2)</th><th>(0,(1,B),0,2)</th><th>(0,0,1,2)</th><th>(0,0,2,1)</th><th>(0,(2,A),1,0)</th><th>(0,(2,B),1,0)</th><th>(0,(2,A),0,1)</th><th>(0,(2,B),0,1)</th><th>(0,(1,A),1,1)</th><th>(0,(1,B),1,1)</th><th>(1,0,1,1)</th><th>(1,(1,A),0,1)</th><th>(1,(1,B),0,1)</th><th>(1,(1,A),1,0)</th><th>(1,(1,B),1,0)</th></tr></thead><tbody>
- <tr><td>(3,0,0,0)</td><td>-3 * λ1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3 * λ1 * α</td><td>3 * λ1 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(3,A),0,0)</td><td>0</td><td>-(μA + μq) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q36 * q60 * α</td><td>μA * q36 * q60 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q34 * α</td><td>μA * q34 * β</td><td>μA * q35 * α</td><td>μA * q35 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(3,B),0,0)</td><td>0</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq) + (μq + μB * q36 * q61) * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q36 * q60 * α</td><td>μB * q36 * q60 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q34 * α</td><td>μB * q34 * β</td><td>μB * q35 * α</td><td>μB * q35 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,0,3,0)</td><td>0</td><td>0</td><td>0</td><td>-λ3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ3 * α</td><td>λ3 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,0,0,3)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-λ4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ4 * α</td><td>λ4 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(2,(1,A),0,0)</td><td>μA * q36 * q60</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-(μA + μq + 2 * λ1) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>μA * q34</td><td>μA * q35</td><td>2 * λ1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(2,(1,B),0,0)</td><td>μB * q36 * q60</td><td>0</td><td>0</td><td>0</td><td>0</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + 2 * λ1) + (μq + μB * q36 * q61) * β</td><td>μB * q34</td><td>μB * q35</td><td>0</td><td>2 * λ1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(2,0,1,0)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ3 * α</td><td>λ3 * β</td><td>-(2 * λ1 + λ3)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2 * λ1 * α</td><td>2 * λ1 * β</td></tr>
- <tr><td>(2,0,0,1)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ4 * α</td><td>λ4 * β</td><td>0</td><td>-(2 * λ1 + λ4)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2 * λ1 * α</td><td>2 * λ1 * β</td><td>0</td><td>0</td></tr>
- <tr><td>(1,(2,A),0,0)</td><td>0</td><td>λ1</td><td>0</td><td>0</td><td>0</td><td>μA * q36 * q60 * α</td><td>μA * q36 * q60 * β</td><td>0</td><td>0</td><td>-(μA + μq + λ1) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q35 * α</td><td>μA * q35 * β</td><td>μA * q34 * α</td><td>μA * q34 * β</td></tr>
- <tr><td>(1,(2,B),0,0)</td><td>0</td><td>0</td><td>λ1</td><td>0</td><td>0</td><td>μB * q36 * q60 * α</td><td>μB * q36 * q60 * β</td><td>0</td><td>0</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + λ1) + (μq + μB * q36 * q61) * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q35 * α</td><td>μB * q35 * β</td><td>μB * q34 * α</td><td>μB * q34 * β</td></tr>
- <tr><td>(1,0,2,0)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-(λ1 + λ3)</td><td>0</td><td>λ1 * α</td><td>λ1 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ3 * α</td><td>λ3 * β</td></tr>
- <tr><td>(1,0,0,2)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-(λ1 + λ4)</td><td>0</td><td>0</td><td>λ1 * α</td><td>λ1 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ4 * α</td><td>λ4 * β</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(1,A),2,0)</td><td>0</td><td>0</td><td>0</td><td>μA * q34</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q36 * q60</td><td>0</td><td>-(μA + μq + λ3) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>0</td><td>0</td><td>0</td><td>μA * q35</td><td>λ3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(1,B),2,0)</td><td>0</td><td>0</td><td>0</td><td>μB * q34</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q36 * q60</td><td>0</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + λ3) + (μq + μB * q36 * q61) * β</td><td>0</td><td>0</td><td>0</td><td>μB * q35</td><td>0</td><td>λ3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(1,A),0,2)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q35</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q36 * q60</td><td>0</td><td>0</td><td>-(μA + μq + λ4) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>μA * q34</td><td>0</td><td>0</td><td>0</td><td>λ4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(1,B),0,2)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q35</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q36 * q60</td><td>0</td><td>0</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + λ4) + (μq + μB * q36 * q61) * β</td><td>μB * q34</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,0,1,2)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ3 * α</td><td>λ3 * β</td><td>-(λ4 + λ3)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ4 * α</td><td>λ4 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,0,2,1)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ4 * α</td><td>λ4 * β</td><td>0</td><td>0</td><td>0</td><td>-(λ4 + λ3)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ3 * α</td><td>λ3 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(2,A),1,0)</td><td>0</td><td>λ3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q34 * α</td><td>μA * q34 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-(μA + μq + λ3) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>0</td><td>0</td><td>μA * q35 * α</td><td>μA * q35 * β</td><td>0</td><td>0</td><td>0</td><td>μA * q36 * q60 * α</td><td>μA * q36 * q60 * β</td></tr>
- <tr><td>(0,(2,B),1,0)</td><td>0</td><td>0</td><td>λ3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q34 * α</td><td>μB * q34 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + λ3) + (μq + μB * q36 * q61) * β</td><td>0</td><td>0</td><td>μB * q35 * α</td><td>μB * q35 * β</td><td>0</td><td>0</td><td>0</td><td>μB * q36 * q60 * α</td><td>μB * q36 * q60 * β</td></tr>
- <tr><td>(0,(2,A),0,1)</td><td>0</td><td>λ4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q35 * α</td><td>μA * q35 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-(μA + μq + λ4) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>μA * q34 * α</td><td>μA * q34 * β</td><td>0</td><td>μA * q36 * q60 * α</td><td>μA * q36 * q60 * β</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(2,B),0,1)</td><td>0</td><td>0</td><td>λ4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q35 * α</td><td>μB * q35 * β</td><td>0</td><td>0</td><td>0</td><td>0</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + λ4) + (μq + μB * q36 * q61) * β</td><td>μB * q34 * α</td><td>μB * q34 * β</td><td>0</td><td>μB * q36 * q60 * α</td><td>μB * q36 * q60 * β</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(1,A),1,1)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q35</td><td>μA * q34</td><td>λ4</td><td>0</td><td>λ3</td><td>0</td><td>-(μA + μq + λ3+ λ4) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>μA * q36 * q60</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(0,(1,B),1,1)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q35</td><td>μB * q34</td><td>0</td><td>λ4</td><td>0</td><td>λ3</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + λ3+ λ4) + (μq + μB * q36 * q61) * β</td><td>μB * q36 * q60</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
- <tr><td>(1,0,1,1)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ1 * α</td><td>λ1 * β</td><td>-(λ1 + λ3 + λ4)</td><td>λ3 * α</td><td>λ3 * β</td><td>λ4 * α</td><td>λ4 * β</td></tr>
- <tr><td>(1,(1,A),0,1)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q36 * q60</td><td>λ4</td><td>0</td><td>0</td><td>μA * q35</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ1</td><td>0</td><td>0</td><td>0</td><td>μA * q34</td><td>-(μA + μq + λ1+ λ4) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td><td>0</td><td>0</td></tr>
- <tr><td>(1,(1,B),0,1)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q36 * q60</td><td>0</td><td>λ4</td><td>0</td><td>μB * q35</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ1</td><td>0</td><td>0</td><td>μB * q34</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + λ1+ λ4) + (μq + μB * q36 * q61) * β</td><td>0</td><td>0</td></tr>
- <tr><td>(1,(1,A),1,0)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q36 * q60</td><td>0</td><td>λ3</td><td>0</td><td>μA * q34</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μA * q35</td><td>0</td><td>0</td><td>-(μA + μq + λ1+ λ3) + (μq + μA * q36 * q61) * α</td><td>(μq + μA * q36 * q61) * β</td></tr>
- <tr><td>(1,(1,B),1,0)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q36 * q60</td><td>0</td><td>0</td><td>λ3</td><td>μB * q34</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>λ1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>μB * q35</td><td>0</td><td>0</td><td>(μq + μB * q36 * q61) * α</td><td>-(μB + μq + λ1+ λ3) + (μq + μB * q36 * q61) * β</td></tr>
-</tbody></table>
+Per poter valutare il modello semplificato si è dovuto risolvere (trovare la distribuzione a regime) la catena di Markov a tempo continuo che descrive l'evoluzione dl sistema.
+Dopo aver compilato la matrice Q che rappresenta il generatore infinitesimale della catena (link), si è quindi risolto il seguente sistema di equazioni lineare:
+- πQ = 0
+
+trovando la seguente distribuzione limite:
+
+<table>
+   <tr>
+      <td>(3,0,0,0)</td>
+      <td>0,2955257595</td>
+   </tr>
+   <tr>
+      <td>(0,(3,A),0,0)</td>
+      <td>0,0010493937</td>
+   </tr>
+   <tr>
+      <td>(0,(3,B),0,0)</td>
+      <td>0,0003091759</td>
+   </tr>
+   <tr>
+      <td>(0,0,3,0)</td>
+      <td>0,0038985165</td>
+   </tr>
+   <tr>
+      <td>(0,0,0,3)</td>
+      <td>0,0201986299</td>
+   </tr>
+   <tr>
+      <td>(2,(1,A),0,0)</td>
+      <td>0,0628669158</td>
+   </tr>
+   <tr>
+      <td>(2,(1,B),0,0)</td>
+      <td>0,0181319005</td>
+   </tr>
+   <tr>
+      <td>(2,0,1,0)</td>
+      <td>0,115255928</td>
+   </tr>
+   <tr>
+      <td>(2,0,0,1)</td>
+      <td>0,19948052</td>
+   </tr>
+   <tr>
+      <td>(1,(2,A),0,0)</td>
+      <td>0,0114663278</td>
+   </tr>
+   <tr>
+      <td>(1,(2,B),0,0)</td>
+      <td>0,0033695517</td>
+   </tr>
+   <tr>
+      <td>(1,0,2,0)</td>
+      <td>0,029980932</td>
+   </tr>
+   <tr>
+      <td>(1,0,0,2)</td>
+      <td>0,0897702381</td>
+   </tr>
+   <tr>
+      <td>(0,(1,A),2,0)</td>
+      <td>0,0021275043</td>
+   </tr>
+   <tr>
+      <td>(0,(1,B),2,0)</td>
+      <td>0,0006081991</td>
+   </tr>
+   <tr>
+      <td>(0,(1,A),0,2)</td>
+      <td>0,0063663591</td>
+   </tr>
+   <tr>
+      <td>(0,(1,B),0,2)</td>
+      <td>0,0018325876</td>
+   </tr>
+   <tr>
+      <td>(0,0,1,2)</td>
+      <td>0,0116715845</td>
+   </tr>
+   <tr>
+      <td>(0,0,2,1)</td>
+      <td>0,0067469732</td>
+   </tr>
+   <tr>
+      <td>(0,(2,A),1,0)</td>
+      <td>0,0014916223</td>
+   </tr>
+   <tr>
+      <td>(0,(2,B),1,0)</td>
+      <td>0,0004338117</td>
+   </tr>
+   <tr>
+      <td>(0,(2,A),0,1)</td>
+      <td>0,0025798483</td>
+   </tr>
+   <tr>
+      <td>(0,(2,B),0,1)</td>
+      <td>0,0007562691</td>
+   </tr>
+   <tr>
+      <td>(0,(1,A),1,1)</td>
+      <td>0,0036822808</td>
+   </tr>
+   <tr>
+      <td>(0,(1,B),1,1)</td>
+      <td>0,0010507244</td>
+   </tr>
+   <tr>
+      <td>(1,0,1,1)</td>
+      <td>0,0518715347</td>
+   </tr>
+   <tr>
+      <td>(1,(1,A),0,1)</td>
+      <td>0,0282945707</td>
+   </tr>
+   <tr>
+      <td>(1,(1,B),0,1)</td>
+      <td>0,0081441227</td>
+   </tr>
+   <tr>
+      <td>(1,(1,A),1,0)</td>
+      <td>0,0163612658</td>
+   </tr>
+   <tr>
+      <td>(1,(1,B),1,0)</td>
+      <td>0,004676952</td>
+   </tr>
+</table>
+
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
 <ol type="1">
