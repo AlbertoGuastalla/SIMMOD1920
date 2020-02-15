@@ -609,7 +609,7 @@ trovando la seguente distribuzione limite (<b>π</b>):
 - Numero medio di jobs in Delay station E[n<SUB>DS</SUB>]: 1.921983303
 - Numero medio di jobs in CPU station E[n<SUB>CPU</SUB>]: 0.1984139534
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2971184709
-- Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]>: 0.5824842722
+- Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]: 0.5824842722
 
 Calcolati attaverso: &#8721; k * π<SUB>i</SUB> con k > 0, i = 1,...,30
 
@@ -643,13 +643,13 @@ Sempre considerando il fatto che l'operatore valore atteso gode della proprietà
 
 Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper-esponenziale si riduce ad una singola esponenziale negativa di media η = 27 msec rendendo cosi identiche l'analisi effettuata con la catena di Markov da quella effttuata con MVA durante la prima validazione (con l'unica differenza che il tempo medio di servizio della Swap-In è 0.0).
 
-VALORI MEDI PRODOTTI DALLA CATENA DI MARKOV:
+NUMRO MEDIO DI JOBS DERIVATI DALLA DISTRIBUZIONE LIMITE:
 - Numero medio di jobs in Delay station E[n<SUB>DS</SUB>]: 1.857884605
 - Numero medio di jobs in CPU station E[n<SUB>CPU</SUB>]: 0.2985386137
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2856433626
-- Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]>: 0.5579334187
+- Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]: 0.5579334187
 
-VALORI MEDI PRODOTTI DA MVA: <br>
+NUMRO MEDIO DI JOBS DRIVATI DA MVA: <br>
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
