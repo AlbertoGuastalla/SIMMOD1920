@@ -653,7 +653,7 @@ NUMRO MEDIO DI JOBS DRIVATI DA MVA: <br>
 
 <p align=”justify”>
 Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. <br>
-Semi utilizzati: 100000000 ÷ 100000099. <br>
+Semi utilizzati: 10000000 ÷ 10000099. <br>
 Numero di terminali connessi al sistema: 3. <br>
 Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 1121.775299 <br>
 <img align=”center” src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/intervals2.png"/> <br>
