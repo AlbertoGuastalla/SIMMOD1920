@@ -419,12 +419,9 @@ Infine si sono calcolate le due medie, dividendo rispettivamente entrambe le som
 Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. <br>
 Semi utilizzati: 100000000 ÷ 100000099. <br>
 Numero di terminali connessi al sistema: 20. <br>
-Modello utilizzato: primo modello di validazione. <br> 
 Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 6630.261907 <br>
 <img align=”center” src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/intervals.png"/> <br>
 Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (il 50% degli intervalli sia centrato su una stima più grande o uguale del valore teorico e l'altro 50% viceversa). Nell’esempio riportato, 91 intervalli contengono il valore teorico e 9 viceversa; 48 intervalli sono "sbilancianti" verso l'alto, mentre i rimanenti 52 verso il basso.
-
-Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande.
 
 ## BOTTLENECK ANALYSIS 
 
@@ -651,6 +648,18 @@ NUMRO MEDIO DI JOBS DERIVATI DALLA DISTRIBUZIONE LIMITE:
 
 NUMRO MEDIO DI JOBS DRIVATI DA MVA: <br>
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
+
+#### EXTENSIVE VALIDATION 
+
+<p align=”justify”>
+Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. <br>
+Semi utilizzati: 100000000 ÷ 100000099. <br>
+Numero di terminali connessi al sistema: 3. <br>
+Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato livello di carico: 1121.775299 <br>
+<img align=”center” src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/intervals2.png"/> <br>
+Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (il 50% degli intervalli sia centrato su una stima più grande o uguale del valore teorico e l'altro 50% viceversa). Nell’esempio riportato, 89 intervalli contengono il valore teorico e 11 viceversa; 50 intervalli sono "sbilancianti" verso l'alto, mentre i rimanenti 50 verso il basso.
+
+Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande.
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
 
