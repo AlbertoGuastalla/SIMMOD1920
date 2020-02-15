@@ -176,13 +176,13 @@ Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'asse
 Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale come dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
 
-## VALIDATION MODELS
+# VALIDATION MODELS
 
 <p align="center">
   <img width="1000" height="400" src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/validation.png"/>
 </p>
 
-### FIRST VALIDATION STEP
+## FIRST VALIDATION STEP
 
 ### DETTAGLI DEL MODELLO
 
@@ -469,7 +469,7 @@ Il valore di N* (il livello di carico superato il quale si `e certi che si formi
 
 In formule: N* * 0.00012539 = 0.00088888888, che significa: N* = 7.0888
 
-#### ANALISI BOTTLENECK PER IL RESPONSE TIME 
+### ANALISI BOTTLENECK PER IL RESPONSE TIME 
 
 L'asintoto orizzontale per il response time risulta essere: R<SUB>0</SUB>(1) = 2975 
 
@@ -488,9 +488,9 @@ Il valore di N*, anche questa volta, è determinato dall’intersezione dell’a
 
 In formule:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 
-### SECOND VALIDATION STEP
+# SECOND VALIDATION STEP
 
-### DETTAGLI DEL MODELLO
+## DETTAGLI DEL MODELLO
 
 - Tempo medio di ritardo Z = 5000 msec
 - Tempo medio di servizio della stazione Swap-In S1 = 0.0 msec
@@ -506,7 +506,7 @@ Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenzial
 - &#402;X(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
 di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
-### CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
+## CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
 
 Per poter valutare il modello semplificato si è dovuto risolvere (trovare la distribuzione a regime) la catena di Markov a tempo continuo che descrive l'evoluzione dl sistema.
 Dopo aver compilato la matrice Q che rappresenta il generatore infinitesimale della catena (https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/Markov%20Chain.xlsx), si è quindi risolto il seguente sistema di equazioni lineare (attraverso un solver apposito):
@@ -599,7 +599,7 @@ trovando la seguente distribuzione limite (<b>π</b>):
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/distribution.png"/>
 
-### CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
+## CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
 
 ### NUMERO MEDIO DI JOBS
 
@@ -636,7 +636,7 @@ Ma dato che, λ = X<SUB>DS</SUB> + q61 * μ = μ, allora μ = X<SUB>DS</SUB> / 0
 Sempre considerando il fatto che l'operatore valore atteso gode della proprietà di linearità, il tempo medio di permanenza del sotto-sistema attivo è quindi:
 <b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1121.775299.
 
-### CONFRONTO CON MVA
+## CONFRONTO CON MVA
 
 Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper-esponenziale si riduce ad una singola esponenziale negativa di media η = 27 msec rendendo cosi identiche l'analisi effettuata con la catena di Markov da quella effttuata con MVA durante la prima validazione (con l'unica differenza che il tempo medio di servizio della Swap-In è 0.0).
 
