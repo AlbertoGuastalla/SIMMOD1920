@@ -640,14 +640,39 @@ Sempre considerando il fatto che l'operatore valore atteso gode della proprietà
 
 Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper-esponenziale si riduce ad una singola esponenziale negativa di media η = 27 msec rendendo cosi identiche l'analisi effettuata con la catena di Markov da quella effttuata con MVA durante la prima validazione (con l'unica differenza che il tempo medio di servizio della Swap-In è 0.0).
 
-### NUMRO MEDIO DI JOBS DERIVATI DALLA DISTRIBUZIONE LIMITE
+### INDICI DI PRESTAZIONE MEDI DERIVATI DALLA DISTRIBUZIONE LIMITE
+
+### NUMERO MEDIO DI JOBS
 
 - Numero medio di jobs in Delay station E[n<SUB>DS</SUB>]: 1.857884605
 - Numero medio di jobs in CPU station E[n<SUB>CPU</SUB>]: 0.2985386137
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2856433626
 - Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]: 0.5579334187
 
-### NUMRO MEDIO DI JOBS DRIVATI DA MVA
+### UTILIZZAZIONI
+
+- Utilizzazione della Delay station U<SUB>DS</SUB>: 0.6192948683
+- Utilizzazione della CPU station U<SUB>CPU</SUB>: 0.2508144219
+- Utilizzazione della IO1 station U<SUB>IO1</SUB>: 0.2415249987
+- Utilizzazione della IO2 station U<SUB>IO2</SUB>: 0.4180240361
+
+### THROUGHPUTS
+
+- Throughput della Delay station X<SUB>DS</SUB>: 0,000371576921
+- Throughput della CPU station X<SUB>CPU</SUB>: 0.09289423033
+- Throughput della IO1 station X<SUB>IO1</SUB>: 0.006038124968
+- Throughput della IO2 station X<SUB>IO2</SUB>: 0.002322355756
+
+### WAITING TIMES
+
+- Waiting time della Delay station X<SUB>DS</SUB>: 5000
+- Waiting time della CPU station X<SUB>CPU</SUB>: 3.213747642
+- Waiting time della IO1 station X<SUB>IO1</SUB>: 47.30663312
+- Waiting time della IO2 station X<SUB>IO2</SUB>: 240.2445953
+
+In questo caso, va precisato però che, per il calcolo degli indici di prestazioni riguardanti la stazione CPU, si è utilizzato un tempo medio di servizio pari a 2.7 anzichè di 27 poichè in questo modello di validazione è presente un quanto di tempo che segue una distribuzione esponenziale negativa. Questa astrazione ha come effetto che il tempo medio di servizio della CPU si riduce a 1 ÷ (1 ÷ 27 + 1 ÷ 3) = 2.7 msec.
+
+### INDICI DI PRESTAZIONE MEDI DERIVATI DERIVATI DA MVA
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
 
 ### EXTENSIVE VALIDATION 
