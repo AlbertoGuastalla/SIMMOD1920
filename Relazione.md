@@ -184,7 +184,7 @@ Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numer
 
 ### FIRST VALIDATION STEP
 
-#### DETTAGLI DEL MODELLO
+### DETTAGLI DEL MODELLO
 
 - Tempo medio di ritardo Z = 5000 msec
 - Tempo medio di servizio della stazione Swap-In S1 = 210 msec
@@ -413,7 +413,7 @@ Si sono quindi dapprima calcolate le somme di entrambi i tempi:
 
 Infine si sono calcolate le due medie, dividendo rispettivamente entrambe le somme per il numero di passaggi alla delay station e per il numero di passaggi al sotto-sistema.
 
-#### EXTENSIVE VALIDATION 
+### EXTENSIVE VALIDATION 
 
 <p align=”justify”>
 Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. <br>
@@ -423,7 +423,7 @@ Valore teorico per il tempo medio di permanenza nel sotto-sistema per il dato li
 <img align=”center” src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/intervals.png"/> <br>
 Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% degli intervalli coprissero il valore teorico, mentre i restanti 10% viceversa (il 50% degli intervalli sia centrato su una stima più grande o uguale del valore teorico e l'altro 50% viceversa). Nell’esempio riportato, 91 intervalli contengono il valore teorico e 9 viceversa; 48 intervalli sono "sbilancianti" verso l'alto, mentre i rimanenti 52 verso il basso.
 
-#### BOTTLENECK ANALYSIS 
+### BOTTLENECK ANALYSIS 
 
 Una prima e approssimativa analisi delle strozzature si può facilmente vedere lanciando MVA e osservando che l’utilizzazione della IO2 Station arriva quasi ad essere 100% con un numero di terminali connessi al sistema pari a 20. 
 
@@ -445,7 +445,7 @@ Il sistema di equazioni lineare è stato risolto attraverso il metodo di elimina
 La Reserve e la Swap-Out Station sono state omesse poichè irrilevanti nel calcolo degli indici di prestazione medi.
 </p>
  
-#### ANALISI BOTTLENECK PER IL THROUGHPUT   
+### ANALISI BOTTLENECK PER IL THROUGHPUT   
 
 <ul>
 <li><b>Tempo medio di ciclo del sistema con 1 cliente: </b> Y<SUB>0</SUB>(1) = R<SUB>0</SUB>(1) + Z = 2975 + 5000 = 7975 msec </li>
@@ -490,7 +490,7 @@ In formule:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 
 ### SECOND VALIDATION STEP
 
-#### DETTAGLI DEL MODELLO
+### DETTAGLI DEL MODELLO
 
 - Tempo medio di ritardo Z = 5000 msec
 - Tempo medio di servizio della stazione Swap-In S1 = 0.0 msec
@@ -506,7 +506,7 @@ Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenzial
 - &#402;X(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
 di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
-#### CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
+### CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
 
 Per poter valutare il modello semplificato si è dovuto risolvere (trovare la distribuzione a regime) la catena di Markov a tempo continuo che descrive l'evoluzione dl sistema.
 Dopo aver compilato la matrice Q che rappresenta il generatore infinitesimale della catena (https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/Markov%20Chain.xlsx), si è quindi risolto il seguente sistema di equazioni lineare (attraverso un solver apposito):
@@ -599,9 +599,9 @@ trovando la seguente distribuzione limite (<b>π</b>):
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/distribution.png"/>
 
-#### CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
+### CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
 
-#### NUMERO MEDIO DI JOBS
+### NUMERO MEDIO DI JOBS
 
 - Numero medio di jobs in Delay station E[n<SUB>DS</SUB>]: 1.921983303
 - Numero medio di jobs in CPU station E[n<SUB>CPU</SUB>]: 0.1984139534
@@ -610,7 +610,7 @@ trovando la seguente distribuzione limite (<b>π</b>):
 
 Calcolati attaverso: &#8721; k * π<SUB>i</SUB> con k > 0, i = 1,...,30
 
-#### UTILIZZAZIONI
+### UTILIZZAZIONI
 
 - Utilizzazione della CPU station U<SUB>CPUS</SUB>: 0.1755993833
 - Utilizzazione della IO1 station U<SUB>IO1</SUB>: 0.2498578293
@@ -618,7 +618,7 @@ Calcolati attaverso: &#8721; k * π<SUB>i</SUB> con k > 0, i = 1,...,30
 
 Calcolate attaverso: &#8721; π<SUB>i</SUB> con k > 0, i = 1,...,30
 
-#### THROUGHPUTS
+### THROUGHPUTS
 
 - Throughput della Delay station X<SUB>DS</SUB>: 0.0003843966605
 - Throughput della CPU station X<SUB>CPU</SUB>: 0.0065036808633
@@ -627,7 +627,7 @@ Calcolate attaverso: &#8721; π<SUB>i</SUB> con k > 0, i = 1,...,30
 
 Calcolati attaverso: X = U / S
 
-#### AVERAGE ACTIVE TIME
+### AVERAGE ACTIVE TIME
 
 Dato che essendo il sistema in equilibrio operazionale, dnotando il flusso in entrata al sotto-sistema con λ e quello in uscita con μ, deve per forza valere che λ = μ.
 
@@ -636,21 +636,21 @@ Ma dato che, λ = X<SUB>DS</SUB> + q61 * μ = μ, allora μ = X<SUB>DS</SUB> / 0
 Sempre considerando il fatto che l'operatore valore atteso gode della proprietà di linearità, il tempo medio di permanenza del sotto-sistema attivo è quindi:
 <b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1121.775299.
 
-#### CONFRONTO CON MVA
+### CONFRONTO CON MVA
 
 Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper-esponenziale si riduce ad una singola esponenziale negativa di media η = 27 msec rendendo cosi identiche l'analisi effettuata con la catena di Markov da quella effttuata con MVA durante la prima validazione (con l'unica differenza che il tempo medio di servizio della Swap-In è 0.0).
 
-#### NUMRO MEDIO DI JOBS DERIVATI DALLA DISTRIBUZIONE LIMITE
+### NUMRO MEDIO DI JOBS DERIVATI DALLA DISTRIBUZIONE LIMITE
 
 - Numero medio di jobs in Delay station E[n<SUB>DS</SUB>]: 1.857884605
 - Numero medio di jobs in CPU station E[n<SUB>CPU</SUB>]: 0.2985386137
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2856433626
 - Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]: 0.5579334187
 
-#### NUMRO MEDIO DI JOBS DRIVATI DA MVA
+### NUMRO MEDIO DI JOBS DRIVATI DA MVA
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
 
-#### EXTENSIVE VALIDATION 
+### EXTENSIVE VALIDATION 
 
 <p align=”justify”>
 Test effettuato su 100 simulazioni utilizzando semi iniziali differenti. <br>
