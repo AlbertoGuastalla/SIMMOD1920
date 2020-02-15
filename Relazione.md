@@ -488,9 +488,9 @@ Il valore di N*, anche questa volta, è determinato dall’intersezione dell’a
 
 In formule:  1125 * N* – 5000 = 2975, che significa: N* = 7.0888 <br>
 
-# SECOND VALIDATION STEP
+## SECOND VALIDATION STEP
 
-## DETTAGLI DEL MODELLO
+### DETTAGLI DEL MODELLO
 
 - Tempo medio di ritardo Z = 5000 msec
 - Tempo medio di servizio della stazione Swap-In S1 = 0.0 msec
@@ -506,7 +506,7 @@ Tutte le stazioni presentano una distribuzione dei tempi di servizio esponenzial
 - &#402;X(x) = α ∗ 1/µ1 ∗ exp(−x/µ1) + β ∗ 1/µ2 ∗ exp(−x/µ2) <br>
 di parametri: α = 0.8, β = 0.2, µ1 = 15 msec, and µ2 = 75 msec.
 
-## CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
+### CATENA DI MARKOV A TEMPO CONTINUO (CTMC)
 
 Per poter valutare il modello semplificato si è dovuto risolvere (trovare la distribuzione a regime) la catena di Markov a tempo continuo che descrive l'evoluzione dl sistema.
 Dopo aver compilato la matrice Q che rappresenta il generatore infinitesimale della catena (https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/Markov%20Chain.xlsx), si è quindi risolto il seguente sistema di equazioni lineare (attraverso un solver apposito):
