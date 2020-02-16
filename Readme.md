@@ -1,7 +1,7 @@
 ## DESCRIZIONE DEI SORGENTI
 
 <ul>
-  <li><b>OSSSimulator.c</b>: sorgente relativo al simulatore.</li>
+  <li><b>Simulator.c</b>: sorgente relativo al simulatore.</li>
   <li><b>MVA.c</b>: mean value analysis algorithm.</li>
   <li><b>NES_List_Manager.c</b>: sorgente contenente le varie procedure di gestione delle liste.</li>
   <li><b>NES.h</b>: header contenente definizioni di strutture dati e i prototipi di funzioni.</li>
@@ -12,7 +12,7 @@
 
 ## PARAMETRI OPZIONALI DA RIGA DI COMANDO 
 
-Lanciare OSSSimulator N –fsv –verbosity 
+Lanciare Simulator N –fsv –verbosity 
 
 <ul>
 <li>N: numero di terminali connessi al sistema. </li>
