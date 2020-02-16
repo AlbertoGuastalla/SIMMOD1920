@@ -668,7 +668,7 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
 
 ### THROUGHPUTS
 
-- Throughput della Delay station X<SUB>DS</SUB>: 0,000371576921
+- Throughput della Delay station X<SUB>DS</SUB>: 0.000371576921
 - Throughput della CPU station X<SUB>CPU</SUB>: 0.09289423033
 - Throughput della IO1 station X<SUB>IO1</SUB>: 0.006038124968
 - Throughput della IO2 station X<SUB>IO2</SUB>: 0.002322355756
