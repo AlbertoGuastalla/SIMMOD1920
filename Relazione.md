@@ -133,7 +133,7 @@ Questa scelta è motivata dal fatto che la distribuzione dei tempi di servizio �
 
 Essendo che la Cpu Station presenta una distribuzione dei tempi di servizio iper-esponenziale, essa non gode della proprietà di assenza di memoria. 
 
-Non avendo tempi di servizio distribuiti secondo l’esponenziale negativa (unica distribuzione di probabilità continua che gode della proprietà di assenza di memoria), una possibile situazione in cui, in almeno una delle due stazioni sia presente un job in esecuzione, non sarebbe un corretto punto di rigenerazione per il sistema poiché il tempo di servizio trascorso da questo ipotetico job influenzerebbe il tempo rimanente del medesimo nel successivo ciclo di rigenerazione. Si andrebbe quindi a violare la condizione di inter-indipendenza fra due cicli di rigenerazione adiacenti.
+Non avendo tempi di servizio distribuiti secondo l’esponenziale negativa (unica distribuzione di probabilità continua che gode della proprietà di assenza di memoria), una possibile situazione in cui, in almeno una delle due stazioni sia presente un job in esecuzione, non sarebbe un corretto punto di rigenerazione per il sistema poiché il tempo rimanente del medesimo non segue la stessa distribuzione esponenziale negativa.
 
 <li><b>Numero di jobs alla Swap-Out Station = 0 </b></li>
 
@@ -433,7 +433,7 @@ Una prima e approssimativa analisi delle strozzature si può facilmente vedere l
 Con un’analisi più accurata invece si possono osservare i seguenti valori: 
 
 <ul>
-<li><b>Stazione bottleneck</b>: V<SUB>b</SUB> * S<SUB>b</SUB> = MAX {V<SUB>i</SUB> * S<SUB>i</SUB>} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). </li>
+<li><b>Stazione bottleneck</b>: V<SUB>b</SUB> * S<SUB>b</SUB> = </b>: V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = MAX {V<SUB>i</SUB> * S<SUB>i</SUB>} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). </li>
 
 <li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R<SUB>0</SUB>(1) = D = ∑V<SUB>i</SUB> * S<SUB>i</SUB> = V<SUB>SI</SUB> * S<SUB>SI</SUB> + V<SUB>CPU</SUB> * S<SUB>CPU</SUB> + V<SUB>IO1</SUB> * S<SUB>IO1</SUB> + V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li> 
 </ul>
@@ -608,15 +608,17 @@ trovando la seguente distribuzione limite (<b>π</b>):
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2971184709
 - Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]: 0.5824842722
 
-Calcolati attaverso: &#8721; k * π<SUB>i</SUB> con k > 0, i = 1,...,30
+Calcolati attaverso: E[n] = &#8721; k * π<SUB>i</SUB> con k > 0, i = 1,...,30
 
 ### UTILIZZAZIONI
 
+- Utilizzazione della Delay station U<SUB>DS</SUB>: 0,6406611009
 - Utilizzazione della CPU station U<SUB>CPUS</SUB>: 0.1755993833
 - Utilizzazione della IO1 station U<SUB>IO1</SUB>: 0.2498578293
 - Utilizzazione della IO2 station U<SUB>IO2</SUB>: 0.4324462431
 
-Calcolate attaverso: &#8721; π<SUB>i</SUB> con k > 0, i = 1,...,30
+Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k > 0, i = 1,...,30 (CPU, IO1, IO2)
+U = E[n<SUB>DS</SUB>] / N (DS)
 
 ### THROUGHPUTS
 
