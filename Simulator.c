@@ -3,7 +3,7 @@
  * of the real scheduling protocol used in most modern systems. 
  * The simulated algorithm is Round-Robin with a relative quantum of time.
  *
- * Name              : OSSSimulator.c  (Operating System Scheduling Simulator)
+ * Name              : Simulator.c  (Operating System Scheduling Simulator)
  * Authors           : Alberto Guastalla
  * Language          : ANSI C
  * Latest Revision   : 8/01/2020
@@ -21,8 +21,8 @@
 #include <process.h>				
 
 #define SEED 918273645
-#define MIN_NUM_CYCLES 25					/* for approximate t-student with normal density function */
-#define MIN_NUMBER_OBSERVATIONS 30				/* for central limit theorem (quasi-normality of the sum) */
+#define MIN_NUM_CYCLES 25						/* for approximate t-student with normal density function */
+#define MIN_NUMBER_OBSERVATIONS 30					/* for central limit theorem (quasi-normality of the sum) */
 
 #define SERVICE_DELAY_STREAM 0
 #define SERVICE_SWAP_IN_STREAM 1
@@ -31,21 +31,24 @@
 #define SERVICE_IO1_STREAM 4
 #define SERVICE_IO2_STREAM 5
 #define SWAP_OUT_CHOICE_STREAM 6
+#define TIME_SLICE_STREAM 7
 
 #define TAGGED_CUSTOMER_ID 0
 #define STANDARD_NORMAL_PERCENTILE_0050 1.645
 
-boolean firstStepValidation;					/* flag for First Step Validation Model */
-boolean regenerationCondition;					/* flag to show if the simulation have reached the regeneration condition */
-boolean detailedPrint;						/* flag to show an additional print about regeneration cycles */ 
+boolean firstValidationStep;						/* flag for First Step Validation Model */
+boolean secondValidationStep;						/* flag for Second Step Validation Model */
+boolean regenerationCondition;						/* flag to show if the simulation have reached the regeneration condition */
+boolean detailedPrint;							/* flag to show an additional print about regeneration cycles */ 
 
-double Z;	   						/* Average work-station think time */
-double S1; 		  					/* Average swap-in time */
-double S2; 							/* Average CPU time */
-double S4; 		   					/* Average IO1 time */
-double S5; 		   					/* Average IO2 time */
-double MPD; 							/* Multi-Programming Degree */
-double CPU_QUANTUM; 						/* Quantum of CPU */
+double Z;	   							/* Average work-station think time */
+double S1; 		   						/* Average swap-in time */
+double S2; 		   						/* Average CPU time */
+double S4; 		   						/* Average IO1 time */
+double S5; 		   						/* Average IO2 time */
+double MPD; 								/* Multi-Programming Degree */
+double CPU_QUANTUM; 							/* Quantum of CPU */
+double AVERAGE_TIME_SLICE_TIME;						/* Average time-slice time (for Second Step Validation) */
 
 // CPU completion choice
 double Q33;
@@ -57,75 +60,80 @@ double Q36;
 double Q60;
 double Q61;
 
-unsigned int CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND;		/* Number of jobs in Swap-In station to characterize the regeneration condition */
-unsigned int CUSTOMER_IN_SWAP_OUT_FOR_REGENERATION_COND;	/* Number of jobs in Swap-Out station to characterize the regeneration condition */
-unsigned int CUSTOMER_IN_IO1_FOR_REGENERATION_COND;		/* Number of jobs in IO1 station to characterize the regeneration condition */
-unsigned int CUSTOMER_IN_IO2_FOR_REGENERATION_COND;		/* Number of jobs in IO2 station to characterize the regeneration condition */
+unsigned int CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND;			/* Number of jobs in Swap-In station to characterize the regeneration condition */
+unsigned int CUSTOMER_IN_SWAP_OUT_FOR_REGENERATION_COND;		/* Number of jobs in Swap-Out station to characterize the regeneration condition */
+unsigned int CUSTOMER_IN_IO1_FOR_REGENERATION_COND;			/* Number of jobs in IO1 station to characterize the regeneration condition */
+unsigned int CUSTOMER_IN_IO2_FOR_REGENERATION_COND;			/* Number of jobs in IO2 station to characterize the regeneration condition */
+unsigned int SWAP_IN_CUSTOMERS;
+unsigned int IO1_CUSTOMERS;
+unsigned int IO2_CUSTOMERS;
 
-double Start;             					/* Beginnig of Observation Period */
-double ObservPeriod;      					/* Length of the Observation Period */
-double sim_time;              					/* Clock of the simulator - Simulation time */
-unsigned int event_counter;        				/* Number of the events processed by the simulator*/
-unsigned int cycles;						/* Number of regeneration cycles */
+double Start;             						/* Beginnig of Observation Period */
+double ObservPeriod;      						/* Length of the Observation Period */
+double sim_time;              						/* Clock of the simulator - Simulation time */
+unsigned int event_counter;        					/* Number of the events processed by the simulator*/
+unsigned int cycles;							/* Number of regeneration cycles */
 
-unsigned int nsys;						/* Number of jobs in the system */
-unsigned int n_DS;						/* Number of jobs in delay station */
-unsigned int n_RS;						/* Number of jobs in reserve station */
-unsigned int n_SIS;						/* Number of jobs in swap-in station */
-unsigned int n_CPUS;						/* Number of jobs in Cpu station */
-unsigned int n_IO1S;						/* Number of jobs in IO1 station */
-unsigned int n_IO2S;						/* Number of jobs in IO2 station */
-unsigned int n_SOS;						/* Number of jobs in swap-out station */
-unsigned int narr_DS;						/* Number of arrival at delay station */
-unsigned int ncom_DS;						/* Number of departure at delay station */
-unsigned int narr_RS;						/* Number of arrival at reserve station */
-unsigned int ncom_RS;						/* Number of departure at reserve station */
-unsigned int narr_SIS;						/* Number of arrival at swap-in station */
-unsigned int ncom_SIS;						/* Number of departure at swap-in station */
-unsigned int narr_CPUS;						/* Number of arrival at Cpu station */			
-unsigned int ncom_CPUS;						/* Number of departure at Cpu station */
-unsigned int narr_IO1S;						/* Number of arrival at IO1 station */			
-unsigned int ncom_IO1S;						/* Number of departure at IO1 station */
-unsigned int narr_IO2S;						/* Number of arrival at IO2 station */			
-unsigned int ncom_IO2S;						/* Number of departure at IO2 station */
-unsigned int narr_SOS;						/* Number of arrival at swap-out station */			
-unsigned int ncom_SOS;						/* Number of departure at swap-out station */
+unsigned int nsys;							/* Number of jobs in the system */
+unsigned int n_DS;							/* Number of jobs in delay station */
+unsigned int n_RS;							/* Number of jobs in reserve station */
+unsigned int n_SIS;							/* Number of jobs in swap-in station */
+unsigned int n_CPUS;							/* Number of jobs in Cpu station */
+unsigned int n_IO1S;							/* Number of jobs in IO1 station */
+unsigned int n_IO2S;							/* Number of jobs in IO2 station */
+unsigned int n_SOS;							/* Number of jobs in swap-out station */
+unsigned int narr_DS;							/* Number of arrival at delay station */
+unsigned int ncom_DS;							/* Number of departure at delay station */
+unsigned int narr_RS;							/* Number of arrival at reserve station */
+unsigned int ncom_RS;							/* Number of departure at reserve station */
+unsigned int narr_SIS;							/* Number of arrival at swap-in station */
+unsigned int ncom_SIS;							/* Number of departure at swap-in station */
+unsigned int narr_CPUS;							/* Number of arrival at Cpu station */			
+unsigned int ncom_CPUS;							/* Number of departure at Cpu station */
+unsigned int narr_IO1S;							/* Number of arrival at IO1 station */			
+unsigned int ncom_IO1S;							/* Number of departure at IO1 station */
+unsigned int narr_IO2S;							/* Number of arrival at IO2 station */			
+unsigned int ncom_IO2S;							/* Number of departure at IO2 station */
+unsigned int narr_SOS;							/* Number of arrival at swap-out station */			
+unsigned int ncom_SOS;							/* Number of departure at swap-out station */
 
-double  	 *totalActiveTimes;				/* Total Active Times foreach job */
-double  	 *totalResponseTimes;				/* Total Response Times foreach job */
-unsigned int *passageSubSystemTimes;				/* Number of times that a job pass through the SubSystem (Active System) */
-unsigned int *passageDelayTimes;				/* Number of times that a job pass through the Delay Station */
+double  	 *totalActiveTimes;					/* Total Active Times foreach job */
+double  	 *totalResponseTimes;					/* Total Response Times foreach job */
+unsigned int *passageSubSystemTimes;					/* Number of times that a job pass through the SubSystem (Active System) */
+unsigned int *passageDelayTimes;					/* Number of times that a job pass through the Delay Station */
 
-double leftExtreme;						/* Left Extreme for confidence interval */
-double rightExtreme;						/* Right Extreme for confidence interval */
-double delta;							/* Half part of interval */
-unsigned int numberOfObservationInCurrentCycle;			/* Number of observations in a regeneration cycle */
-unsigned int WORKSTATIONS;					/* Number of terminals connected to the system */ 
+double leftExtreme;							/* Left Extreme for confidence interval */
+double rightExtreme;							/* Right Extreme for confidence interval */
+double delta;								/* Half part of interval */
+unsigned int numberOfObservationInCurrentCycle;				/* Number of observations in a regeneration cycle */
+unsigned int WORKSTATIONS;						/* Number of terminals connected to the system */ 
 
-double sumObs; 							/* Sum of observations in a regeneration cycle */
-double regLength;						/* Length of a regeneration cycle (number of observations) */
-double sumSumObs;						/* Sum of all observations in all regeneration cycles */
-double sumSumObsAt2; 						/* Square of sum of all observations in all regeneration cycles */
-double sumRegLength;						/* Sum of all length of all regeneration cycle (number of observations) */
-double sumRegLengthAt2;						/* Square of sum of all length of all regeneration cycle (number of observations) */
-double sumObsSumRegLength; 					/* Product of sum of observations and length of a regeneration cycle */
-double sampleAverageActiveTime;					/* Sample average Active Time (point estimate) */
+double sumObs; 								/* Sum of observations in a regeneration cycle */
+double regLength;							/* Length of a regeneration cycle (number of observations) */
+double sumSumObs;							/* Sum of all observations in all regeneration cycles */
+double sumSumObsAt2; 							/* Square of sum of all observations in all regeneration cycles */
+double sumRegLength;							/* Sum of all length of all regeneration cycle (number of observations) */
+double sumRegLengthAt2;							/* Square of sum of all length of all regeneration cycle (number of observations) */
+double sumObsSumRegLength; 						/* Product of sum of observations and length of a regeneration cycle */
+double sampleAverageActiveTime;						/* Sample average Active Time (point estimate) */
 
-double meanValues [5];						/* Mean number of customers foreach station produced by MVA */
-FILE *fp;							/* File pointer to read mean values produced by MVA */
+double meanValues [5];							/* Mean number of customers foreach station produced by MVA */
+FILE *fp;								/* File pointer to read mean values produced by MVA */
 
 int main(int argc, char* argv[]){
 	/* Command line parameters (Workstations, validation flag, verbosity flag) */
 	unsigned int validationStep = 0;
-	boolean varbosity = false, vr = false;
+	boolean varbosity = false;
 	int i, terminals = 20;
 	char buffer [20];
 	
 	for (i = 1; i < argc; i++) {
 		if (isNumber(argv[i])) {
 			terminals = atoi(argv[i]);
-		} else if (strcmp(argv[i], "-fsv") == 0) {
+		} else if (strcmp(argv[i], "-fvs") == 0) {
 			validationStep = 1;
+		} else if (strcmp(argv[i], "-svs") == 0) {
+			validationStep = 2;
 		} else if (strcmp(argv[i], "-verbosity") == 0) {
 			varbosity = true;
 		}
@@ -134,7 +142,11 @@ int main(int argc, char* argv[]){
 	/* get the mean value number of jobs foreach station at steady-state from MVA algorithm as
 	   heuristic for define the regeneration condition */	
 	   
-	int ret = spawnl(P_WAIT, "MVA.exe", "MVA.exe", itoa (terminals, buffer, 10), NULL);	
+	if (validationStep == 2) {
+		int ret = spawnl(P_WAIT, "MVA2.exe", "MVA2.exe", itoa (terminals, buffer, 10), NULL);	
+	} else {
+		int ret = spawnl(P_WAIT, "MVA.exe", "MVA.exe", itoa (terminals, buffer, 10), NULL);	
+	}
 	
 	fp = fopen("mean_values.bin","rb");  
 	fread(meanValues, sizeof(double), 5, fp);
@@ -165,7 +177,7 @@ void engine(void){
 	/* update clock */
 	oldtime = sim_time;
 	sim_time = new_event->event.occur_time;
-		
+	
 	/* Collect statistics */
 	if (regenerationCondition) CollectRegStatistics(new_event);
 		
@@ -218,20 +230,28 @@ void initialize(int terminals, int validation, boolean verbosity){
 	int i;
 	
     /* model setup */
-    if (validation == 1) firstStepValidation = true;
-	else firstStepValidation = false;
+    if (validation == 1) firstValidationStep = true;
+	else firstValidationStep = false;
+	
+	if (validation == 2) secondValidationStep = true;
+	else secondValidationStep = false;
 	
 	if (verbosity) detailedPrint = true;
 	else detailedPrint = false; 
     
-    	Z 		        	  				= 5000.0;			
+    Z 		        	  					= 5000.0;			
 	S1 		    		   				= 210.0;			
 	S4 		    		   				= 40.0;				
 	S5 		    		   				= 180.0;
+	Q60 								= 0.40;
+	Q61 								= 0.60;
 	regenerationCondition						= false;
 	WORKSTATIONS							= terminals;
+	SWAP_IN_CUSTOMERS 						= (((int)(meanValues[1] + 0.5) < 1) ? 1 : (int)(meanValues[1] + 0.5));
+	IO1_CUSTOMERS							= ((int)(meanValues[3] + 0.5));
+	IO2_CUSTOMERS 							= ((int)(meanValues[4] + 0.5));
 	
-	if (!firstStepValidation) {
+	if (!firstValidationStep && !secondValidationStep) {
 		Q33							= 0.0;
 		Q34 							= 0.65;
 		Q35 							= 0.25;
@@ -240,10 +260,10 @@ void initialize(int terminals, int validation, boolean verbosity){
 		CPU_QUANTUM 						= 3;				
 		MPD 	    						= 10;
 		CUSTOMER_IN_SWAP_OUT_FOR_REGENERATION_COND 		= 0;
-		CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND 		= (MPD >= WORKSTATIONS) ? ((int)(meanValues[1] + 0.5)) : 1;
-		CUSTOMER_IN_IO1_FOR_REGENERATION_COND 			= (MPD >= WORKSTATIONS) ? ((int)(meanValues[3] + 0.5)) : 1;
-		CUSTOMER_IN_IO2_FOR_REGENERATION_COND 			= (MPD >= WORKSTATIONS) ? ((int)(meanValues[4] + 0.5)) : 6;
-	} else {
+		CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND 		= (MPD >= WORKSTATIONS) ? SWAP_IN_CUSTOMERS : 1;
+		CUSTOMER_IN_IO1_FOR_REGENERATION_COND 			= (MPD >= WORKSTATIONS) ? IO1_CUSTOMERS : 1;
+		CUSTOMER_IN_IO2_FOR_REGENERATION_COND 			= (MPD >= WORKSTATIONS) ? IO2_CUSTOMERS : 6;
+	} else if (firstValidationStep) {
 		Q33							= 0.9;
 		Q34 							= 0.065;
 		Q35 							= 0.025;
@@ -252,58 +272,67 @@ void initialize(int terminals, int validation, boolean verbosity){
 		CPU_QUANTUM 						= DBL_MAX;			
 		MPD 	    						= INT_MAX;	
 		CUSTOMER_IN_SWAP_OUT_FOR_REGENERATION_COND 		= 0;
-		CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND 		= (int)(meanValues[1] + 0.5);
-		CUSTOMER_IN_IO1_FOR_REGENERATION_COND 			= (int)(meanValues[3] + 0.5);
-		CUSTOMER_IN_IO2_FOR_REGENERATION_COND 			= (int)(meanValues[4] + 0.5);
+		CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND 		= SWAP_IN_CUSTOMERS;
+		CUSTOMER_IN_IO1_FOR_REGENERATION_COND 			= IO1_CUSTOMERS;
+		CUSTOMER_IN_IO2_FOR_REGENERATION_COND 			= IO2_CUSTOMERS;
+	} else {
+		Q33							= 0.0;
+		Q34 							= 0.65;
+		Q35 							= 0.25;
+		Q36 							= 0.10;
+		S1 		    		   			= 0.0;			
+		S2 		    					= 27.0;
+		AVERAGE_TIME_SLICE_TIME					= 3.0;								
+		MPD 	    						= INT_MAX;	
+		CUSTOMER_IN_SWAP_OUT_FOR_REGENERATION_COND 		= 0;
+		CUSTOMER_IN_SWAP_IN_FOR_REGENERATION_COND 		= SWAP_IN_CUSTOMERS;
+		CUSTOMER_IN_IO1_FOR_REGENERATION_COND 			= IO1_CUSTOMERS;
+		CUSTOMER_IN_IO2_FOR_REGENERATION_COND 			= IO2_CUSTOMERS;
 	}
-	
-	// Swap-out choice
-	Q60 = 0.40;
-	Q61 = 0.60;
     
     /* Initialize multi stream of random numbers */
 	PlantSeeds(SEED);	
 	
     /* Basic Statistic Measures  */	
-	Start     		      			  	= 0.0;
-	nsys 	  		      			  	= 0;								
-	n_DS 	  		      			  	= 0;									
-	n_RS 	  		      			  	= 0;	
-	n_SIS 	  		      			  	= 0;
-	n_CPUS	  		      			  	= 0;
-	n_IO1S							= 0;		
-	n_IO2S							= 0;	
-	n_SOS							= 0;
-	narr_DS   		      			  	= 0;							
-	ncom_DS      	      			  		= 0;					
-	narr_RS	  		      			  	= 0;							
-	ncom_RS	  	          		      		= 0;	
-	narr_SIS  		      			  	= 0;							
-	ncom_SIS 		      			  	= 0;
-	narr_CPUS 		      			 	= 0;							
-	ncom_CPUS 		      			  	= 0;
-	narr_IO1S 		      			  	= 0;							
-	ncom_IO1S  		      			  	= 0;
-	narr_IO2S 		      			  	= 0;							
-	ncom_IO2S 		      			  	= 0;
-	narr_SOS 		      		  		= 0;							
-	ncom_SOS 		      	          		= 0;
-	cycles				  	  		= 0;
-	leftExtreme 		  	          		= 0.0;
-	rightExtreme 		  		  		= 0.0;
-	numberOfObservationInCurrentCycle 	  		= 0;
-	sumObs					  		= 0.0;
-	regLength 				  		= 0.0;
-	sumSumObs 				  		= 0.0;
-	sumSumObsAt2 			          		= 0.0;
-	sumRegLength 				  		= 0.0;
-	sumRegLengthAt2 			  		= 0.0;
-	sumObsSumRegLength 			  		= 0.0;
-	sampleAverageActiveTime			  		= 0.0;
-	totalActiveTimes      			  		= (double*) calloc (WORKSTATIONS, sizeof(double));
-	passageSubSystemTimes 			  		= (int*) calloc (WORKSTATIONS, sizeof(int));
-	totalResponseTimes    			  		= (double*) calloc (WORKSTATIONS, sizeof(double));
-	passageDelayTimes     			  		= (int*) calloc (WORKSTATIONS, sizeof(int)); 	
+	Start     		      			  		= 0.0;
+	nsys 	  		      			  		= 0;								
+	n_DS 	  		      			  		= 0;									
+	n_RS 	  		      			  		= 0;	
+	n_SIS 	  		      			  		= 0;
+	n_CPUS	  		      			  		= 0;
+	n_IO1S							 	= 0;		
+	n_IO2S							  	= 0;	
+	n_SOS							  	= 0;
+	narr_DS   		      			 	 	= 0;							
+	ncom_DS      	      			  			= 0;					
+	narr_RS	  		      			  		= 0;							
+	ncom_RS	  	          		      			= 0;	
+	narr_SIS  		      			  		= 0;							
+	ncom_SIS 		      			  		= 0;
+	narr_CPUS 		      			  		= 0;							
+	ncom_CPUS 		      			 		= 0;
+	narr_IO1S 		      			  		= 0;							
+	ncom_IO1S  		      			  		= 0;
+	narr_IO2S 		      			  		= 0;							
+	ncom_IO2S 		      			  		= 0;
+	narr_SOS 		      			  		= 0;							
+	ncom_SOS 		      			  		= 0;
+	cycles				  			  	= 0;
+	leftExtreme 		  			  		= 0.0;
+	rightExtreme 		  			  		= 0.0;
+	numberOfObservationInCurrentCycle = 0;
+	sumObs							  	= 0.0;
+	regLength 						  	= 0.0;
+	sumSumObs 						  	= 0.0;
+	sumSumObsAt2 					  		= 0.0;
+	sumRegLength 					  		= 0.0;
+	sumRegLengthAt2 				  		= 0.0;
+	sumObsSumRegLength 				  		= 0.0;
+	sampleAverageActiveTime			  			= 0.0;
+	totalActiveTimes      			  			= (double*) calloc (WORKSTATIONS, sizeof(double));
+	passageSubSystemTimes 			  			= (int*) calloc (WORKSTATIONS, sizeof(int));
+	totalResponseTimes    			  			= (double*) calloc (WORKSTATIONS, sizeof(double));
+	passageDelayTimes     			  			= (int*) calloc (WORKSTATIONS, sizeof(int)); 	
 		
 	sim_time  = Start;	
     
@@ -458,7 +487,7 @@ void departureSwapIn(nodePtr node_event){
 	double cpuBurst;
 	nodePtr next_job;
 	
-	if (!firstStepValidation) {
+	if (!firstValidationStep) {
 		cpuBurst = GetHyperExponentialRandomVariate(SERVICE_CPU_STREAM);
 	} else {
 		cpuBurst = GetNegativeExponentialRandomVariate(S2, SERVICE_CPU_STREAM);
@@ -493,14 +522,18 @@ void arrivalCpu(nodePtr node_event){
 		
 	node_event->event.create_time = sim_time;
 	node_event->event.arrival_time = sim_time;
-		
+	
+	if (secondValidationStep) {
+		CPU_QUANTUM = GetNegativeExponentialRandomVariate(AVERAGE_TIME_SLICE_TIME, TIME_SLICE_STREAM);
+	} 
+
 	if (node_event->event.remained_service_time > CPU_QUANTUM) {
 		node_event->event.service_time = CPU_QUANTUM;
 		node_event->event.remained_service_time = node_event->event.remained_service_time - CPU_QUANTUM;
 	} else {
 		node_event->event.service_time = node_event->event.remained_service_time;
 		node_event->event.remained_service_time = 0.0;
-	}	
+	}
 		
 	if (n_CPUS == 1) {
 		/* Process arrival at idle server */
@@ -528,7 +561,7 @@ void departureCpu(nodePtr node_event){
 	node_event->event.create_time = sim_time;
 	node_event->event.occur_time = sim_time;
 
-	if (!firstStepValidation) {
+	if (!firstValidationStep && !secondValidationStep) {
 		if (node_event->event.remained_service_time == 0.0) {
 			/* Process has finished computing */
 			SelectStream(CPU_COMPLETION_CHOICE_STREAM);
@@ -556,7 +589,7 @@ void departureCpu(nodePtr node_event){
 			/* Process hasn't finished computing */
 		    node_event->event.type = ARRIVAL_CPU;
 		}
-	} else {
+	} else if (firstValidationStep) {
 		SelectStream(CPU_COMPLETION_CHOICE_STREAM);
 		choice = Uniform(0.0, 1.0);
 		
@@ -583,6 +616,37 @@ void departureCpu(nodePtr node_event){
 			node_event->event.service_time = 0.0;
 			node_event->event.remained_service_time = 0.0;
 			node_event->event.type = ARRIVAL_SWAP_OUT;
+		}
+	} else {
+		if (node_event->event.remained_service_time == 0.0) {
+			/* Time slice is greater or equal to the service time */
+			SelectStream(CPU_COMPLETION_CHOICE_STREAM);
+			choice = Uniform(0.0, 1.0);
+			
+			if (choice <= Q34) {
+				/* Go to IO1 station */
+				ioBurst = GetNegativeExponentialRandomVariate(S4, SERVICE_IO1_STREAM);
+				node_event->event.service_time = ioBurst;
+				node_event->event.remained_service_time = 0.0;
+				node_event->event.type = ARRIVAL_IO1;
+			} else if (choice <= Q34 + Q35) {
+				/* Go to IO2 station */
+				ioBurst = GetNegativeExponentialRandomVariate(S5, SERVICE_IO2_STREAM);
+				node_event->event.service_time = ioBurst;
+				node_event->event.remained_service_time = 0.0;
+				node_event->event.type = ARRIVAL_IO2;
+			} else {
+				/* Go to Swap-Out station */
+				node_event->event.service_time = 0.0;
+				node_event->event.remained_service_time = 0.0;
+				node_event->event.type = ARRIVAL_SWAP_OUT;
+			}
+		} else {
+			/* Time slice is lesser to the service time */
+			cpuBurst = GetHyperExponentialRandomVariate(SERVICE_CPU_STREAM);
+			node_event->event.service_time = cpuBurst;
+			node_event->event.remained_service_time = cpuBurst;
+		    node_event->event.type = ARRIVAL_CPU;
 		}
 	}
 	
@@ -624,7 +688,7 @@ void departureIO1(nodePtr node_event){
 	double cpuBurst;
 	nodePtr next_job;
 	
-	if (!firstStepValidation) {
+	if (!firstValidationStep) {
 		cpuBurst = GetHyperExponentialRandomVariate(SERVICE_CPU_STREAM);
 	} else {
 		cpuBurst = GetNegativeExponentialRandomVariate(S2, SERVICE_CPU_STREAM);
@@ -678,7 +742,7 @@ void departureIO2(nodePtr node_event){
 	double cpuBurst;
 	nodePtr next_job;
 	
-	if (!firstStepValidation) {
+	if (!firstValidationStep) {
 		cpuBurst = GetHyperExponentialRandomVariate(SERVICE_CPU_STREAM);
 	} else {
 		cpuBurst = GetNegativeExponentialRandomVariate(S2, SERVICE_CPU_STREAM);
