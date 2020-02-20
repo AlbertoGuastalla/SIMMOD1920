@@ -147,7 +147,7 @@ Queste tre ultime stazioni (tolta la Swap-Out station) presentano un numero vari
 
 ### PUNTO DI RIGENERAZIONE (ORIGINAL MODEL)
 
-Nel caso in cui si abbia scelto il modello originale, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA, per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca del punto rigenerazione scelto. 
+Nel caso in cui si abbia scelto il modello originale, l’assegnazione dei valori a queste variabili è stata effettuata mediante l’utilizzo di MVA (risolvendo il primo modello di validazione), per appunto estrarre il numero medio di clienti per stazione (approssimato all’intero più vicino) come euristica per velocizzare la ricerca del punto rigenerazione scelto. 
 
 Questa operazione è stata effettuata lanciando MVA su un processo figlio (mettendo quindi in attesa il simulatore per il tempo necessario affinchè quest'ultimo termini), il quale andrà a scrivere su file i vari valori medi per ciascuna stazione; dopodichè il padre riprendendo l'esecuzione, leggerà tali valori utilizzandoli come sopracitato.
 
@@ -171,7 +171,7 @@ Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell�
 Nel caso in cui si abbia invece scelto il primo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è guidata unicamente dai valori in output d MVA.
 
 ### PUNTO DI RIGENERAZIONE (SECOND VALIDATION MODEL)
-Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è la medesima del primo modello di validazione.
+Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è la medesima del primo modello di validazione (risolvendo però il secondo modello di validazione).
 
 Infine, è garantito che ciascun ciclo di rigenerazione possieda almeno un numero di osservazioni sufficienti (almeno 30) per essere sicuri di avere una somma delle ultime (variabile aleatoria) approssimativamente normale come dimostrato dal teorema del limite centrale. Nel caso in cui ciò non avvenga, si provvede ad accorpare più cicli di rigenerazione in uno. 
 </ul></p>
@@ -648,7 +648,7 @@ Sempre considerando il fatto che l'operatore valore atteso gode della proprietà
 
 ## CONFRONTO CON MVA
 
-Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper-esponenziale si riduce ad una singola esponenziale negativa di media η = 27 msec rendendo cosi identiche l'analisi effettuata con la catena di Markov da quella effttuata con MVA durante la prima validazione (con l'unica differenza che il tempo medio di servizio della Swap-In è 0.0).
+Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper-esponenziale si riduce ad una singola esponenziale negativa di media η = 27 msec rendendo cosi identiche l'analisi effettuata con la catena di Markov da quella effettuata con MVA durante la prima validazione (con l'unica differenza che il tempo medio di servizio della Swap-In è 0.0).
 
 ### INDICI DI PRESTAZIONE MEDI DERIVATI DALLA DISTRIBUZIONE LIMITE
 
@@ -680,7 +680,7 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
 - Waiting time della IO1 station X<SUB>IO1</SUB>: 47.30663312
 - Waiting time della IO2 station X<SUB>IO2</SUB>: 240.2445953
 
-In entrambe le versioni della seconda validazione, va precisato però che, per il calcolo degli indici di prestazioni riguardanti la stazione CPU, si è utilizzato un tempo medio di servizio pari a 2.7 anzichè di 27 poichè in questo modello di validazione è presente un quanto di tempo che segue una distribuzione esponenziale negativa. Questa astrazione ha come effetto che il tempo medio di servizio della CPU si riduce a 1 ÷ (1 ÷ 27 + 1 ÷ 3) = 2.7 msec.
+
 
 ### INDICI DI PRESTAZIONE MEDI DERIVATI DERIVATI DA MVA
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
