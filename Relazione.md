@@ -680,7 +680,7 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
 - Waiting time della IO1 station X<SUB>IO1</SUB>: 47.30663312
 - Waiting time della IO2 station X<SUB>IO2</SUB>: 240.2445953
 
-
+In entrambe le versioni della seconda validazione, va precisato però che, per il calcolo degli indici di prestazioni riguardanti la stazione CPU, si è utilizzato un tempo medio di servizio pari a 1 / (μ<SUB>i</SUB> + δ), dove μ<SUB>i</SUB> rappresenta il tasso di servizio dello stadio i della CPU e δ il tasso dell'esponenziale quanto di tempo. 1 / (μ<SUB>i</SUB> + δ) rappresenta quindi il valore atteso dell'esponenziale minima fra le due sopracitate.
 
 ### INDICI DI PRESTAZIONE MEDI DERIVATI DERIVATI DA MVA
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
