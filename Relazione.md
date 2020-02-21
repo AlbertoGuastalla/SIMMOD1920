@@ -791,11 +791,11 @@ Seme utilizzato: 123456789
 ### INDICI DI PRESTAZIONE MEDI DERIVATI DERIVATI DA MVA
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
 
-#0: Delay Station
-#1: Swap-In Station
-#2: CPU Station
-#3: IO1 Station
-#4: IO2 Station
+#0: Delay Station <br>
+#1: Swap-In Station <br>
+#2: CPU Station <br>
+#3: IO1 Station <br>
+#4: IO2 Station <br>
 
 ### EXTENSIVE VALIDATION 
 
