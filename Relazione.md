@@ -168,7 +168,7 @@ Si utilizza questo approccio solo qualora il grado di multiprogrammazione sia ma
 Questa scelta è motivata nuovamente dal fatto che, si è alla ricerca di quell’assegnazione di valori che massimizza la probabilità di occorrere in una condizione di rigenerazione per abbattere quindi i tempi dovuti all’attesa dell’evento (sempre in accordo con le proprietà che ogni punto di rigenerazione deve possedere per essere considerato tale). <br>
 
 ### PUNTO DI RIGENERAZIONE (FIRST VALIDATION MODEL)
-Nel caso in cui si abbia invece scelto il primo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è guidata unicamente dai valori in output d MVA.
+Nel caso in cui si abbia invece scelto il primo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è guidata unicamente dai valori in output d MVA (risolvendo, come nel modello originale il primo modello di validazione).
 
 ### PUNTO DI RIGENERAZIONE (SECOND VALIDATION MODEL)
 Nel caso in cui si abbia invece scelto il secondo modello di validazione, l'assegnazione dei valori alle variabili che definiscono il punto di rigenerazione è la medesima del primo modello di validazione (risolvendo però il secondo modello di validazione).
@@ -408,10 +408,10 @@ Qui sotto i vari tempi medi di permanenza nel sotto-sistema per ogni livello di 
 Lanciando il simulatore con il parametro "-verbosity" specificato, è possibile visualizzare su riga di comando, il valore simulato del tempo medio di risposta e del tempo medio di permanenza nel sotto-sistema per ciascun cliente.
 Si sono quindi dapprima calcolate le somme di entrambi i tempi:
 
-- Tempo di risposta: Departure_Swap_Out_Time - Departure_Delay_Time.
+- Tempo di risposta: Departure_Swap_Out_Time (nel caso venga scelto il ramo q60) - Departure_Delay_Time.
 - Tempo di permanenza: Arrival_Swap_Out_Time - Departure_Swap_In_Time.
 
-Infine si sono calcolate le due medie, dividendo rispettivamente entrambe le somme per il numero di passaggi alla delay station e per il numero di passaggi al sotto-sistema.
+Infine si sono calcolate le due medie, dividendo rispettivamente entrambe le somme per il numero di passaggi alla Delay station e per il numero di passaggi al sotto-sistema.
 
 ### EXTENSIVE VALIDATION 
 
@@ -433,7 +433,7 @@ Una prima e approssimativa analisi delle strozzature si può facilmente vedere l
 Con un’analisi più accurata invece si possono osservare i seguenti valori: 
 
 <ul>
-<li><b>Stazione bottleneck</b>: V<SUB>b</SUB> * S<SUB>b</SUB> = </b>: V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = MAX {V<SUB>i</SUB> * S<SUB>i</SUB>} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). </li>
+<li><b>Stazione bottleneck</b>: V<SUB>b</SUB> * S<SUB>b</SUB> = V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = MAX {V<SUB>i</SUB> * S<SUB>i</SUB>} = max { 2.5 * 210, 250 * 2.7, 16.25 * 40, 6.25 * 180 } = 6.25 * 180 = 1125 (Quindi effettivamente la stazione IO2 risulta essere la stazione bottleneck del sistema). </li>
 
 <li><b>Tempo medio di risposta del sistema con 1 cliente</b> = R<SUB>0</SUB>(1) = D = ∑V<SUB>i</SUB> * S<SUB>i</SUB> = V<SUB>SI</SUB> * S<SUB>SI</SUB> + V<SUB>CPU</SUB> * S<SUB>CPU</SUB> + V<SUB>IO1</SUB> * S<SUB>IO1</SUB> + V<SUB>IO2</SUB> * S<SUB>IO2</SUB> = 2.5 * 210 + 250 * 2.7 + 16.25 * 40 + 6.25 * 180 = 2975 msec </li> 
 </ul>
@@ -641,7 +641,7 @@ Calcolati attaverso: W = E[n] / X (formula di Little per CPU, IO1 e IO2)
 
 ### AVERAGE ACTIVE TIME
 
-Dato che essendo il sistema in equilibrio operazionale, dnotando il flusso in entrata al sotto-sistema con λ e quello in uscita con μ, deve per forza valere che λ = μ.
+Dato che essendo il sistema in equilibrio operazionale, denotando il flusso in entrata al sotto-sistema con λ e quello in uscita con μ, deve per forza valere che λ = μ.
 
 Ma dato che, λ = X<SUB>DS</SUB> + q61 * μ = μ, allora μ = X<SUB>DS</SUB> / 0.4 = 0.0009609916513.
 
