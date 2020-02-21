@@ -597,7 +597,7 @@ trovando la seguente distribuzione limite (<b>π</b>):
   </tr>
 </table>
 
-<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/distribution.png"/>
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/distribution1.png"/>
 
 ## CACLOLO DEGLI INDICI DI PRESTAZIONE MEDI
 
@@ -608,16 +608,16 @@ trovando la seguente distribuzione limite (<b>π</b>):
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2971184709
 - Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]: 0.5824842722
 
-Calcolati attaverso: E[n] = &#8721; k * π<SUB>i</SUB> con k > 0, i = 1,...,30
+Calcolati attaverso: E[n] = &#8721; k<SUB>m</SUB> * π<SUB>i</SUB> con k<SUB>m</SUB> 0, i = 1,...,30 (distribuzione marginale per ciascuna delle M stazioni presenti nel modello)
 
 ### UTILIZZAZIONI
 
-- Utilizzazione della Delay station U<SUB>DS</SUB>: 0.6406611009
+- Utilizzazione della Delay station U<SUB>DS</SUB>: 0.9351965193
 - Utilizzazione della CPU station U<SUB>CPUS</SUB>: 0.1755993833
 - Utilizzazione della IO1 station U<SUB>IO1</SUB>: 0.2498578293
 - Utilizzazione della IO2 station U<SUB>IO2</SUB>: 0.4324462431
 
-Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k > 0, i = 1,...,30 (CPU, IO1, IO2) | U = E[n<SUB>DS</SUB>] / N (DS)
+Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k<SUB>m</SUB> 0, i = 1,...,30 (distribuzione marginale per ciascuna delle M stazioni presenti nel modello)
 
 ### THROUGHPUTS
 
@@ -626,7 +626,9 @@ Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k > 0, i = 1,...,30 (CPU, IO
 - Throughput della IO1 station X<SUB>IO1</SUB>: 0.006246445733
 - Throughput della IO2 station X<SUB>IO2</SUB>: 0.002402479128
 
-Calcolati attaverso: X = U / S
+Calcolati attaverso: X = &#8721; π<SUB>i</SUB> * 1 / S(k<SUB>m</SUB>) con k<SUB>m</SUB> 0, i = 1,...,30 (distribuzione marginale per ciascuna delle M stazioni presenti nel modello)
+
+In questo caso S(k<SUB>m</SUB>) = S (per CPU, IO1 e IO2 Station), S(k<SUB>m</SUB>) = S / k<SUB>DS</SUB> (per Delay Station)
 
 ### WAITING TIMES
 
@@ -646,11 +648,15 @@ Ma dato che, λ = X<SUB>DS</SUB> + q61 * μ = μ, allora μ = X<SUB>DS</SUB> / 0
 Sempre considerando il fatto che l'operatore valore atteso gode della proprietà di linearità, il tempo medio di permanenza del sotto-sistema attivo è quindi:
 <b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1121.775299.
 
-## CONFRONTO CON MVA
+### SIMULAZIONE (30 minuti)
+
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation1.png"/>
+
+### CONFRONTO CON MVA
 
 Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper-esponenziale si riduce ad una singola esponenziale negativa di media η = 27 msec rendendo cosi identiche l'analisi effettuata con la catena di Markov da quella effettuata con MVA durante la prima validazione (con l'unica differenza che il tempo medio di servizio della Swap-In è 0.0).
 
-## DISTRIBUZIONE LIMITE
+### DISTRIBUZIONE LIMITE
 
 <table>
    <tr>
@@ -735,6 +741,8 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
    </tr>
 </table>
 
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/distribution2.png"/>
+
 ### INDICI DI PRESTAZIONE MEDI DERIVATI DALLA DISTRIBUZIONE LIMITE
 
 ### NUMERO MEDIO DI JOBS
@@ -746,7 +754,7 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
 
 ### UTILIZZAZIONI
 
-- Utilizzazione della Delay station U<SUB>DS</SUB>: 0.6192948683
+- Utilizzazione della Delay station U<SUB>DS</SUB>: 0.9259275423
 - Utilizzazione della CPU station U<SUB>CPU</SUB>: 0.2508144219
 - Utilizzazione della IO1 station U<SUB>IO1</SUB>: 0.2415249987
 - Utilizzazione della IO2 station U<SUB>IO2</SUB>: 0.4180240361
@@ -765,7 +773,16 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
 - Waiting time della IO1 station X<SUB>IO1</SUB>: 47.30663312
 - Waiting time della IO2 station X<SUB>IO2</SUB>: 240.2445953
 
+### AVERAGE ACTIVE TIME
+
+μ = X<SUB>DS</SUB> / 0.4 = 0.0009289423026.
+<b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1229,479368.
+
 In entrambe le versioni della seconda validazione, va precisato però che, per il calcolo degli indici di prestazioni riguardanti la stazione CPU, si è utilizzato un tempo medio di servizio pari a 1 / (μ<SUB>i</SUB> + δ), dove μ<SUB>i</SUB> rappresenta il tasso di servizio dello stadio i della CPU e δ il tasso dell'esponenziale quanto di tempo. 1 / (μ<SUB>i</SUB> + δ) rappresenta quindi il valore atteso dell'esponenziale minima fra le due sopracitate.
+
+### SIMULAZIONE (30 minuti)
+
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation2.png"/>
 
 ### INDICI DI PRESTAZIONE MEDI DERIVATI DERIVATI DA MVA
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
