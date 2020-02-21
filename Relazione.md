@@ -648,7 +648,9 @@ Ma dato che, λ = X<SUB>DS</SUB> + q61 * μ = μ, allora μ = X<SUB>DS</SUB> / 0
 Sempre considerando il fatto che l'operatore valore atteso gode della proprietà di linearità, il tempo medio di permanenza del sotto-sistema attivo è quindi:
 <b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1121.775299.
 
-### SIMULAZIONE (30 minuti)
+### BREVE SIMULAZIONE (30 minuti)
+
+Seme utilizzato: 123456789
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation1.png"/>
 
@@ -780,7 +782,9 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
 
 In entrambe le versioni della seconda validazione, va precisato però che, per il calcolo degli indici di prestazioni riguardanti la stazione CPU, si è utilizzato un tempo medio di servizio pari a 1 / (μ<SUB>i</SUB> + δ), dove μ<SUB>i</SUB> rappresenta il tasso di servizio dello stadio i della CPU e δ il tasso dell'esponenziale quanto di tempo. 1 / (μ<SUB>i</SUB> + δ) rappresenta quindi il valore atteso dell'esponenziale minima fra le due sopracitate.
 
-### SIMULAZIONE (30 minuti)
+### BREVE SIMULAZIONE (30 minuti)
+
+Seme utilizzato: 123456789
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation2.png"/>
 
