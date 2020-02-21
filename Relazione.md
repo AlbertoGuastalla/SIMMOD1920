@@ -699,6 +699,8 @@ Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona appro
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
 
+Seme utilizzato: 918273645
+
 <ol type="1">
   <li><b>δ = 3; CPU ~ Hyper-Exp (α = 0.8, β = 0.2, µ1 = 15, µ2 = 75) </b> <br>
   Sample Average Active Time = 4193.819712 (point-estimate) <br>
@@ -722,7 +724,6 @@ Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona appro
   Larghezza dell’intervallo: 28.399809 </li>
 </ol>
 
-Questi risultati sono stati ottenuti considerando un numero p di cicli di rigenerazione maggiore di 25 (condizione necessaria e sufficiente per poter approssimare la distribuzione t di student con (p − 1) gradi di libertà alla normale con identica media e varianza). <br>
 Ciò che si può osservare è che la dimensione dell'intervallo nel caso in cui il quanto di tempo sia uguale 3000 msec risulta essere leggermente più piccola rispetto a quella in cui lo stesso vale 3 msec (indipendentemente dalla scelta della distribuzione dei tempi di servizio della CPU).
 
 ## AUTORE
