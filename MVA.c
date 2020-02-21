@@ -116,14 +116,19 @@ double** MVA_LI_D (double *visits, double *sevices, int *stations, int* delaySta
 	double *utilizations = (double*) calloc (M, sizeof(double));
 	double *meanWaitings = (double*) calloc (M, sizeof(double));
 	
-	printf("Number of Customers in the System: %d\n\n", N);
+		//MODIFIED BY GB
+		printf("Number of Customers in the System: %d\n\n", N);
 	
 	for (int i = 0; i < M; i++) {
 		meanJobs[i] = 0.0;
 	}
 	
 	for (int k = 1; k <= N; k++) {
+		
+		
+		//MODIFIED BY GB
 		double sum = 0.0;
+		//int sum = 0.0;
 		for (int i = 0; i < M; i++) {
 			if (stations[i] == 0) {
 				meanWaitings[i] = delayStationsTimes[i];
@@ -170,10 +175,10 @@ int main (int argc, char *argv[]) {
 			0.00, 0.00, 1.00,  0.00, 0.00
 		};
 		
-		double *visits = getVisitVector(Q, 5);
+		double *visits = getVisitVector(Q, stations);
 		double sevices[] = { 0.0, 210.0, 2.7, 40.0, 180.0 };
-		int stationsType[] = { 0, 1, 1, 1, 1, 1 }; //0 Delay, 1 Normal
-		int delayStationsTimes[] = { 5000.0, 0, 0, 0, 0 };  
+		int stationsType[] = { 0, 1, 1, 1, 1 }; //0 Delay, 1 Normal
+		int delayStationsTimes[] = { 5000, 0, 0, 0, 0 };  
 
 		double** averagePerformanceIndices = MVA_LI_D(visits, sevices, stationsType, delayStationsTimes, stations, atoi(argv[1]));
 		
@@ -186,13 +191,13 @@ int main (int argc, char *argv[]) {
    			fwrite(averagePerformanceIndices[0], sizeof(double), stations, fp);
 		}
 	
-		/*for (int i = 0; i < stations; i++) {
+		for (int i = 0; i < stations; i++) {
 			printf("Mean Value Jobs in station n.%d: %g \n", i, averagePerformanceIndices[0][i]);
 			printf("throughput of station n.%d: %g \n", i, averagePerformanceIndices[1][i]);
 			printf("utilization of station n.%d: %g \n", i, averagePerformanceIndices[2][i]);
 			printf("Average waiting time of station n.%d: %g \n", i, averagePerformanceIndices[3][i]);
 			printf("\n");
-		}*/
+		}
 	} else {
 		printf("Missing parameter...");
 	}
