@@ -608,7 +608,7 @@ trovando la seguente distribuzione limite (<b>π</b>):
 - Numero medio di jobs in IO1 station E[n<SUB>IO1</SUB>]: 0.2971184709
 - Numero medio di jobs in IO2 station E[n<SUB>IO2</SUB>]: 0.5824842722
 
-Calcolati attaverso: E[n] = &#8721; k<SUB>m</SUB> * π<SUB>i</SUB> con k<SUB>m</SUB> > 0, i = 1,...,30 (distribuzione marginale per ciascuna delle M stazioni presenti nel modello)
+Calcolati attaverso: E[n] = &#8721; k<SUB>m</SUB> * π<SUB>i</SUB> con k<SUB>m</SUB> > 0, i = 1,...,30 (ottenuto attraverso la relativa distribuzione marginale di ciascuna delle M stazioni presenti nel modello).
 
 ### UTILIZZAZIONI
 
@@ -617,7 +617,7 @@ Calcolati attaverso: E[n] = &#8721; k<SUB>m</SUB> * π<SUB>i</SUB> con k<SUB>m</
 - Utilizzazione della IO1 station U<SUB>IO1</SUB>: 0.2498578293
 - Utilizzazione della IO2 station U<SUB>IO2</SUB>: 0.4324462431
 
-Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k<SUB>m</SUB> > 0, i = 1,...,30 (distribuzione marginale per ciascuna delle M stazioni presenti nel modello)
+Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k<SUB>m</SUB> > 0, i = 1,...,30 (ottenuta attraverso la relativa distribuzione marginale di ciascuna delle M stazioni presenti nel modello).
 
 ### THROUGHPUTS
 
@@ -626,7 +626,7 @@ Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k<SUB>m</SUB> > 0, i = 1,...
 - Throughput della IO1 station X<SUB>IO1</SUB>: 0.006246445733
 - Throughput della IO2 station X<SUB>IO2</SUB>: 0.002402479128
 
-Calcolati attaverso: X = &#8721; π<SUB>i</SUB> * 1 / S(k<SUB>m</SUB>) con k<SUB>m</SUB> > 0, i = 1,...,30 (distribuzione marginale per ciascuna delle M stazioni presenti nel modello)
+Calcolati attaverso: X = &#8721; π<SUB>i</SUB> * 1 / S(k<SUB>m</SUB>) con k<SUB>m</SUB> > 0, i = 1,...,30 (ottenuto attraverso la relativa distribuzione marginale di ciascuna delle M stazioni presenti nel modello).
 
 In questo caso S(k<SUB>m</SUB>) = S (per CPU, IO1 e IO2 Station essendo stazioni load independent), S(k<SUB>m</SUB>) = S / k<SUB>DS</SUB> (per Delay Station essendo l'unica stazione load dependent)
 
@@ -790,6 +790,12 @@ Seme utilizzato: 123456789
 
 ### INDICI DI PRESTAZIONE MEDI DERIVATI DERIVATI DA MVA
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
+
+#0: Delay Station
+#1: Swap-In Station
+#2: CPU Station
+#3: IO1 Station
+#4: IO2 Station
 
 ### EXTENSIVE VALIDATION 
 
