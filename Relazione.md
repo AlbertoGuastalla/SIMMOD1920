@@ -516,7 +516,7 @@ trovando la seguente distribuzione limite (<b>π</b>):
 
 <table>
   <tr>
-    <th>π1 (3,0,0,0)<br></th>
+    <th>π1 (3,0,0,0)</th>
     <th>0.2955257595</th>
     <th>π11 (1,(2,B),0,0)</th>
     <th>0.0033695517</th>
