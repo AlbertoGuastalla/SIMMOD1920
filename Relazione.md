@@ -652,7 +652,7 @@ Sempre considerando il fatto che l'operatore valore atteso gode della proprietà
 
 Seme utilizzato: 123456789
 
-<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation1.png"/>
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation2.png"/>
 
 ### CONFRONTO CON MVA
 
@@ -786,7 +786,7 @@ In entrambe le versioni della seconda validazione, va precisato però che, per i
 
 Seme utilizzato: 123456789
 
-<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation2.png"/>
+<img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation1.png"/>
 
 ### INDICI DI PRESTAZIONE MEDI DERIVATI DERIVATI DA MVA
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva2.png"/>
