@@ -12,7 +12,7 @@
 
 ## PARAMETRI OPZIONALI DA RIGA DI COMANDO 
 
-Lanciare Simulator N –fvs -svs –verbosity 
+Lanciare Simulator [N –fvs -svs –verbosity] 
 
 <ul>
 <li>N: numero di terminali connessi al sistema. </li>
