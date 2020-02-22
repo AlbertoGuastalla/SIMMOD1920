@@ -429,6 +429,12 @@ Una prima e approssimativa analisi delle strozzature si può facilmente vedere l
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/mva.png"/>
 
+#0: Delay Station <br>
+#1: Swap-In Station <br>
+#2: CPU Station <br>
+#3: IO1 Station <br>
+#4: IO2 Station <br>
+
 <p align=”justify”>
 Con un’analisi più accurata invece si possono osservare i seguenti valori: 
 
