@@ -16,7 +16,7 @@ Lanciare Simulator N –fvs -svs –verbosity
 
 <ul>
 <li>N: numero di terminali connessi al sistema. </li>
-<li>-fsv: first step validation flag </li>
-<li>-fsv: second step validation flag </li>
+<li>-fvs: first step validation flag </li>
+<li>-svs: second step validation flag </li>
 <li>-verbosity: verbosity flag </li>
 </ul>
