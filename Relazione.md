@@ -129,6 +129,8 @@ Punto di entrata del sotto-sistema.
 
 Questa scelta è motivata dal fatto che la distribuzione dei tempi di servizio è sconosciuta, fortemente influenzata dal grado di multiprogrammazione scelto, dai tempi di attesa di ciascuna stazione e dai probability branch che caratterizzano il modello. Quindi in generale essa non gode della proprietà di assenza di memoria.
 
+Va però precisato che, non essendo una stazione con un servitore, non vi è la possibilità di interrompre un cliente mentre esso è in servizio; quindi anche per il motivo sopracitato, sarebbe stato possibile fissare arbitrariamente un numero di jobs alla Reserve Station per caratterizzare un punto di rigenerazione valido.
+
 <li><b>Numero di jobs alla Cpu Station = 0. </b></li>
 
 Essendo che la Cpu Station presenta una distribuzione dei tempi di servizio iper-esponenziale, essa non gode della proprietà di assenza di memoria. 
