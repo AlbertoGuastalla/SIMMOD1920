@@ -648,7 +648,7 @@ In questo caso S(k<SUB>m</SUB>) = S (per CPU, IO1 e IO2 Station essendo stazioni
 Calcolati attaverso: W = E[n] / X (formula di Little per CPU, IO1 e IO2)
 
 ### RESPONSE TIME
-- Response Time = (3 / X<SUB>DS</SUB>) - Z = 2804.438249
+- Response Time = (N / X<SUB>DS</SUB>) - Z = (3 / 0.0003843966605) - 5000 = 2804.438249
 
 ### AVERAGE ACTIVE TIME
 
