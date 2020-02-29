@@ -647,6 +647,9 @@ In questo caso S(k<SUB>m</SUB>) = S (per CPU, IO1 e IO2 Station essendo stazioni
 
 Calcolati attaverso: W = E[n] / X (formula di Little per CPU, IO1 e IO2)
 
+### RESPONSE TIME
+- Response Time = (3 / X<SUB>DS</SUB>) - Z = 2804.438249
+
 ### AVERAGE ACTIVE TIME
 
 Dato che essendo il sistema in equilibrio operazionale, denotando il flusso in entrata al sotto-sistema con λ e quello in uscita con μ, deve per forza valere che λ = μ.
@@ -782,6 +785,9 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
 - Waiting time della CPU station X<SUB>CPU</SUB>: 3.213747642
 - Waiting time della IO1 station X<SUB>IO1</SUB>: 47.30663312
 - Waiting time della IO2 station X<SUB>IO2</SUB>: 240.2445953
+
+### RESPONSE TIME
+- Response Time = 3073.698419
 
 ### AVERAGE ACTIVE TIME
 
