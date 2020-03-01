@@ -114,6 +114,11 @@ La Feature Event List (FEL) del simulatore è inizializzata inserendo i vari eve
 
 <li><b>DepartureSwapOut</b>: gestisce la partenza dalla Swap-Out Station, inoltrando probabilisticamente il processo alla Reserve Station, se desidera ulteriore tempo di computazione oppure alla Delay Station viceversa. Se presente, viene estratto (dequeue) un processo dalla Reserve Queue. </li></ul></p>
 
+## BREVE SIMULAZIONE (60 minuti)
+Seme utilizzato: 918273645
+
+<img src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/sim1.png"/>
+
 ## PUNTO DI RIGENERAZIONE SCELTO
 
 <p align=”justify”>
@@ -415,6 +420,11 @@ Si sono quindi dapprima calcolate le somme di entrambi i tempi:
 
 Infine si sono calcolate le due medie, dividendo rispettivamente entrambe le somme per il numero di passaggi alla Delay station e per il numero di passaggi al sotto-sistema.
 
+### BREVE SIMULAZIONE (60 minuti)
+Seme utilizzato: 918273645
+
+<img src="https://github.com/AlebertoGuastalla/SIMMOD1920/blob/master/sim2.png"/>
+
 ### EXTENSIVE VALIDATION 
 
 <p align=”justify”>
@@ -660,7 +670,6 @@ Sempre considerando il fatto che l'operatore valore atteso gode della proprietà
 <b>AverageActiveTime = E[n<SUB>CPU</SUB> + n<SUB>IO1</SUB> + n<SUB>IO2</SUB>] / μ</b> = 1121.775299.
 
 ### BREVE SIMULAZIONE (30 minuti)
-
 Seme utilizzato: 123456789
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation2.png"/>
@@ -797,7 +806,6 @@ Imponendo entrambi gli stadi esponenziali della CPU a media η = 27 msec, l'iper
 In entrambe le versioni della seconda validazione, va precisato però che, per il calcolo degli indici di prestazioni riguardanti la stazione CPU, si sono utilizzati dei tempi medi di servizio pari a 1 / (μ<SUB>i</SUB> + δ) (rispettivamente per entrambi gli stadi della CPU), dove μ<SUB>i</SUB> rappresenta il tasso di servizio dello stadio i della CPU e δ il tasso dell'esponenziale quanto di tempo. 1 / (μ<SUB>i</SUB> + δ) rappresenta quindi il valore atteso dell'esponenziale minima fra le due sopracitate, nonchè il tempo medio di servizio tenendo conto della presenza di un quanto di tempo aleatorio.
 
 ### BREVE SIMULAZIONE (30 minuti)
-
 Seme utilizzato: 123456789
 
 <img src="https://github.com/AlbertoGuastalla/SIMMOD1920/blob/master/simulation1.png"/>
@@ -824,7 +832,6 @@ Teoricamente, con un livello di fiducia al 90%, ci si aspetterebbe che il 90% de
 Questo è dovuto al fatto che 100 simulazioni differenti offrono una buona approssimazione ma per potersi avvicinare maggiormente ai risultati teorici, bisognerebbe effettuarne un numero molto più grande.
 
 ## QUATTRO CASI DI TEST (MODELLO ORIGINALE)
-
 Seme utilizzato: 918273645
 
 <ol type="1">
