@@ -646,7 +646,7 @@ Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k<SUB>m</SUB> > 0, i = 1,...
 
 Calcolati attaverso: X = &#8721; π<SUB>i</SUB> * 1 / S(k<SUB>m</SUB>) con k<SUB>m</SUB> > 0, i = 1,...,30 e m = 0,...,3 (ottenuto attraverso la relativa distribuzione marginale di ciascuna delle M stazioni presenti nel modello).
 
-In questo caso S(k<SUB>m</SUB>) = S<SUB>m</SUB (per CPU, IO1 e IO2 Station essendo stazioni load independent), S(k<SUB>m</SUB>) = S<SUB>m</SUB / k<SUB>DS</SUB> (per Delay Station essendo l'unica stazione load dependent)
+In questo caso S(k<SUB>m</SUB>) = S<SUB>m</SUB> (per CPU, IO1 e IO2 Station essendo stazioni load independent), S(k<SUB>m</SUB>) = S<SUB>m</SUB> / k<SUB>DS</SUB> (per Delay Station essendo l'unica stazione load dependent)
 
 ### WAITING TIMES
 
