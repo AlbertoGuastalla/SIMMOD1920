@@ -640,7 +640,7 @@ Calcolate attaverso: U = &#8721; π<SUB>i</SUB> con k<SUB>m</SUB> > 0, i = 1,...
 ### THROUGHPUTS
 
 - Throughput della Delay station X<SUB>DS</SUB>: 0.0003843966605
-- Throughput della CPU station X<SUB>CPU</SUB>: 0.0065036808633
+- Throughput della CPU station X<SUB>CPU</SUB>: 0.06814304427
 - Throughput della IO1 station X<SUB>IO1</SUB>: 0.006246445733
 - Throughput della IO2 station X<SUB>IO2</SUB>: 0.002402479128
 
